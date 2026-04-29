@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICD-10-CM Entity Evaluation Report</title>
+<style>
+  :root {
+    --bg: #fdfdfd;
+    --fg: #1a1a2e;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --green: #16a34a;
+    --green-light: #dcfce7;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --amber: #d97706;
+    --amber-light: #fef3c7;
+    --gray: #64748b;
+    --gray-light: #f1f5f9;
+    --border: #e2e8f0;
+    --code-bg: #f8fafc;
+    --shadow: 0 1px 3px rgba(0,0,0,.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.65;
+    font-size: 15px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  h1 { font-size: 1.85rem; font-weight: 700; margin-bottom: .3rem; letter-spacing: -.02em; }
+  h2 { font-size: 1.35rem; font-weight: 700; margin-top: 2.8rem; margin-bottom: .8rem; padding-bottom: .4rem; border-bottom: 2px solid var(--border); }
+  h3 { font-size: 1.05rem; font-weight: 600; margin-top: 1.6rem; margin-bottom: .5rem; }
+  p { margin-bottom: .75rem; }
+  .subtitle { color: var(--gray); font-size: .95rem; margin-bottom: 2rem; }
+  code { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: .87em; background: var(--code-bg); padding: .15em .35em; border-radius: 4px; }
+  pre { background: var(--code-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; overflow-x: auto; font-size: .85rem; margin: .8rem 0; }
+  pre code { background: none; padding: 0; }
+  table { width: 100%; border-collapse: collapse; margin: .8rem 0 1.2rem; font-size: .88rem; }
+  th, td { padding: .5rem .6rem; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; background: var(--gray-light); font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; color: var(--gray); }
+  td { font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: none; }
+  .num { text-align: right; font-family: 'JetBrains Mono', monospace; font-size: .84rem; }
+  .good { color: var(--green); font-weight: 600; }
+  .bad { color: var(--red); font-weight: 600; }
+  .warn { color: var(--amber); font-weight: 600; }
+  .muted { color: var(--gray); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8rem; margin: 1rem 0; }
+  .card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 1rem; box-shadow: var(--shadow); }
+  .card-label { font-size: .73rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--gray); margin-bottom: .2rem; }
+  .card-value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .card-detail { font-size: .78rem; color: var(--gray); margin-top: .1rem; }
+  .card-green { border-left: 4px solid var(--green); }
+  .card-red { border-left: 4px solid var(--red); }
+  .card-amber { border-left: 4px solid var(--amber); }
+  .card-blue { border-left: 4px solid var(--accent); }
+  .bar-container { width: 100%; height: 20px; background: var(--gray-light); border-radius: 4px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-fill.green { background: var(--green); }
+  .bar-fill.red { background: var(--red); }
+  .bar-fill.amber { background: var(--amber); }
+  .bar-fill.blue { background: var(--accent); }
+  .bar-label { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: .7rem; font-weight: 600; color: var(--fg); }
+  .callout { padding: .8rem 1rem; border-radius: 6px; margin: .8rem 0; font-size: .9rem; }
+  .callout-red { background: var(--red-light); border-left: 4px solid var(--red); }
+  .callout-green { background: var(--green-light); border-left: 4px solid var(--green); }
+  .callout-amber { background: var(--amber-light); border-left: 4px solid var(--amber); }
+  .callout-blue { background: var(--accent-light); border-left: 4px solid var(--accent); }
+  .callout strong { font-weight: 600; }
+  .example-list { list-style: none; padding: 0; margin: .5rem 0; }
+  .example-list li { padding: .3rem .5rem; font-family: 'JetBrains Mono', monospace; font-size: .8rem; background: var(--code-bg); border: 1px solid var(--border); border-radius: 4px; margin-bottom: .25rem; }
+  .tag { font-size: .68rem; font-weight: 600; padding: .1em .35em; border-radius: 3px; margin-right: .3em; }
+  .tag-fp { background: var(--red-light); color: var(--red); }
+  .tag-tp { background: var(--green-light); color: var(--green); }
+  .layer-diagram { display: flex; flex-direction: column; gap: .5rem; margin: 1rem 0 1.5rem; }
+  .layer-box { display: flex; align-items: stretch; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); }
+  .layer-num { min-width: 48px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: #fff; }
+  .layer-body { padding: .6rem .9rem; flex: 1; }
+  .layer-body strong { font-size: .9rem; }
+  .layer-body p { font-size: .82rem; color: var(--gray); margin-bottom: 0; }
+  .layer-1 .layer-num { background: var(--accent); }
+  .layer-2 .layer-num { background: var(--amber); }
+  .layer-3 .layer-num { background: var(--red); }
+  .composite-row { display: flex; align-items: center; gap: .7rem; margin-bottom: .4rem; }
+  .composite-label { width: 190px; font-size: .83rem; flex-shrink: 0; }
+  .composite-bar-wrap { flex: 1; }
+  .composite-val { width: 50px; text-align: right; font-weight: 600; font-size: .83rem; font-variant-numeric: tabular-nums; }
+  .arch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  .arch-box { border: 1px solid var(--border); border-radius: 8px; padding: 1.1rem; background: #fff; box-shadow: var(--shadow); }
+  .arch-box h4 { font-size: .92rem; margin-bottom: .5rem; }
+  .arch-box ul { padding-left: 1.1rem; font-size: .85rem; }
+  .arch-box li { margin-bottom: .25rem; }
+  @media (max-width: 750px) { .arch-grid { grid-template-columns: 1fr; } }
+  .section-num { color: var(--accent); font-weight: 700; margin-right: .3rem; }
+  .verdict { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.3rem; border-radius: 8px; margin: 1.2rem 0; }
+  .verdict-text h3 { margin: 0 0 .15rem; font-size: 1rem; }
+  .verdict-text p { margin: 0; font-size: .88rem; color: var(--gray); }
+  .verdict-green { background: var(--green-light); border: 1px solid var(--green); }
+  /* highlight row */
+  .hl { background: #f0fdf4; }
+</style>
+</head>
+<body>
+
+<h1>ICD-10-CM Entity Evaluation Report</h1>
+<p class="subtitle">86,827 diagnostic titles &middot; 3-layer validation &middot; 4 entities compared &middot; April 2026</p>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">1</span> The Problem</h2>
+
+<p>We build XML entities to match ICD-10-CM diagnostic classification titles in free text. The Eduction matching engine uses flat headword entries and regex patterns. The ICD-10-CM 2026 dataset contains 86,827 official titles (excluding external cause codes V00&ndash;Y99).</p>
+
+<p>A naive entity that composes condition nouns with anatomy terms via patterns like <code>[condition] of [anatomy]</code> produces ~3.7 million possible combinations against only 86,827 real titles &mdash; a <strong>43:1 ratio of nonsense to real matches</strong>.</p>
+
+<div class="callout callout-red">
+  <strong>False positive examples:</strong> "fracture of liver" (fractures are skeletal), "cataract of knee" (cataracts are ocular), "hernia of cornea" (hernias occur in body cavities), "burn of femur" (burns affect surfaces, not bone). These are the dominant output of unconstrained pattern composition.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">2</span> The Four Entities</h2>
+
+<div class="arch-grid">
+  <div class="arch-box" style="border-left: 4px solid var(--gray);">
+    <h4>Original <code>medical_conditions.xml</code></h4>
+    <ul>
+      <li>Pre-existing healthcare entity: 13 private sub-entities</li>
+      <li>12,577 flat entries (conditions, anatomy, adjectives, roots, prefixes)</li>
+      <li>General-purpose medical vocabulary &mdash; not ICD-10-CM-specific</li>
+      <li>No compound patterns in public entity &mdash; matches each sub-entity independently</li>
+      <li>629 KB &mdash; compact, hand-curated</li>
+    </ul>
+  </div>
+  <div class="arch-box" style="border-left: 4px solid var(--amber);">
+    <h4>Baseline (ICD-derived, unconstrained)</h4>
+    <ul>
+      <li>Built from ICD-10-CM CSV with unconstrained compound patterns</li>
+      <li>14,085 flat entries + 67 compound patterns</li>
+      <li><code>[condition] of [anatomy]</code> allows any condition with any anatomy</li>
+      <li>80 score=0 FP suppression patterns</li>
+      <li>936 KB</li>
+    </ul>
+  </div>
+  <div class="arch-box" style="border-left: 4px solid var(--accent);">
+    <h4>Strategy 1: Domain-Split Compound Patterns</h4>
+    <ul>
+      <li>Anatomy split into 8 domain-specific sub-entities</li>
+      <li>Compound patterns constrained: only valid condition+anatomy pairings</li>
+      <li>All titles as flat entries + abbreviation variants</li>
+      <li>Short entries (&le;2 words) anchored with <code>^entry$</code></li>
+      <li>12,094 KB &mdash; large due to full entry set + compound patterns</li>
+    </ul>
+  </div>
+  <div class="arch-box" style="border-left: 4px solid var(--green);">
+    <h4>Strategy 3: Flat Entries Only</h4>
+    <ul>
+      <li>Every title listed explicitly &mdash; zero compound patterns</li>
+      <li>Encounter suffixes factored out; abbreviation variants generated</li>
+      <li>Short entries (&le;2 words) anchored with <code>^entry$</code></li>
+      <li>No FP suppression patterns needed &mdash; nothing to suppress</li>
+      <li>4,566 KB</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">3</span> Evaluation Architecture</h2>
+
+<p>Three independent validation layers, ordered by increasing resistance to overfitting.</p>
+
+<div class="layer-diagram">
+  <div class="layer-box layer-1">
+    <div class="layer-num">1</div>
+    <div class="layer-body">
+      <strong>Development FP Dataset</strong> &mdash; 783 entries (600 TP, 171 FP, 12 edge)
+      <p>Hand-crafted. 6 FP categories: impossible_combo, domain_mismatch, common_english, partial_medical, ambiguous_short, near_miss. Visible to builders. <code>fp_dataset.json</code></p>
+    </div>
+  </div>
+  <div class="layer-box layer-2">
+    <div class="layer-num">2</div>
+    <div class="layer-body">
+      <strong>Static Validation Dataset</strong> &mdash; 957 entries (300 TP, 657 FP)
+      <p>Programmatically generated: cross-domain swaps, random combos, template remixes, novel English, boundary probes. All FPs verified against 445K-term ICD dataset. <code>fp_validation.json</code></p>
+    </div>
+  </div>
+  <div class="layer-box layer-3">
+    <div class="layer-num">3</div>
+    <div class="layer-body">
+      <strong>Adversarial Validation</strong> &mdash; ~740 entries generated dynamically
+      <p>Extracts vocabulary from the entity's own headwords at eval time. Generates vocab_recombination (300), word_soup (100), affix_probe (60), context_injection (80). No static file. Unforgeable.</p>
+    </div>
+  </div>
+</div>
+
+<div class="callout callout-blue">
+  <strong>Why Layer 3 cannot be gamed.</strong> The entity itself is the input to FP generation. If "glaucoma" and "kidney" are both matchable, the adversarial layer tests "glaucoma of kidney". 0/300 vocab_recombination means the structural combination problem is solved. 0/100 word_soup means substring pollution is solved.
+</div>
+
+<h3>Composite score formula</h3>
+<pre><code>Composite = Coverage &times; 0.35 + (100 &minus; Dev FP) &times; 0.15 + (100 &minus; Val FP) &times; 0.15 + (100 &minus; Adv FP) &times; 0.25 + Size &times; 0.10
+Size score = max(0, 100 &minus; file_size_KB / 50)</code></pre>
+<p>Adversarial FP rate carries the highest weight (25%) because it is the only metric that cannot be gamed.</p>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">4</span> Results: Head-to-Head</h2>
+
+<table>
+  <tr>
+    <th>Metric</th>
+    <th class="num">Original</th>
+    <th class="num">Baseline</th>
+    <th class="num">Strategy 1<br><span style="font-weight:400;text-transform:none;font-size:.72rem">Domain-Split</span></th>
+    <th class="num">Strategy 3<br><span style="font-weight:400;text-transform:none;font-size:.72rem">Flat Entries</span></th>
+  </tr>
+  <tr>
+    <td>Coverage</td>
+    <td class="num warn">92.15%</td>
+    <td class="num">99.48%</td>
+    <td class="num good">100.0%</td>
+    <td class="num good">99.91%</td>
+  </tr>
+  <tr>
+    <td>Uncovered titles</td>
+    <td class="num warn">6,817</td>
+    <td class="num">454</td>
+    <td class="num good">1</td>
+    <td class="num">76</td>
+  </tr>
+  <tr>
+    <td>Dev FP rate</td>
+    <td class="num bad">73.7%</td>
+    <td class="num bad">88.3%</td>
+    <td class="num good">0.0%</td>
+    <td class="num good">0.0%</td>
+  </tr>
+  <tr>
+    <td>Static validation FP rate</td>
+    <td class="num bad">95.7%</td>
+    <td class="num bad">98.0%</td>
+    <td class="num good">1.07%</td>
+    <td class="num good">1.07%</td>
+  </tr>
+  <tr>
+    <td>Adversarial FP rate</td>
+    <td class="num bad">89.1%</td>
+    <td class="num bad">90.9%</td>
+    <td class="num good">0.0%</td>
+    <td class="num good">0.0%</td>
+  </tr>
+  <tr style="background: var(--gray-light);">
+    <td>&emsp;vocab_recombination</td>
+    <td class="num bad">286 / 300</td>
+    <td class="num bad">290 / 300</td>
+    <td class="num good">0 / 300</td>
+    <td class="num good">0 / 300</td>
+  </tr>
+  <tr style="background: var(--gray-light);">
+    <td>&emsp;word_soup</td>
+    <td class="num bad">82 / 100</td>
+    <td class="num bad">68 / 100</td>
+    <td class="num good">0 / 100</td>
+    <td class="num good">0 / 100</td>
+  </tr>
+  <tr style="background: var(--gray-light);">
+    <td>&emsp;affix_probe</td>
+    <td class="num bad">42 / 60</td>
+    <td class="num bad">60 / 60</td>
+    <td class="num good">0 / 60</td>
+    <td class="num good">0 / 60</td>
+  </tr>
+  <tr>
+    <td>Entity file size</td>
+    <td class="num good">629 KB</td>
+    <td class="num">936 KB</td>
+    <td class="num bad">12,094 KB</td>
+    <td class="num">4,566 KB</td>
+  </tr>
+  <tr>
+    <td>Flat entries</td>
+    <td class="num">12,577</td>
+    <td class="num">14,085</td>
+    <td class="num">115,698</td>
+    <td class="num">52,516</td>
+  </tr>
+  <tr>
+    <td>Active patterns</td>
+    <td class="num">3</td>
+    <td class="num">67</td>
+    <td class="num">2,807</td>
+    <td class="num">2,784</td>
+  </tr>
+  <tr style="font-weight:700; background: var(--green-light);">
+    <td>Composite score</td>
+    <td class="num bad">48.3</td>
+    <td class="num bad">47.3</td>
+    <td class="num good">89.8</td>
+    <td class="num good">90.7</td>
+  </tr>
+</table>
+
+<h3>Visual comparison</h3>
+<table style="border:none; margin-top:.5rem;">
+  <tr><td style="width:155px; border:none; font-size:.83rem; font-weight:600;">Coverage</td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill amber" style="width:92.15%"></div><div class="bar-label">Original 92.15%</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill blue" style="width:99.48%"></div><div class="bar-label">Baseline 99.48%</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill green" style="width:100%"></div><div class="bar-label">S1 100%</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill green" style="width:99.91%"></div><div class="bar-label">S3 99.91%</div></div></td></tr>
+  <tr><td colspan="2" style="border:none; height:10px;"></td></tr>
+  <tr><td style="border:none; font-size:.83rem; font-weight:600;">Adversarial FP</td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill red" style="width:89.1%"></div><div class="bar-label">Original 89.1%</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill red" style="width:90.9%"></div><div class="bar-label">Baseline 90.9%</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill green" style="width:1%"></div><div class="bar-label" style="color:var(--green)">S1 0%</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill green" style="width:1%"></div><div class="bar-label" style="color:var(--green)">S3 0%</div></div></td></tr>
+  <tr><td colspan="2" style="border:none; height:10px;"></td></tr>
+  <tr><td style="border:none; font-size:.83rem; font-weight:600;">Composite</td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill red" style="width:48.3%"></div><div class="bar-label">Original 48.3</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill red" style="width:47.3%"></div><div class="bar-label">Baseline 47.3</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill green" style="width:89.8%"></div><div class="bar-label">S1 89.8</div></div></td></tr>
+  <tr><td style="border:none"></td>
+    <td style="border:none"><div class="bar-container"><div class="bar-fill green" style="width:90.7%"></div><div class="bar-label">S3 90.7</div></div></td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">5</span> Original Entity: Detailed Analysis</h2>
+
+<p>The original <code>medical_conditions.xml</code> is a general-purpose healthcare vocabulary, not built specifically for ICD-10-CM matching. It contains 13 private sub-entities organized by function:</p>
+
+<table>
+  <tr><th>Sub-entity</th><th>Role</th><th class="num">Entries</th></tr>
+  <tr><td><code>conditions/the_big_list</code></td><td>Condition terms (the bulk of entries)</td><td class="num">~11,000</td></tr>
+  <tr><td><code>anatomy_singular</code> / <code>anatomy_plural</code></td><td>Anatomy terms in singular and plural forms</td><td class="num">~800</td></tr>
+  <tr><td><code>anatomical_roots</code></td><td>Roots like "cardi", "hepat", "nephr"</td><td class="num">~120</td></tr>
+  <tr><td><code>medical_prefixes</code></td><td>Prefixes: hyper, hypo, endo, retro, etc.</td><td class="num">~40</td></tr>
+  <tr><td><code>conditions_high</code> / <code>conditions_low</code></td><td>Conditions split by FP risk level</td><td class="num">~200</td></tr>
+  <tr><td><code>condition_adjectives</code></td><td>Adjectives: acute, chronic, severe, viral, etc.</td><td class="num">~50</td></tr>
+  <tr><td><code>prefixable_ailments</code></td><td>Ailments that combine with medical prefixes</td><td class="num">~80</td></tr>
+  <tr><td><code>conditions/the_omas</code> / <code>the_emias</code></td><td>-oma and -emia condition terms</td><td class="num">~250</td></tr>
+</table>
+
+<p class="muted" style="font-size:.82rem; margin-top:.3rem;">Total: 12,577 flat entries, 3 active regex patterns, 19 cross-reference patterns (opaque to simulator), 3 score=0 suppression patterns.</p>
+
+<h3>5.1 &mdash; Summary scorecard</h3>
+
+<div class="cards">
+  <div class="card card-amber">
+    <div class="card-label">Coverage</div>
+    <div class="card-value">92.15%</div>
+    <div class="card-detail">80,010 / 86,827 &mdash; 6,817 titles missed</div>
+  </div>
+  <div class="card card-red">
+    <div class="card-label">Dev FP rate</div>
+    <div class="card-value">73.7%</div>
+    <div class="card-detail">126 / 171 false positives matched</div>
+  </div>
+  <div class="card card-red">
+    <div class="card-label">Adversarial FP rate</div>
+    <div class="card-value">89.1%</div>
+    <div class="card-detail">410 / 460 false positives matched</div>
+  </div>
+  <div class="card card-red">
+    <div class="card-label">Composite</div>
+    <div class="card-value">48.3</div>
+    <div class="card-detail">Size score 87.4 (629 KB) is only bright spot</div>
+  </div>
+</div>
+
+<h3>5.2 &mdash; Coverage by ICD-10-CM chapter</h3>
+
+<p>The original entity&rsquo;s 92% coverage is not evenly distributed. General medical conditions (chapters C, M, S, I) are well-covered. Chapters with non-medical vocabulary &mdash; toxic agents (T), health services (Z), symptoms (R), perinatal (P) &mdash; fall sharply.</p>
+
+<table>
+  <tr><th>Chapter</th><th>Description</th><th class="num">Covered</th><th class="num">Total</th><th class="num">Coverage</th><th class="num">Missed</th></tr>
+  <tr><td>C</td><td>Neoplasms</td><td class="num">1,537</td><td class="num">1,537</td><td class="num good">100.0%</td><td class="num">0</td></tr>
+  <tr><td>S</td><td>Injuries &mdash; body region</td><td class="num">39,244</td><td class="num">39,674</td><td class="num good">98.9%</td><td class="num">430</td></tr>
+  <tr><td>M</td><td>Musculoskeletal</td><td class="num">8,505</td><td class="num">8,639</td><td class="num good">98.4%</td><td class="num">134</td></tr>
+  <tr><td>I</td><td>Circulatory</td><td class="num">1,744</td><td class="num">1,773</td><td class="num good">98.4%</td><td class="num">29</td></tr>
+  <tr><td>D</td><td>Blood / immune</td><td class="num">1,005</td><td class="num">1,022</td><td class="num good">98.3%</td><td class="num">17</td></tr>
+  <tr><td>E</td><td>Endocrine / metabolic</td><td class="num">1,213</td><td class="num">1,249</td><td class="num">97.1%</td><td class="num">36</td></tr>
+  <tr><td>N</td><td>Genitourinary</td><td class="num">981</td><td class="num">1,017</td><td class="num">96.5%</td><td class="num">36</td></tr>
+  <tr><td>O</td><td>Pregnancy / childbirth</td><td class="num">2,870</td><td class="num">2,995</td><td class="num">95.8%</td><td class="num">125</td></tr>
+  <tr><td>B</td><td>Certain infections</td><td class="num">572</td><td class="num">597</td><td class="num">95.8%</td><td class="num">25</td></tr>
+  <tr><td>J</td><td>Respiratory</td><td class="num">431</td><td class="num">450</td><td class="num">95.8%</td><td class="num">19</td></tr>
+  <tr><td>K</td><td>Digestive</td><td class="num">1,047</td><td class="num">1,095</td><td class="num">95.6%</td><td class="num">48</td></tr>
+  <tr><td>L</td><td>Skin / subcutaneous</td><td class="num">1,130</td><td class="num">1,184</td><td class="num">95.4%</td><td class="num">54</td></tr>
+  <tr><td>A</td><td>Certain infections</td><td class="num">645</td><td class="num">681</td><td class="num">94.7%</td><td class="num">36</td></tr>
+  <tr><td>G</td><td>Nervous system</td><td class="num">862</td><td class="num">914</td><td class="num">94.3%</td><td class="num">52</td></tr>
+  <tr><td>Q</td><td>Congenital anomalies</td><td class="num">975</td><td class="num">1,059</td><td class="num warn">92.1%</td><td class="num">84</td></tr>
+  <tr><td>H</td><td>Eye / ear</td><td class="num">3,882</td><td class="num">4,280</td><td class="num warn">90.7%</td><td class="num">398</td></tr>
+  <tr><td>F</td><td>Mental / behavioral</td><td class="num">986</td><td class="num">1,086</td><td class="num warn">90.8%</td><td class="num">100</td></tr>
+  <tr><td>P</td><td>Perinatal</td><td class="num">449</td><td class="num">552</td><td class="num bad">81.3%</td><td class="num">103</td></tr>
+  <tr><td>R</td><td>Symptoms / signs</td><td class="num">678</td><td class="num">924</td><td class="num bad">73.4%</td><td class="num">246</td></tr>
+  <tr style="background: var(--red-light);">
+    <td>T</td><td>Toxic effects / complications</td><td class="num">10,061</td><td class="num">14,319</td><td class="num bad">70.3%</td><td class="num bad">4,258</td></tr>
+  <tr style="background: var(--red-light);">
+    <td>Z</td><td>Health services / status</td><td class="num">1,189</td><td class="num">1,775</td><td class="num bad">67.0%</td><td class="num bad">586</td></tr>
+</table>
+
+<div class="callout callout-amber">
+  <strong>62% of all uncovered titles</strong> come from just two chapters: T (toxic effects, 4,258 missed) and Z (health services, 586 missed). These titles contain chemical names, procedure codes, and administrative phrases that don&rsquo;t appear in a general medical vocabulary. Examples: &ldquo;toxic effect of 2-propanol&rdquo;, &ldquo;encounter for screening for malignant neoplasm of bladder&rdquo;, &ldquo;insect bite (nonvenomous) of scalp&rdquo;.
+</div>
+
+<h3>5.3 &mdash; True positive performance</h3>
+
+<table>
+  <tr><th>TP test set</th><th class="num">Matched</th><th class="num">Total</th><th class="num">Rate</th></tr>
+  <tr><td>Dev: official titles</td><td class="num">460</td><td class="num">500</td><td class="num warn">92.0%</td></tr>
+  <tr><td>Dev: natural variants</td><td class="num">96</td><td class="num">100</td><td class="num">96.0%</td></tr>
+  <tr><td>Static validation: official titles</td><td class="num">270</td><td class="num">300</td><td class="num warn">90.0%</td></tr>
+  <tr><td>Adversarial: official titles</td><td class="num">188</td><td class="num">200</td><td class="num">94.0%</td></tr>
+  <tr><td>Adversarial: context injection</td><td class="num">74</td><td class="num">80</td><td class="num">92.5%</td></tr>
+</table>
+
+<p>The 44 dev TP misses are titles with vocabulary outside the entity&rsquo;s scope:</p>
+<ul class="example-list">
+  <li><span class="tag tag-tp">MISS</span> "preterm newborn, gestational age 35 completed weeks"</li>
+  <li><span class="tag tag-tp">MISS</span> "toxic effect of venom of ants, undetermined, sequela"</li>
+  <li><span class="tag tag-tp">MISS</span> "opioid abuse with withdrawal"</li>
+  <li><span class="tag tag-tp">MISS</span> "poisoning by monoamine-oxidase-inhibitor antidepressants"</li>
+  <li><span class="tag tag-tp">MISS</span> "complication of immune effector cellular therapy"</li>
+</ul>
+
+<h3>5.4 &mdash; False positive breakdown</h3>
+
+<p>All FP matches in the original entity occur via <code>flat_substring</code> &mdash; a short flat entry appearing as a substring in the test phrase. The entity has no compound patterns generating novel combinations; the problem is that individual medical words match indiscriminately.</p>
+
+<table>
+  <tr><th>Layer</th><th>Category</th><th class="num">Matched</th><th class="num">Total</th><th class="num">Rate</th><th>Root cause</th></tr>
+  <tr style="background:var(--gray-light);"><td rowspan="6"><strong>Layer 1</strong><br>Dev FP</td>
+    <td><code>impossible_combo</code></td><td class="num bad">50</td><td class="num">52</td><td class="num bad">96.2%</td><td>&ldquo;fracture&rdquo;, &ldquo;hernia&rdquo; etc. as flat entries</td></tr>
+  <tr style="background:var(--gray-light);"><td><code>domain_mismatch</code></td><td class="num bad">17</td><td class="num">17</td><td class="num bad">100%</td><td>condition nouns match regardless of anatomy</td></tr>
+  <tr style="background:var(--gray-light);"><td><code>common_english</code></td><td class="num">38</td><td class="num">69</td><td class="num">55.1%</td><td>&ldquo;viral&rdquo;, &ldquo;chronic&rdquo;, &ldquo;acute&rdquo; in condition_adjectives</td></tr>
+  <tr style="background:var(--gray-light);"><td><code>partial_medical</code></td><td class="num">10</td><td class="num">12</td><td class="num bad">83.3%</td><td>medical words in non-diagnostic context</td></tr>
+  <tr style="background:var(--gray-light);"><td><code>ambiguous_short</code></td><td class="num">7</td><td class="num">16</td><td class="num">43.8%</td><td>single medical words too vague alone</td></tr>
+  <tr style="background:var(--gray-light);"><td><code>near_miss</code></td><td class="num">13</td><td class="num">17</td><td class="num bad">76.5%</td><td>near-medical phrases containing real entries</td></tr>
+  <tr><td rowspan="5"><strong>Layer 2</strong><br>Static Val</td>
+    <td><code>cross_domain_swap</code></td><td class="num bad">198</td><td class="num">200</td><td class="num bad">99.0%</td><td>swapped anatomy still contains matchable words</td></tr>
+  <tr><td><code>random_combo</code></td><td class="num bad">187</td><td class="num">200</td><td class="num bad">93.5%</td><td>random condition &times; anatomy both in vocabulary</td></tr>
+  <tr><td><code>template_remix</code></td><td class="num bad">145</td><td class="num">150</td><td class="num bad">96.7%</td><td>recombined titles contain known substrings</td></tr>
+  <tr><td><code>novel_english</code></td><td class="num bad">74</td><td class="num">80</td><td class="num bad">92.5%</td><td>medical adjectives in non-medical context</td></tr>
+  <tr><td><code>boundary_probe</code></td><td class="num bad">25</td><td class="num">27</td><td class="num bad">92.6%</td><td>single words / short fragments as flat entries</td></tr>
+  <tr style="background:var(--red-light);"><td rowspan="3"><strong>Layer 3</strong><br>Adversarial</td>
+    <td><code>vocab_recombination</code></td><td class="num bad">286</td><td class="num">300</td><td class="num bad">95.3%</td><td>entity vocabulary recombines into false matches</td></tr>
+  <tr style="background:var(--red-light);"><td><code>word_soup</code></td><td class="num bad">82</td><td class="num">100</td><td class="num bad">82.0%</td><td>short entries substring-match into word jumbles</td></tr>
+  <tr style="background:var(--red-light);"><td><code>affix_probe</code></td><td class="num bad">42</td><td class="num">60</td><td class="num bad">70.0%</td><td>medical prefixes (&ldquo;hyper&rdquo;, &ldquo;pseudo&rdquo;) match fake words</td></tr>
+</table>
+
+<div class="callout callout-red">
+  <strong>The core flaw: vocabulary without constraints.</strong> The original entity stores individual medical words (&ldquo;fracture&rdquo;, &ldquo;liver&rdquo;, &ldquo;chronic&rdquo;, &ldquo;hyper&rdquo;) as flat headwords. Any text containing one of these words as a &ge;5-character substring matches. There is no mechanism to distinguish &ldquo;fracture of femur&rdquo; (real ICD title) from &ldquo;fracture of liver&rdquo; (impossible), &ldquo;viral pneumonia&rdquo; (real) from &ldquo;viral video&rdquo; (common English), or &ldquo;hypothermia&rdquo; (real) from &ldquo;hyperplaxitis&rdquo; (fake word).
+</div>
+
+<h3>5.5 &mdash; Original vs. Baseline vs. Strategies</h3>
+
+<p>The original entity and the ICD baseline score almost identically (~48 composite) despite fundamentally different designs. This is because they share the same structural flaw:</p>
+
+<table>
+  <tr><th>Property</th><th>Original</th><th>Baseline</th><th>Strategy 1</th><th>Strategy 3</th></tr>
+  <tr>
+    <td>Single-word flat entries</td>
+    <td class="bad">Yes &mdash; thousands</td>
+    <td class="bad">Yes &mdash; thousands</td>
+    <td class="good">No &mdash; anchored with <code>^...$</code></td>
+    <td class="good">No &mdash; anchored with <code>^...$</code></td>
+  </tr>
+  <tr>
+    <td>Condition+anatomy constraints</td>
+    <td class="bad">None</td>
+    <td class="bad">None (any &times; any)</td>
+    <td class="good">8 domain sub-entities</td>
+    <td class="good">N/A (no compound patterns)</td>
+  </tr>
+  <tr>
+    <td>Common English rejection</td>
+    <td class="bad">No filtering</td>
+    <td class="warn">80 score=0 patterns</td>
+    <td class="good">Structural (no short entries match)</td>
+    <td class="good">Structural (no short entries match)</td>
+  </tr>
+  <tr>
+    <td>Vocab recombination FP</td>
+    <td class="bad">286 / 300 (95%)</td>
+    <td class="bad">290 / 300 (97%)</td>
+    <td class="good">0 / 300</td>
+    <td class="good">0 / 300</td>
+  </tr>
+</table>
+
+<p>The baseline adds compound patterns that push coverage from 92% to 99.5%, but makes the FP problem <em>worse</em> (88% vs 74% dev FP) because those patterns create a combinatorial explosion. Both are effectively vocabularies without grammar &mdash; they know the words of medicine but not the rules for combining them.</p>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">6</span> FP Analysis by Layer</h2>
+
+<h3>Layer 1: Development FP (171 test phrases)</h3>
+<table>
+  <tr><th>Category</th><th class="num">Total</th><th class="num">Original</th><th class="num">Baseline</th><th class="num">S1</th><th class="num">S3</th></tr>
+  <tr><td><code>impossible_combo</code></td><td class="num">52</td><td class="num bad">50</td><td class="num bad">51</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>domain_mismatch</code></td><td class="num">17</td><td class="num bad">17</td><td class="num bad">16</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>common_english</code></td><td class="num">69</td><td class="num bad">38</td><td class="num bad">58</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>partial_medical</code></td><td class="num">12</td><td class="num bad">10</td><td class="num bad">9</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>ambiguous_short</code></td><td class="num">16</td><td class="num">7</td><td class="num bad">11</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>near_miss</code></td><td class="num">17</td><td class="num bad">13</td><td class="num bad">17</td><td class="num">1</td><td class="num">1</td></tr>
+  <tr style="font-weight:600; background:var(--gray-light);"><td>Total FP matched</td><td class="num">171</td><td class="num bad">126</td><td class="num bad">151</td><td class="num good">0</td><td class="num good">0</td></tr>
+</table>
+
+<h3>Layer 2: Static Validation (657 test phrases)</h3>
+<table>
+  <tr><th>Category</th><th class="num">Total</th><th class="num">Original</th><th class="num">Baseline</th><th class="num">S1</th><th class="num">S3</th></tr>
+  <tr><td><code>cross_domain_swap</code></td><td class="num">200</td><td class="num bad">198</td><td class="num bad">198</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>random_combo</code></td><td class="num">200</td><td class="num bad">187</td><td class="num bad">191</td><td class="num">1</td><td class="num">1</td></tr>
+  <tr><td><code>template_remix</code></td><td class="num">150</td><td class="num bad">145</td><td class="num bad">150</td><td class="num">2</td><td class="num">2</td></tr>
+  <tr><td><code>novel_english</code></td><td class="num">80</td><td class="num bad">74</td><td class="num bad">80</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>boundary_probe</code></td><td class="num">27</td><td class="num bad">25</td><td class="num bad">25</td><td class="num">4</td><td class="num">4</td></tr>
+  <tr style="font-weight:600; background:var(--gray-light);"><td>Total FP matched</td><td class="num">657</td><td class="num bad">629</td><td class="num bad">644</td><td class="num good">7</td><td class="num good">7</td></tr>
+</table>
+
+<h3>Layer 3: Adversarial (460 test phrases, dynamic)</h3>
+<table>
+  <tr><th>Category</th><th class="num">Total</th><th class="num">Original</th><th class="num">Baseline</th><th class="num">S1</th><th class="num">S3</th></tr>
+  <tr><td><code>vocab_recombination</code></td><td class="num">300</td><td class="num bad">286</td><td class="num bad">290</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>word_soup</code></td><td class="num">100</td><td class="num bad">82</td><td class="num bad">68</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr><td><code>affix_probe</code></td><td class="num">60</td><td class="num bad">42</td><td class="num bad">60</td><td class="num good">0</td><td class="num good">0</td></tr>
+  <tr style="font-weight:600; background:var(--gray-light);"><td>Total FP matched</td><td class="num">460</td><td class="num bad">410</td><td class="num bad">418</td><td class="num good">0</td><td class="num good">0</td></tr>
+</table>
+
+<div class="callout callout-green">
+  <strong>Both strategies achieve 0% adversarial FP</strong> &mdash; the structural combination and substring problems are fully solved. Neither builder reads any FP test dataset; all FP prevention comes from structural entry classification derived from the ICD title set.
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">7</span> Composite Score Breakdown</h2>
+
+<table>
+  <tr>
+    <th>Component</th>
+    <th>Weight</th>
+    <th class="num">Original</th>
+    <th class="num">Baseline</th>
+    <th class="num">Strategy 1</th>
+    <th class="num">Strategy 3</th>
+  </tr>
+  <tr>
+    <td>Coverage</td><td>35%</td>
+    <td class="num warn">92.2</td><td class="num">99.5</td><td class="num good">100.0</td><td class="num good">99.9</td>
+  </tr>
+  <tr>
+    <td>Dev FP inv. (100 &minus; FP%)</td><td>15%</td>
+    <td class="num bad">26.3</td><td class="num bad">11.7</td><td class="num good">100.0</td><td class="num good">100.0</td>
+  </tr>
+  <tr>
+    <td>Val FP inv. (100 &minus; FP%)</td><td>15%</td>
+    <td class="num bad">4.3</td><td class="num bad">2.0</td><td class="num good">98.9</td><td class="num good">98.9</td>
+  </tr>
+  <tr>
+    <td>Adv FP inv. (100 &minus; FP%)</td><td>25%</td>
+    <td class="num bad">10.9</td><td class="num bad">9.1</td><td class="num good">100.0</td><td class="num good">100.0</td>
+  </tr>
+  <tr>
+    <td>Size score</td><td>10%</td>
+    <td class="num good">87.4</td><td class="num good">81.3</td><td class="num bad">0.0</td><td class="num">8.7</td>
+  </tr>
+  <tr style="font-weight:700; background: var(--green-light);">
+    <td>Composite</td><td>100%</td>
+    <td class="num bad">48.3</td><td class="num bad">47.3</td><td class="num good">89.8</td><td class="num good">90.7</td>
+  </tr>
+</table>
+
+<p>The original and baseline score almost identically (~48) despite very different architectures. Both are dominated by FP rates &gt;70%. Strategies 1 and 3 flip this: near-zero FP rates yield composites near 90, limited only by file size penalties.</p>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">8</span> Strategy Trade-offs</h2>
+
+<table>
+  <tr><th>Dimension</th><th>Original</th><th>Baseline</th><th>Strategy 1</th><th>Strategy 3</th></tr>
+  <tr>
+    <td><strong>Coverage</strong></td>
+    <td class="warn">92.15%</td>
+    <td>99.48%</td>
+    <td class="good">100%</td>
+    <td class="good">99.91%</td>
+  </tr>
+  <tr>
+    <td><strong>FP precision</strong></td>
+    <td class="bad">74&ndash;96% FP</td>
+    <td class="bad">88&ndash;98% FP</td>
+    <td class="good">0&ndash;1% FP</td>
+    <td class="good">0&ndash;1% FP</td>
+  </tr>
+  <tr>
+    <td><strong>Size</strong></td>
+    <td class="good">629 KB</td>
+    <td class="good">936 KB</td>
+    <td class="bad">12,094 KB</td>
+    <td>4,566 KB</td>
+  </tr>
+  <tr>
+    <td><strong>Extensibility</strong></td>
+    <td class="good">General-purpose; covers broad medical vocab</td>
+    <td>ICD-specific; compound patterns extend coverage</td>
+    <td class="good">New conditions/anatomies via domain sub-entities</td>
+    <td class="warn">New titles must be added individually</td>
+  </tr>
+  <tr>
+    <td><strong>Complexity</strong></td>
+    <td class="good">13 entities, hand-curated, well-commented</td>
+    <td>15 entities, compound patterns</td>
+    <td>29 entities, 8 domains, 141 suppressions</td>
+    <td class="good">25 entities, zero compound patterns</td>
+  </tr>
+  <tr>
+    <td><strong>Build method</strong></td>
+    <td>Manual curation</td>
+    <td>Semi-automated from CSV</td>
+    <td>Automated from CSV + domain definitions</td>
+    <td class="good">Fully automated from CSV</td>
+  </tr>
+</table>
+
+<div class="verdict verdict-green">
+  <div class="verdict-text">
+    <h3>Outcome</h3>
+    <p>The original entity and the baseline score nearly identically (~48) because both share the same structural flaw: individual medical words as flat entries match indiscriminately. The ICD-specific strategies solve this by (1) constraining compound patterns to valid domains (S1) or abandoning them entirely (S3), and (2) anchoring short entries to prevent substring matches. This yields a ~2&times; improvement in composite score.</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">9</span> Builder Integrity</h2>
+
+<p>Both strategy builders read only the ICD CSV. Neither reads any FP test dataset. FP prevention comes from structural entry classification.</p>
+
+<table>
+  <tr><th>Constraint</th><th>Status</th></tr>
+  <tr>
+    <td>No FP dataset imports in <code>build_entity.py</code></td>
+    <td class="good">PASS &mdash; only input is <code>icd10cm_terms_2026.csv</code></td>
+  </tr>
+  <tr>
+    <td>Structural FP prevention</td>
+    <td class="good">PASS &mdash; risky entries classified by word count and ICD title structure</td>
+  </tr>
+  <tr>
+    <td>Adversarial unforgeable</td>
+    <td class="good">PASS &mdash; 0/300 vocab_recombination, 0/100 word_soup for both strategies</td>
+  </tr>
+</table>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">10</span> Known Limitations</h2>
+
+<table>
+  <tr><th style="width:28%">Limitation</th><th>Impact</th></tr>
+  <tr>
+    <td><strong>Simulation vs. real engine</strong></td>
+    <td>Evaluator uses substring matching (more permissive than Eduction's phrase-boundary matching). FP rates are conservative upper bounds.</td>
+  </tr>
+  <tr>
+    <td><strong>Context injection</strong></td>
+    <td>"Patient denies fracture of femur" contains a real title. 76/80 matched. Reported separately, excluded from FP rate.</td>
+  </tr>
+  <tr>
+    <td><strong>7 residual static FPs</strong></td>
+    <td>3+ word entries ("fracture of femur", "laceration of stomach") substring-match into phrases like "old fracture of femur". Most contain real diagnoses. Irreducible floor of substring matching.</td>
+  </tr>
+  <tr>
+    <td><strong>Natural variant TP misses</strong></td>
+    <td>63 reordered/abbreviated variants missed. These require word-order-flexible matching.</td>
+  </tr>
+  <tr>
+    <td><strong>Original entity evaluation</strong></td>
+    <td>The original has no public entity; we wrapped it. Some commented-out compound patterns (cross-references between sub-entities) were not activated &mdash; in production these would change behavior.</td>
+  </tr>
+  <tr>
+    <td><strong>Cross-reference opacity</strong></td>
+    <td><code>(?A:...)</code> patterns are not evaluated by the simulator. Strategy 1's compound patterns are tested only via overlapping flat entries.</td>
+  </tr>
+</table>
+
+<!-- ============================================================ -->
+<h2><span class="section-num">11</span> Tooling</h2>
+
+<pre><code># Full report (all 3 layers)
+python3 shared/report.py &lt;entity.xml&gt;
+
+# Compare all strategies
+python3 shared/compare.py
+
+# Adversarial only
+python3 shared/adversarial_validation.py &lt;entity.xml&gt;</code></pre>
+
+<p style="text-align:center; color:var(--gray); font-size: .8rem; margin-top:3rem; padding-top:1rem; border-top:1px solid var(--border);">
+  ICD-10-CM 2026 &middot; 86,827 official titles (V00&ndash;Y99 excluded) &middot; Generated April 2026
+</p>
+
+</body>
+</html>

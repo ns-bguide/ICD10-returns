@@ -1,0 +1,5875 @@
+{
+  "metadata": {
+    "description": "HELD-OUT validation dataset for ICD-10-CM entity FP testing. Systematically generated — not hand-crafted. Tests structural correctness, not memorization of known test cases.",
+    "version": "1.0",
+    "generation_seed": 2026,
+    "warning": "This dataset should NOT be used during strategy development. It is for final validation only.",
+    "categories": {
+      "cross_domain_swap": "Real condition swapped to wrong anatomy domain",
+      "random_combo": "Random condition × anatomy from ICD vocabulary, not a real title",
+      "template_remix": "Recombined qualifier + condition + anatomy from different titles",
+      "novel_english": "Medical words in non-medical contexts (different from fp_dataset)",
+      "boundary_probe": "Single words, sentence fragments, article/qualifier variants",
+      "official_title": "Real ICD-10-CM titles (true positives, different sample)"
+    },
+    "counts": {
+      "by_label": {
+        "TP": 300,
+        "FP": 657
+      },
+      "by_category": {
+        "official_title": 300,
+        "cross_domain_swap": 200,
+        "random_combo": 200,
+        "template_remix": 150,
+        "novel_english": 80,
+        "boundary_probe": 27
+      },
+      "total": 957
+    }
+  },
+  "entries": [
+    {
+      "text": "autonomic dysreflexia",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of taipan venom, undetermined",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "anetoderma of jadassohn-pellizzari",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "scarring of conjunctiva, left eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified hereditary corneal dystrophies, left eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of cyanides, assault, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other disorders of pituitary gland",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contracture of muscle, right hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "stress fracture, left ankle, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "salter-harris type i physeal fracture of upper end of unspecified fibula, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "postprocedural hematoma and seroma of a respiratory system organ or structure following a procedure",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of olecranon process without intraarticular extension of left ulna, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other injury of other flexor muscle, fascia and tendon at forearm level, unspecified arm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of unspecified degree of unspecified site of right lower limb, except ankle and foot, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced segmental fracture of shaft of humerus, unspecified arm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced subtrochanteric fracture of right femur, subsequent encounter for open fracture type i or ii with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crystalline deposits in vitreous body, right eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of other primarily systemic and hematological agents, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "idiopathic chronic gout, right elbow, without tophus (tophi)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pathological fracture, right hand, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dislocation of right ankle joint, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other uterine inertia",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pre-existing type 1 diabetes mellitus, in pregnancy, unspecified trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified b-cell lymphoma, lymph nodes of head, face, and neck",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified open wound of unspecified thumb without damage to nail, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "urinary tract infection following delivery, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pyemic and septic embolism in childbirth",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "colles' fracture of left radius, initial encounter for open fracture type iiia, iiib, or iiic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of cauda equina, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of first degree of shoulder and upper limb, except wrist and hand, unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exposure of other prosthetic materials into organ or tissue",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "auditory recruitment",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "infection and inflammatory reaction due to internal fixation device of unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crushing injury of left little finger",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified sprain of right elbow, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced segmental fracture of shaft of humerus, left arm, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of base of fourth metacarpal bone, left hand, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "rheumatic mitral valve disease, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lymphocyte depleted hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration without foreign body of right middle finger with damage to nail, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced comminuted fracture of shaft of left femur, initial encounter for open fracture type iiia, iiib, or iiic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "atheroembolism of right lower extremity",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by, adverse effect of and underdosing of other nonsteroidal anti-inflammatory drugs [nsaid]",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other superficial bite of unspecified parts of thorax, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "anaphylactic reaction due to milk and dairy products, unspecified, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "metabolic disorder, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "obesity, class 3",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of right middle finger with damage to nail, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "congenital displaced lens",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of right eyelid and periocular area, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced oblique fracture of shaft of humerus, left arm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced bicondylar fracture of right tibia, subsequent encounter for closed fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "primary blast injury of bronchus, unilateral, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of other muscle(s) and tendon(s) at lower leg level, left leg, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of left internal carotid artery, intracranial portion, not elsewhere classified with loss of consciousness of unspecified duration",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of unspecified degree of multiple sites of left wrist and hand, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other myositis, hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of base of neck of unspecified femur, subsequent encounter for open fracture type i or ii with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration without foreign body of right eyelid and periocular area, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "mediastinal (thymic) large b-cell lymphoma",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of unspecified toe(s), subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other stimulant dependence with intoxication, uncomplicated",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced segmental fracture of shaft of ulna, left arm, subsequent encounter for open fracture type iiia, iiib, or iiic with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exudative age-related macular degeneration, right eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of distal phalanx of right great toe, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of coral snake venom, undetermined, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of lower epiphysis (separation) of left femur",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "ankylosis, left ankle",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "barton's fracture of right radius, subsequent encounter for open fracture type i or ii with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified disorders of adult personality and behavior",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of left breast, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "family history of adenomatous and serrated polyps",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of cuboid bone of unspecified foot, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of organophosphate and carbamate insecticides, assault, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by other antiprotozoal drugs, assault, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other articular cartilage disorders, right hip",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of venom of other reptiles, accidental (unintentional), sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other injury of inferior vena cava",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "arthropathy in hypersensitivity reactions classified elsewhere",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "leakage of other nervous system device, implant or graft, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of lunate [semilunar], unspecified wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "encounter for prophylactic rabies immune globin",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of unspecified thumb without damage to nail, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "recurrent dislocation, left elbow",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other traumatic displaced spondylolisthesis of fifth cervical vertebra, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete transverse atypical femoral fracture, right leg, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of left lesser toe(s) with damage to nail",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of liver, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of venom of centipedes and venomous millipedes, accidental (unintentional), sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified sprain of left little finger, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified injury of axillary artery, right side, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of overlapping sites of bone and articular cartilage of unspecified limb",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of middle phalanx of right middle finger, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "bennett's fracture, right hand, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of bladder, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "osseous and subluxation stenosis of intervertebral foramina of thoracic region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diffuse traumatic brain injury with loss of consciousness of 6 hours to 24 hours, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by analeptics and opioid receptor antagonists, intentional self-harm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nonmedicinal substance allergy status",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "juvenile osteochondrosis of patella, right knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of middle phalanx of unspecified lesser toe(s), subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of third degree of unspecified ear [any part, except ear drum]",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced spiral fracture of shaft of right femur, subsequent encounter for closed fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "obstruction due to foreign body accidentally left in body following injection or immunization, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of coronoid process of right ulna, initial encounter for open fracture type iiia, iiib, or iiic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified arthritis, other site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration without foreign body of right back wall of thorax with penetration into thoracic cavity, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cerebral infarction due to unspecified occlusion or stenosis of unspecified middle cerebral artery",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other diseases of jaws",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acute posterior multifocal placoid pigment epitheliopathy, unspecified eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of dichloromethane, assault, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other miliary tuberculosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of muscle, fascia and tendon of unspecified hip, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete traumatic amputation at knee level, unspecified lower leg, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced osteochondral fracture of unspecified patella, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of finger without damage to nail",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of femoral artery, left leg",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced bicondylar fracture of unspecified tibia, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified juvenile rheumatoid arthritis, left hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "personal history of psychological abuse in childhood",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "female genital tract fistula, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other fracture of great toe",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of left lesser toe(s) without damage to nail, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of unspecified part of left wrist and hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crushing injury of unspecified foot, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of rodenticides, assault, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "total (external) ophthalmoplegia, right eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of unspecified degree of left ankle, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "mammographic calcification found on diagnostic imaging of breast",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of t5-t6 vertebra, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "adverse effect of antithrombotic drugs, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of other blood vessels at forearm level, left arm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "hypertrophy of bone",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "protozoal diseases complicating pregnancy, childbirth and the puerperium",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lead-induced chronic gout, right ankle and foot, without tophus (tophi)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "progressive systemic sclerosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of other specified noxious substances eaten as food",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced comminuted fracture of shaft of left tibia, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of greater trochanter of left femur, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of tibiofibular ligament",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body of right breast",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blister (nonthermal), left hip",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by antimycobacterial drugs, assault, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosions involving 60-69% of body surface",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "metatarsalgia, left foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture (avulsion) of medial epicondyle of unspecified humerus, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by sulfonamides, intentional self-harm, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "strain of muscle, fascia and tendon of lower back, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blister (nonthermal) of thigh",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pressure ulcer of unspecified elbow",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "ganglion, wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for other rhesus isoimmunization, second trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of second degree of chin, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced articular fracture of head of right femur, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced oblique fracture of shaft of unspecified radius, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of carbon monoxide from other source, accidental (unintentional), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "partial traumatic amputation of left great toe, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of hook process of hamate [unciform] bone, left wrist, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced transverse fracture of shaft of unspecified ulna, initial encounter for open fracture type i or ii",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "osteonecrosis in diseases classified elsewhere, left lower leg",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other anterior subluxation of right hip, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "obturator subluxation of left hip, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration without foreign body of left lesser toe(s) with damage to nail, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "deep endometriosis of right fallopian tube",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "double pterygium of eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced apophyseal fracture of left femur, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "secondary corneal edema, bilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "atherosclerosis of other type of bypass graft(s) of the extremities with rest pain, bilateral legs",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by digestants, intentional self-harm, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pathological fracture, unspecified toe(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "salter-harris type iv physeal fracture of lower end of ulna, left arm, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "papilledema",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "neoplasm of uncertain behavior of thyroid gland",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified injury of femoral artery, left leg, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "strain of muscle(s) and tendon(s) of anterior muscle group at lower leg level, unspecified leg, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "hemiplegic migraine, intractable",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of xylazine, assault, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other psychoactive substance use, unspecified with psychoactive substance-induced psychotic disorder",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pauciarticular juvenile rheumatoid arthritis, right hip",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "visual discomfort, left eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "counseling related to combined concerns regarding sexual attitude, behavior and orientation",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diphtheria",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "neoplasm of unspecified behavior of retina and choroid",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified soft tissue disorder related to use, overuse and pressure, right lower leg",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effects of other metals",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous) of vagina and vulva",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified open wound, unspecified knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified tear of unspecified meniscus, current injury, unspecified knee, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "long term (current) use of myelosuppressive agent",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by keratolytics, keratoplastics, and other hair treatment drugs and preparations, undetermined, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "partial traumatic transphalangeal amputation of left index finger, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified intracapsular fracture of right femur, initial encounter for open fracture type iiia, iiib, or iiic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "institutional upbringing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced comminuted fracture of shaft of humerus, right arm, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified adult maltreatment, suspected, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of the lower end of right radius, subsequent encounter for open fracture type iiia, iiib, or iiic with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "triplet pregnancy with two or more monoamniotic fetuses, unspecified trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of penis, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous), left lesser toe(s), subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "intrinsic cartilagenous obstruction of eustachian tube, unspecified ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced bimalleolar fracture of right lower leg, subsequent encounter for open fracture type iiia, iiib, or iiic with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other osteoporosis with current pathological fracture, left humerus, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other stimulant dependence with unspecified stimulant-induced disorder",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of unspecified eye and adnexa, part unspecified, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by other primarily systemic and hematological agents, assault, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dental sealant status",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced oblique fracture of shaft of right tibia, subsequent encounter for open fracture type iiia, iiib, or iiic with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "osteonecrosis due to drugs, unspecified finger(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dislocation of distal interphalangeal joint of right little finger, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced avulsion fracture of left ilium, initial encounter for open fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "obstruction due to foreign body accidentally left in body following other procedure",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "alpers disease",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pruritic urticarial papules and plaques of pregnancy (puppp)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acquired hemolytic anemia, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "ischemic optic neuropathy",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of unspecified thumb without damage to nail, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury at c3 level of cervical spinal cord, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "subluxation stenosis of neural canal of lumbar region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acute on chronic slipped upper femoral epiphysis, unspecified stability (nontraumatic), left hip",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of unspecified foot, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of right index finger with damage to nail",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "partial traumatic transmetacarpal amputation of right hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of first metacarpal bone, left hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other nonscarring hair loss",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of other nerves at hip and thigh level, left leg, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by unspecified primarily systemic and hematological agent, accidental (unintentional)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced associated transverse-posterior fracture of unspecified acetabulum",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "follicular lymphoma grade i, intra-abdominal lymph nodes",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other allergy, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exudative cyst of pars plana, right eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "brown-sequard syndrome at t2-t6 level of thoracic spinal cord, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body of unspecified finger without damage to nail, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "molybdenum deficiency",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "age-related osteoporosis with current pathological fracture, left forearm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of olecranon process without intraarticular extension of unspecified ulna, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for anti-a sensitization, second trimester, fetus 3",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified open wound of right buttock, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of cobra venom, intentional self-harm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of left ear [any part, except ear drum]",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other traumatic nondisplaced spondylolisthesis of fourth cervical vertebra, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blindness right eye, category 5",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified trochanteric fracture of unspecified femur, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified injury of right vertebral artery, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "traumatic rupture of unspecified ligament of unspecified finger at metacarpophalangeal and interphalangeal joint, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blister (nonthermal) of right eyelid and periocular area, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced comminuted fracture of shaft of radius, left arm, subsequent encounter for open fracture type iiia, iiib, or iiic with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of extensor muscle, fascia and tendon of right index finger at wrist and hand level",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of third degree of right wrist, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "carcinoma in situ of lip, oral cavity and pharynx",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "viral pericarditis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of olecranon process with intraarticular extension of right ulna, subsequent encounter for closed fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by smallpox vaccines, accidental (unintentional), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diabetes mellitus due to underlying condition with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (nkhhc)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of middle phalanx of right ring finger, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "isolated proteinuria with dense deposit disease",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of third metatarsal bone, unspecified foot, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "postprocedural respiratory failure",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of shaft of third metacarpal bone, left hand, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of first degree of multiple right fingers (nail), not including thumb, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "hemoglobinuria due to hemolysis from other external causes",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound without foreign body of unspecified part of neck, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for (suspected) central nervous system malformation or damage in fetus, microcephaly, fetus 3",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acute dilatation of stomach",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "immunization not carried out due to unavailability of vaccine",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other acute myringitis, unspecified ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "age-related osteoporosis with current pathological fracture, left shoulder, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced pilon fracture of left tibia, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified subluxation of left radial head, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by unspecified psychodysleptics [hallucinogens], undetermined, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "ganglion, unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "episodic tension-type headache",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "arteriovenous malformation of vessel of lower limb",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "mumps pancreatitis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "retinal detachment with single break",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of antigonadotrophins, antiestrogens, antiandrogens, not elsewhere classified, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced segmental fracture of shaft of unspecified fibula, subsequent encounter for closed fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sacroiliitis, not elsewhere classified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified synovitis and tenosynovitis, left ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of base of second metacarpal bone, right hand, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified trochanteric fracture of left femur, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced transverse fracture of shaft of right fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pansynostosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of fifth lumbar vertebra",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced transverse fracture of shaft of right ulna, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "phimosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of right index finger, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "vulval varices",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other secondary scoliosis, lumbosacral region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of colon",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "incomplete lesion of unspecified level of lumbar spinal cord, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of distal pole of navicular [scaphoid] bone of wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "thrombosis due to internal orthopedic prosthetic devices, implants and grafts, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "atherosclerotic heart disease of native coronary artery with other forms of angina pectoris",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration without foreign body of right little finger without damage to nail, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of unspecified degree of unspecified thumb (nail), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of trapezoid [smaller multangular], left wrist, initial encounter for open fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced transverse fracture of shaft of right ulna, subsequent encounter for closed fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of contact with venomous toad, intentional self-harm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dry eye syndrome of right lacrimal gland",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified superficial mycoses",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "transverse fracture of ovary",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "transverse fracture is skeletal-domain; ovary is reproductive-domain"
+    },
+    {
+      "text": "osteoarthritis of femur",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "osteoarthritis is joints-domain; femur is skeletal-domain"
+    },
+    {
+      "text": "subluxation of vagina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "reproductive",
+      "reason": "subluxation is joints-domain; vagina is reproductive-domain"
+    },
+    {
+      "text": "dislocation of humerus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "dislocation is joints-domain; humerus is skeletal-domain"
+    },
+    {
+      "text": "macular degeneration of shoulder joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "joints",
+      "reason": "macular degeneration is ocular-domain; shoulder joint is joints-domain"
+    },
+    {
+      "text": "embolism of axilla",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "surface",
+      "reason": "embolism is vascular-domain; axilla is surface-domain"
+    },
+    {
+      "text": "conjunctivitis of thyroid gland",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "conjunctivitis is ocular-domain; thyroid gland is organs-domain"
+    },
+    {
+      "text": "myelopathy of optic nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "ocular",
+      "reason": "myelopathy is neural-domain; optic nerve is ocular-domain"
+    },
+    {
+      "text": "sunburn of ovary",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "reproductive",
+      "reason": "sunburn is surface-domain; ovary is reproductive-domain"
+    },
+    {
+      "text": "fracture of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "fracture is skeletal-domain; retina is ocular-domain"
+    },
+    {
+      "text": "osteoarthritis of ulna",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "osteoarthritis is joints-domain; ulna is skeletal-domain"
+    },
+    {
+      "text": "macular degeneration of trigeminal nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "neural",
+      "reason": "macular degeneration is ocular-domain; trigeminal nerve is neural-domain"
+    },
+    {
+      "text": "osteolysis of kidney",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "osteolysis is skeletal-domain; kidney is organs-domain"
+    },
+    {
+      "text": "osteomyelitis of coronary artery",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "vascular",
+      "reason": "osteomyelitis is skeletal-domain; coronary artery is vascular-domain"
+    },
+    {
+      "text": "sprain of spinal cord",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "neural",
+      "reason": "sprain is joints-domain; spinal cord is neural-domain"
+    },
+    {
+      "text": "retinopathy of wrist",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "joints",
+      "reason": "retinopathy is ocular-domain; wrist is joints-domain"
+    },
+    {
+      "text": "retinopathy of sternum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "skeletal",
+      "reason": "retinopathy is ocular-domain; sternum is skeletal-domain"
+    },
+    {
+      "text": "dislocation of sacrum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "dislocation is joints-domain; sacrum is skeletal-domain"
+    },
+    {
+      "text": "segmental fracture of jugular vein",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "vascular",
+      "reason": "segmental fracture is skeletal-domain; jugular vein is vascular-domain"
+    },
+    {
+      "text": "macular degeneration of sacroiliac joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "joints",
+      "reason": "macular degeneration is ocular-domain; sacroiliac joint is joints-domain"
+    },
+    {
+      "text": "thrombosis of ovary",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "reproductive",
+      "reason": "thrombosis is vascular-domain; ovary is reproductive-domain"
+    },
+    {
+      "text": "osteomyelitis of stomach",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "osteomyelitis is skeletal-domain; stomach is organs-domain"
+    },
+    {
+      "text": "thrombosis of ulna",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "thrombosis is vascular-domain; ulna is skeletal-domain"
+    },
+    {
+      "text": "aneurysm of sciatic nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "neural",
+      "reason": "aneurysm is vascular-domain; sciatic nerve is neural-domain"
+    },
+    {
+      "text": "glaucoma of kidney",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "glaucoma is ocular-domain; kidney is organs-domain"
+    },
+    {
+      "text": "blister of metacarpal bone",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "blister is surface-domain; metacarpal bone is skeletal-domain"
+    },
+    {
+      "text": "atherosclerosis of brain",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "organs",
+      "reason": "atherosclerosis is vascular-domain; brain is organs-domain"
+    },
+    {
+      "text": "phlebitis of sacrum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "phlebitis is vascular-domain; sacrum is skeletal-domain"
+    },
+    {
+      "text": "embolism of appendix",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "organs",
+      "reason": "embolism is vascular-domain; appendix is organs-domain"
+    },
+    {
+      "text": "macular degeneration of median nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "neural",
+      "reason": "macular degeneration is ocular-domain; median nerve is neural-domain"
+    },
+    {
+      "text": "osteoarthritis of coronary artery",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "vascular",
+      "reason": "osteoarthritis is joints-domain; coronary artery is vascular-domain"
+    },
+    {
+      "text": "retinopathy of bladder",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "retinopathy is ocular-domain; bladder is organs-domain"
+    },
+    {
+      "text": "retinal detachment of lung",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "retinal detachment is ocular-domain; lung is organs-domain"
+    },
+    {
+      "text": "retinal detachment of facial nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "neural",
+      "reason": "retinal detachment is ocular-domain; facial nerve is neural-domain"
+    },
+    {
+      "text": "torus fracture of lung",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "torus fracture is skeletal-domain; lung is organs-domain"
+    },
+    {
+      "text": "radiculopathy of esophagus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "organs",
+      "reason": "radiculopathy is neural-domain; esophagus is organs-domain"
+    },
+    {
+      "text": "torus fracture of epididymis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "torus fracture is skeletal-domain; epididymis is reproductive-domain"
+    },
+    {
+      "text": "unspecified subluxation of metatarsal",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "unspecified subluxation is joints-domain; metatarsal is skeletal-domain"
+    },
+    {
+      "text": "phlebitis of scapula",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "phlebitis is vascular-domain; scapula is skeletal-domain"
+    },
+    {
+      "text": "endometriosis of heart",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "organs",
+      "reason": "endometriosis is reproductive-domain; heart is organs-domain"
+    },
+    {
+      "text": "optic neuritis of abdominal wall",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "optic neuritis is ocular-domain; abdominal wall is surface-domain"
+    },
+    {
+      "text": "thrombosis of shoulder joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "joints",
+      "reason": "thrombosis is vascular-domain; shoulder joint is joints-domain"
+    },
+    {
+      "text": "neuropathy of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "ocular",
+      "reason": "neuropathy is neural-domain; retina is ocular-domain"
+    },
+    {
+      "text": "arthropathy of aorta",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "vascular",
+      "reason": "arthropathy is joints-domain; aorta is vascular-domain"
+    },
+    {
+      "text": "pathological fracture of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "pathological fracture is skeletal-domain; retina is ocular-domain"
+    },
+    {
+      "text": "embolism of iris",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "ocular",
+      "reason": "embolism is vascular-domain; iris is ocular-domain"
+    },
+    {
+      "text": "sunburn of macula",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "ocular",
+      "reason": "sunburn is surface-domain; macula is ocular-domain"
+    },
+    {
+      "text": "vaginitis of knee joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "joints",
+      "reason": "vaginitis is reproductive-domain; knee joint is joints-domain"
+    },
+    {
+      "text": "spiral fracture of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "spiral fracture is skeletal-domain; retina is ocular-domain"
+    },
+    {
+      "text": "first degree burn of metatarsal",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "first degree burn is surface-domain; metatarsal is skeletal-domain"
+    },
+    {
+      "text": "vaginitis of macula",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "ocular",
+      "reason": "vaginitis is reproductive-domain; macula is ocular-domain"
+    },
+    {
+      "text": "ectopic pregnancy of renal artery",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "vascular",
+      "reason": "ectopic pregnancy is reproductive-domain; renal artery is vascular-domain"
+    },
+    {
+      "text": "recurrent dislocation of pelvis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "recurrent dislocation is joints-domain; pelvis is skeletal-domain"
+    },
+    {
+      "text": "displaced fracture of lung",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "displaced fracture is skeletal-domain; lung is organs-domain"
+    },
+    {
+      "text": "arteritis of kidney",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "organs",
+      "reason": "arteritis is vascular-domain; kidney is organs-domain"
+    },
+    {
+      "text": "conjunctivitis of brachial plexus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "neural",
+      "reason": "conjunctivitis is ocular-domain; brachial plexus is neural-domain"
+    },
+    {
+      "text": "nerve compression of face",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "nerve compression is neural-domain; face is surface-domain"
+    },
+    {
+      "text": "ectopic pregnancy of sclera",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "ocular",
+      "reason": "ectopic pregnancy is reproductive-domain; sclera is ocular-domain"
+    },
+    {
+      "text": "transverse fracture of vitreous body",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "transverse fracture is skeletal-domain; vitreous body is ocular-domain"
+    },
+    {
+      "text": "cataract of trunk",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "cataract is ocular-domain; trunk is surface-domain"
+    },
+    {
+      "text": "atherosclerosis of hip joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "joints",
+      "reason": "atherosclerosis is vascular-domain; hip joint is joints-domain"
+    },
+    {
+      "text": "torus fracture of pancreas",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "torus fracture is skeletal-domain; pancreas is organs-domain"
+    },
+    {
+      "text": "second degree burn of portal vein",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "vascular",
+      "reason": "second degree burn is surface-domain; portal vein is vascular-domain"
+    },
+    {
+      "text": "second degree burn of trigeminal nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "neural",
+      "reason": "second degree burn is surface-domain; trigeminal nerve is neural-domain"
+    },
+    {
+      "text": "retinal detachment of patella",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "skeletal",
+      "reason": "retinal detachment is ocular-domain; patella is skeletal-domain"
+    },
+    {
+      "text": "atherosclerosis of vagina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "reproductive",
+      "reason": "atherosclerosis is vascular-domain; vagina is reproductive-domain"
+    },
+    {
+      "text": "subluxation of ovary",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "reproductive",
+      "reason": "subluxation is joints-domain; ovary is reproductive-domain"
+    },
+    {
+      "text": "comminuted fracture of acromioclavicular joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "joints",
+      "reason": "comminuted fracture is skeletal-domain; acromioclavicular joint is joints-domain"
+    },
+    {
+      "text": "strain of lung",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "organs",
+      "reason": "strain is joints-domain; lung is organs-domain"
+    },
+    {
+      "text": "unspecified dislocation of buttock",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "surface",
+      "reason": "unspecified dislocation is joints-domain; buttock is surface-domain"
+    },
+    {
+      "text": "recurrent dislocation of jugular vein",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "vascular",
+      "reason": "recurrent dislocation is joints-domain; jugular vein is vascular-domain"
+    },
+    {
+      "text": "nondisplaced fracture of prostate",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "nondisplaced fracture is skeletal-domain; prostate is reproductive-domain"
+    },
+    {
+      "text": "subluxation of pancreas",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "organs",
+      "reason": "subluxation is joints-domain; pancreas is organs-domain"
+    },
+    {
+      "text": "neuropathy of sternum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "skeletal",
+      "reason": "neuropathy is neural-domain; sternum is skeletal-domain"
+    },
+    {
+      "text": "macular degeneration of heart",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "macular degeneration is ocular-domain; heart is organs-domain"
+    },
+    {
+      "text": "unspecified dislocation of ulna",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "unspecified dislocation is joints-domain; ulna is skeletal-domain"
+    },
+    {
+      "text": "blister of sacroiliac joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "joints",
+      "reason": "blister is surface-domain; sacroiliac joint is joints-domain"
+    },
+    {
+      "text": "nerve compression of temporomandibular joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "joints",
+      "reason": "nerve compression is neural-domain; temporomandibular joint is joints-domain"
+    },
+    {
+      "text": "unspecified dislocation of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "ocular",
+      "reason": "unspecified dislocation is joints-domain; retina is ocular-domain"
+    },
+    {
+      "text": "arteritis of humerus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "arteritis is vascular-domain; humerus is skeletal-domain"
+    },
+    {
+      "text": "strain of metacarpal bone",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "strain is joints-domain; metacarpal bone is skeletal-domain"
+    },
+    {
+      "text": "neuropathy of sacrum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "skeletal",
+      "reason": "neuropathy is neural-domain; sacrum is skeletal-domain"
+    },
+    {
+      "text": "blister of macula",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "ocular",
+      "reason": "blister is surface-domain; macula is ocular-domain"
+    },
+    {
+      "text": "vaginitis of scalp",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "surface",
+      "reason": "vaginitis is reproductive-domain; scalp is surface-domain"
+    },
+    {
+      "text": "arthropathy of buttock",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "surface",
+      "reason": "arthropathy is joints-domain; buttock is surface-domain"
+    },
+    {
+      "text": "greenstick fracture of prostate",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "greenstick fracture is skeletal-domain; prostate is reproductive-domain"
+    },
+    {
+      "text": "neuralgia of thyroid gland",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "organs",
+      "reason": "neuralgia is neural-domain; thyroid gland is organs-domain"
+    },
+    {
+      "text": "displaced fracture of pancreas",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "displaced fracture is skeletal-domain; pancreas is organs-domain"
+    },
+    {
+      "text": "embolism of epididymis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "reproductive",
+      "reason": "embolism is vascular-domain; epididymis is reproductive-domain"
+    },
+    {
+      "text": "retinopathy of ovary",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "reproductive",
+      "reason": "retinopathy is ocular-domain; ovary is reproductive-domain"
+    },
+    {
+      "text": "conjunctivitis of knee joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "joints",
+      "reason": "conjunctivitis is ocular-domain; knee joint is joints-domain"
+    },
+    {
+      "text": "spiral fracture of pancreas",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "spiral fracture is skeletal-domain; pancreas is organs-domain"
+    },
+    {
+      "text": "cataract of portal vein",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "vascular",
+      "reason": "cataract is ocular-domain; portal vein is vascular-domain"
+    },
+    {
+      "text": "corrosion of sacrum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "corrosion is surface-domain; sacrum is skeletal-domain"
+    },
+    {
+      "text": "unspecified dislocation of macula",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "ocular",
+      "reason": "unspecified dislocation is joints-domain; macula is ocular-domain"
+    },
+    {
+      "text": "endometriosis of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "ocular",
+      "reason": "endometriosis is reproductive-domain; retina is ocular-domain"
+    },
+    {
+      "text": "corrosion of vagina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "reproductive",
+      "reason": "corrosion is surface-domain; vagina is reproductive-domain"
+    },
+    {
+      "text": "erythema of facial nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "neural",
+      "reason": "erythema is surface-domain; facial nerve is neural-domain"
+    },
+    {
+      "text": "macular degeneration of axilla",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "macular degeneration is ocular-domain; axilla is surface-domain"
+    },
+    {
+      "text": "atherosclerosis of testis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "reproductive",
+      "reason": "atherosclerosis is vascular-domain; testis is reproductive-domain"
+    },
+    {
+      "text": "fracture of wrist",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "joints",
+      "reason": "fracture is skeletal-domain; wrist is joints-domain"
+    },
+    {
+      "text": "endometriosis of tibia",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "skeletal",
+      "reason": "endometriosis is reproductive-domain; tibia is skeletal-domain"
+    },
+    {
+      "text": "dislocation of sternum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "dislocation is joints-domain; sternum is skeletal-domain"
+    },
+    {
+      "text": "strain of gallbladder",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "organs",
+      "reason": "strain is joints-domain; gallbladder is organs-domain"
+    },
+    {
+      "text": "third degree burn of sternum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "third degree burn is surface-domain; sternum is skeletal-domain"
+    },
+    {
+      "text": "myelopathy of face",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "myelopathy is neural-domain; face is surface-domain"
+    },
+    {
+      "text": "burn of facial nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "neural",
+      "reason": "burn is surface-domain; facial nerve is neural-domain"
+    },
+    {
+      "text": "dislocation of calcaneus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "dislocation is joints-domain; calcaneus is skeletal-domain"
+    },
+    {
+      "text": "varicose veins of talus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "varicose veins is vascular-domain; talus is skeletal-domain"
+    },
+    {
+      "text": "vaginitis of conjunctiva",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "ocular",
+      "reason": "vaginitis is reproductive-domain; conjunctiva is ocular-domain"
+    },
+    {
+      "text": "aneurysm of iris",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "ocular",
+      "reason": "aneurysm is vascular-domain; iris is ocular-domain"
+    },
+    {
+      "text": "nerve compression of epididymis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "reproductive",
+      "reason": "nerve compression is neural-domain; epididymis is reproductive-domain"
+    },
+    {
+      "text": "recurrent dislocation of metatarsal",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "recurrent dislocation is joints-domain; metatarsal is skeletal-domain"
+    },
+    {
+      "text": "optic neuritis of metacarpal bone",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "skeletal",
+      "reason": "optic neuritis is ocular-domain; metacarpal bone is skeletal-domain"
+    },
+    {
+      "text": "sunburn of median nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "neural",
+      "reason": "sunburn is surface-domain; median nerve is neural-domain"
+    },
+    {
+      "text": "unspecified dislocation of sciatic nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "neural",
+      "reason": "unspecified dislocation is joints-domain; sciatic nerve is neural-domain"
+    },
+    {
+      "text": "blister of metatarsal",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "blister is surface-domain; metatarsal is skeletal-domain"
+    },
+    {
+      "text": "neuropathy of skin",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "neuropathy is neural-domain; skin is surface-domain"
+    },
+    {
+      "text": "optic neuritis of groin",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "optic neuritis is ocular-domain; groin is surface-domain"
+    },
+    {
+      "text": "prolapse of aorta",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "vascular",
+      "reason": "prolapse is reproductive-domain; aorta is vascular-domain"
+    },
+    {
+      "text": "glaucoma of gallbladder",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "glaucoma is ocular-domain; gallbladder is organs-domain"
+    },
+    {
+      "text": "ectopic pregnancy of portal vein",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "vascular",
+      "reason": "ectopic pregnancy is reproductive-domain; portal vein is vascular-domain"
+    },
+    {
+      "text": "arteritis of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "ocular",
+      "reason": "arteritis is vascular-domain; retina is ocular-domain"
+    },
+    {
+      "text": "endometriosis of coronary artery",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "vascular",
+      "reason": "endometriosis is reproductive-domain; coronary artery is vascular-domain"
+    },
+    {
+      "text": "thrombosis of axilla",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "surface",
+      "reason": "thrombosis is vascular-domain; axilla is surface-domain"
+    },
+    {
+      "text": "comminuted fracture of vagina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "comminuted fracture is skeletal-domain; vagina is reproductive-domain"
+    },
+    {
+      "text": "osteoarthritis of sciatic nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "neural",
+      "reason": "osteoarthritis is joints-domain; sciatic nerve is neural-domain"
+    },
+    {
+      "text": "osteonecrosis of adrenal gland",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "osteonecrosis is skeletal-domain; adrenal gland is organs-domain"
+    },
+    {
+      "text": "greenstick fracture of adrenal gland",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "greenstick fracture is skeletal-domain; adrenal gland is organs-domain"
+    },
+    {
+      "text": "osteomyelitis of brachial plexus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "neural",
+      "reason": "osteomyelitis is skeletal-domain; brachial plexus is neural-domain"
+    },
+    {
+      "text": "uveitis of rib",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "skeletal",
+      "reason": "uveitis is ocular-domain; rib is skeletal-domain"
+    },
+    {
+      "text": "subluxation of axilla",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "surface",
+      "reason": "subluxation is joints-domain; axilla is surface-domain"
+    },
+    {
+      "text": "endometriosis of bladder",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "organs",
+      "reason": "endometriosis is reproductive-domain; bladder is organs-domain"
+    },
+    {
+      "text": "greenstick fracture of vitreous body",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "greenstick fracture is skeletal-domain; vitreous body is ocular-domain"
+    },
+    {
+      "text": "third degree burn of patella",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "third degree burn is surface-domain; patella is skeletal-domain"
+    },
+    {
+      "text": "nondisplaced fracture of liver",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "nondisplaced fracture is skeletal-domain; liver is organs-domain"
+    },
+    {
+      "text": "spiral fracture of stomach",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "spiral fracture is skeletal-domain; stomach is organs-domain"
+    },
+    {
+      "text": "segmental fracture of cornea",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "segmental fracture is skeletal-domain; cornea is ocular-domain"
+    },
+    {
+      "text": "unspecified subluxation of vitreous body",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "ocular",
+      "reason": "unspecified subluxation is joints-domain; vitreous body is ocular-domain"
+    },
+    {
+      "text": "displaced fracture of epididymis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "displaced fracture is skeletal-domain; epididymis is reproductive-domain"
+    },
+    {
+      "text": "oblique fracture of ulnar nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "neural",
+      "reason": "oblique fracture is skeletal-domain; ulnar nerve is neural-domain"
+    },
+    {
+      "text": "retinopathy of appendix",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "organs",
+      "reason": "retinopathy is ocular-domain; appendix is organs-domain"
+    },
+    {
+      "text": "neuropathy of cervix",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "reproductive",
+      "reason": "neuropathy is neural-domain; cervix is reproductive-domain"
+    },
+    {
+      "text": "unspecified dislocation of chest wall",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "surface",
+      "reason": "unspecified dislocation is joints-domain; chest wall is surface-domain"
+    },
+    {
+      "text": "nondisplaced fracture of epididymis",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "nondisplaced fracture is skeletal-domain; epididymis is reproductive-domain"
+    },
+    {
+      "text": "vaginitis of clavicle",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "skeletal",
+      "reason": "vaginitis is reproductive-domain; clavicle is skeletal-domain"
+    },
+    {
+      "text": "glaucoma of acromioclavicular joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "joints",
+      "reason": "glaucoma is ocular-domain; acromioclavicular joint is joints-domain"
+    },
+    {
+      "text": "radiculopathy of calcaneus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "skeletal",
+      "reason": "radiculopathy is neural-domain; calcaneus is skeletal-domain"
+    },
+    {
+      "text": "torus fracture of brain",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "torus fracture is skeletal-domain; brain is organs-domain"
+    },
+    {
+      "text": "erythema of rib",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "erythema is surface-domain; rib is skeletal-domain"
+    },
+    {
+      "text": "thrombosis of talus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "thrombosis is vascular-domain; talus is skeletal-domain"
+    },
+    {
+      "text": "stress fracture of stomach",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "stress fracture is skeletal-domain; stomach is organs-domain"
+    },
+    {
+      "text": "arteritis of sclera",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "ocular",
+      "reason": "arteritis is vascular-domain; sclera is ocular-domain"
+    },
+    {
+      "text": "third degree burn of fibula",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "third degree burn is surface-domain; fibula is skeletal-domain"
+    },
+    {
+      "text": "osteolysis of adrenal gland",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "osteolysis is skeletal-domain; adrenal gland is organs-domain"
+    },
+    {
+      "text": "spiral fracture of temporomandibular joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "joints",
+      "reason": "spiral fracture is skeletal-domain; temporomandibular joint is joints-domain"
+    },
+    {
+      "text": "keratitis of chest wall",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "keratitis is ocular-domain; chest wall is surface-domain"
+    },
+    {
+      "text": "dislocation of face",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "surface",
+      "reason": "dislocation is joints-domain; face is surface-domain"
+    },
+    {
+      "text": "cataract of groin",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "cataract is ocular-domain; groin is surface-domain"
+    },
+    {
+      "text": "atherosclerosis of lung",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "organs",
+      "reason": "atherosclerosis is vascular-domain; lung is organs-domain"
+    },
+    {
+      "text": "unspecified subluxation of fallopian tube",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "reproductive",
+      "reason": "unspecified subluxation is joints-domain; fallopian tube is reproductive-domain"
+    },
+    {
+      "text": "keratitis of humerus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "skeletal",
+      "reason": "keratitis is ocular-domain; humerus is skeletal-domain"
+    },
+    {
+      "text": "glaucoma of perineum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "glaucoma is ocular-domain; perineum is surface-domain"
+    },
+    {
+      "text": "recurrent dislocation of brachial plexus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "neural",
+      "reason": "recurrent dislocation is joints-domain; brachial plexus is neural-domain"
+    },
+    {
+      "text": "nerve compression of palm",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "nerve compression is neural-domain; palm is surface-domain"
+    },
+    {
+      "text": "thrombosis of brachial plexus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "neural",
+      "reason": "thrombosis is vascular-domain; brachial plexus is neural-domain"
+    },
+    {
+      "text": "first degree burn of knee joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "joints",
+      "reason": "first degree burn is surface-domain; knee joint is joints-domain"
+    },
+    {
+      "text": "nondisplaced fracture of conjunctiva",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "ocular",
+      "reason": "nondisplaced fracture is skeletal-domain; conjunctiva is ocular-domain"
+    },
+    {
+      "text": "macular degeneration of portal vein",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "vascular",
+      "reason": "macular degeneration is ocular-domain; portal vein is vascular-domain"
+    },
+    {
+      "text": "ectopic pregnancy of stomach",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "organs",
+      "reason": "ectopic pregnancy is reproductive-domain; stomach is organs-domain"
+    },
+    {
+      "text": "thrombosis of clavicle",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "thrombosis is vascular-domain; clavicle is skeletal-domain"
+    },
+    {
+      "text": "neuralgia of palm",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "neuralgia is neural-domain; palm is surface-domain"
+    },
+    {
+      "text": "radiculopathy of perineum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "radiculopathy is neural-domain; perineum is surface-domain"
+    },
+    {
+      "text": "segmental fracture of median nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "neural",
+      "reason": "segmental fracture is skeletal-domain; median nerve is neural-domain"
+    },
+    {
+      "text": "prolapse of brachial plexus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "neural",
+      "reason": "prolapse is reproductive-domain; brachial plexus is neural-domain"
+    },
+    {
+      "text": "arthropathy of femur",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "arthropathy is joints-domain; femur is skeletal-domain"
+    },
+    {
+      "text": "blister of spinal cord",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "neural",
+      "reason": "blister is surface-domain; spinal cord is neural-domain"
+    },
+    {
+      "text": "sprain of rib",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "skeletal",
+      "reason": "sprain is joints-domain; rib is skeletal-domain"
+    },
+    {
+      "text": "arteritis of brain",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "organs",
+      "reason": "arteritis is vascular-domain; brain is organs-domain"
+    },
+    {
+      "text": "embolism of patella",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "embolism is vascular-domain; patella is skeletal-domain"
+    },
+    {
+      "text": "pathological fracture of bladder",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "organs",
+      "reason": "pathological fracture is skeletal-domain; bladder is organs-domain"
+    },
+    {
+      "text": "nerve compression of buttock",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "surface",
+      "reason": "nerve compression is neural-domain; buttock is surface-domain"
+    },
+    {
+      "text": "sprain of iris",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "ocular",
+      "reason": "sprain is joints-domain; iris is ocular-domain"
+    },
+    {
+      "text": "embolism of retina",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "ocular",
+      "reason": "embolism is vascular-domain; retina is ocular-domain"
+    },
+    {
+      "text": "osteolysis of uterus",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "reproductive",
+      "reason": "osteolysis is skeletal-domain; uterus is reproductive-domain"
+    },
+    {
+      "text": "abrasion of sacrum",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "abrasion is surface-domain; sacrum is skeletal-domain"
+    },
+    {
+      "text": "thrombosis of skin",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "surface",
+      "reason": "thrombosis is vascular-domain; skin is surface-domain"
+    },
+    {
+      "text": "ectopic pregnancy of spinal cord",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "reproductive",
+      "target_domain": "neural",
+      "reason": "ectopic pregnancy is reproductive-domain; spinal cord is neural-domain"
+    },
+    {
+      "text": "phlebitis of patella",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "vascular",
+      "target_domain": "skeletal",
+      "reason": "phlebitis is vascular-domain; patella is skeletal-domain"
+    },
+    {
+      "text": "transverse fracture of pulmonary artery",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "vascular",
+      "reason": "transverse fracture is skeletal-domain; pulmonary artery is vascular-domain"
+    },
+    {
+      "text": "neuralgia of gallbladder",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "organs",
+      "reason": "neuralgia is neural-domain; gallbladder is organs-domain"
+    },
+    {
+      "text": "sunburn of spinal cord",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "neural",
+      "reason": "sunburn is surface-domain; spinal cord is neural-domain"
+    },
+    {
+      "text": "sunburn of appendix",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "organs",
+      "reason": "sunburn is surface-domain; appendix is organs-domain"
+    },
+    {
+      "text": "second degree burn of tibia",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "surface",
+      "target_domain": "skeletal",
+      "reason": "second degree burn is surface-domain; tibia is skeletal-domain"
+    },
+    {
+      "text": "spiral fracture of trunk",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "surface",
+      "reason": "spiral fracture is skeletal-domain; trunk is surface-domain"
+    },
+    {
+      "text": "pathological fracture of palm",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "skeletal",
+      "target_domain": "surface",
+      "reason": "pathological fracture is skeletal-domain; palm is surface-domain"
+    },
+    {
+      "text": "macular degeneration of hip joint",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "joints",
+      "reason": "macular degeneration is ocular-domain; hip joint is joints-domain"
+    },
+    {
+      "text": "subluxation of median nerve",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "joints",
+      "target_domain": "neural",
+      "reason": "subluxation is joints-domain; median nerve is neural-domain"
+    },
+    {
+      "text": "myelopathy of spleen",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "neural",
+      "target_domain": "organs",
+      "reason": "myelopathy is neural-domain; spleen is organs-domain"
+    },
+    {
+      "text": "macular degeneration of palm",
+      "label": "FP",
+      "category": "cross_domain_swap",
+      "source_domain": "ocular",
+      "target_domain": "surface",
+      "reason": "macular degeneration is ocular-domain; palm is surface-domain"
+    },
+    {
+      "text": "behavioral insomnia of heart transplant",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'behavioral insomnia' + 'heart transplant' not in ICD-10-CM"
+    },
+    {
+      "text": "nondisplaced lateral mass fracture of joint prosthesis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'nondisplaced lateral mass fracture' + 'joint prosthesis' not in ICD-10-CM"
+    },
+    {
+      "text": "leakage of ulna styloid process",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'leakage' + 'ulna styloid process' not in ICD-10-CM"
+    },
+    {
+      "text": "fusion of overlapping sites",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'fusion' + 'overlapping sites' not in ICD-10-CM"
+    },
+    {
+      "text": "secondary hyperparathyroidism of placenta [abruptio placentae]",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'secondary hyperparathyroidism' + 'placenta [abruptio placentae]' not in ICD-10-CM"
+    },
+    {
+      "text": "failed medical induction of pharynx",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'failed medical induction' + 'pharynx' not in ICD-10-CM"
+    },
+    {
+      "text": "other rupture of throat",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other rupture' + 'throat' not in ICD-10-CM"
+    },
+    {
+      "text": "alkalosis of bladder in pregnancy",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'alkalosis' + 'bladder in pregnancy' not in ICD-10-CM"
+    },
+    {
+      "text": "other enthesopathy of mandible",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other enthesopathy' + 'mandible' not in ICD-10-CM"
+    },
+    {
+      "text": "chronic passive congestion of right upper extremity",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'chronic passive congestion' + 'right upper extremity' not in ICD-10-CM"
+    },
+    {
+      "text": "fibrosclerosis of oral mucosa",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'fibrosclerosis' + 'oral mucosa' not in ICD-10-CM"
+    },
+    {
+      "text": "stricture of repeat prescription",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'stricture' + 'repeat prescription' not in ICD-10-CM"
+    },
+    {
+      "text": "leukoplakia of systemic sclerosis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'leukoplakia' + 'systemic sclerosis' not in ICD-10-CM"
+    },
+    {
+      "text": "nondisplaced dome fracture of esophagus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'nondisplaced dome fracture' + 'esophagus' not in ICD-10-CM"
+    },
+    {
+      "text": "other abnormality of thallium, accidental (unintentional)",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other abnormality' + 'thallium, accidental (unintentional)' not in ICD-10-CM"
+    },
+    {
+      "text": "coarctation of synovium, right wrist",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'coarctation' + 'synovium, right wrist' not in ICD-10-CM"
+    },
+    {
+      "text": "separation anxiety disorder of calcium-channel blockers",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'separation anxiety disorder' + 'calcium-channel blockers' not in ICD-10-CM"
+    },
+    {
+      "text": "congenital dilation of artificial elbow joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'congenital dilation' + 'artificial elbow joint' not in ICD-10-CM"
+    },
+    {
+      "text": "other fracture of left humerus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other fracture' + 'left humerus' not in ICD-10-CM"
+    },
+    {
+      "text": "bacterial sepsis of urinary calculi",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'bacterial sepsis' + 'urinary calculi' not in ICD-10-CM"
+    },
+    {
+      "text": "other tics of carbon disulfide, undetermined",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other tics' + 'carbon disulfide, undetermined' not in ICD-10-CM"
+    },
+    {
+      "text": "central subluxation and dislocation of antiviral drugs",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'central subluxation and dislocation' + 'antiviral drugs' not in ICD-10-CM"
+    },
+    {
+      "text": "36 weeks gestation of muscle (nontraumatic), forearm",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: '36 weeks gestation' + 'muscle (nontraumatic), forearm' not in ICD-10-CM"
+    },
+    {
+      "text": "contusion, laceration, and hemorrhage of left lacrimal sac",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'contusion, laceration, and hemorrhage' + 'left lacrimal sac' not in ICD-10-CM"
+    },
+    {
+      "text": "subluxation of aortocoronary bypass graft",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'subluxation' + 'aortocoronary bypass graft' not in ICD-10-CM"
+    },
+    {
+      "text": "adjustment disorder with disturbance of rubella",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'adjustment disorder with disturbance' + 'rubella' not in ICD-10-CM"
+    },
+    {
+      "text": "maternal care for abnormality of cornea, unspecified eye",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'maternal care for abnormality' + 'cornea, unspecified eye' not in ICD-10-CM"
+    },
+    {
+      "text": "history of external lip",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'history' + 'external lip' not in ICD-10-CM"
+    },
+    {
+      "text": "ulnohumeral (joint) sprain of kidney following delivery",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'ulnohumeral (joint) sprain' + 'kidney following delivery' not in ICD-10-CM"
+    },
+    {
+      "text": "acquired deformities of unknown cause",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'acquired deformities' + 'unknown cause' not in ICD-10-CM"
+    },
+    {
+      "text": "diffuse secondary atrophy of left ureter",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'diffuse secondary atrophy' + 'left ureter' not in ICD-10-CM"
+    },
+    {
+      "text": "burns involving 30-39% of aflatoxin",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'burns involving 30-39%' + 'aflatoxin' not in ICD-10-CM"
+    },
+    {
+      "text": "splitting of aflatoxin, intentional self-harm",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'splitting' + 'aflatoxin, intentional self-harm' not in ICD-10-CM"
+    },
+    {
+      "text": "lentivirus as the cause of bilirubin metabolism",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'lentivirus as the cause' + 'bilirubin metabolism' not in ICD-10-CM"
+    },
+    {
+      "text": "massive umbilical hemorrhage of sphenoid sinus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'massive umbilical hemorrhage' + 'sphenoid sinus' not in ICD-10-CM"
+    },
+    {
+      "text": "infections of ligament, unspecified shoulder",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'infections' + 'ligament, unspecified shoulder' not in ICD-10-CM"
+    },
+    {
+      "text": "inferior subluxation and dislocation of the fallopian tube",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'inferior subluxation and dislocation' + 'the fallopian tube' not in ICD-10-CM"
+    },
+    {
+      "text": "osteochondropathy, unspecified of ankle joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'osteochondropathy, unspecified' + 'ankle joint' not in ICD-10-CM"
+    },
+    {
+      "text": "other vascular disorders of bursa, unspecified site",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other vascular disorders' + 'bursa, unspecified site' not in ICD-10-CM"
+    },
+    {
+      "text": "toxic effect of ovaries, unilateral",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'toxic effect' + 'ovaries, unilateral' not in ICD-10-CM"
+    },
+    {
+      "text": "hypertrichosis of peripheral vascular system",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hypertrichosis' + 'peripheral vascular system' not in ICD-10-CM"
+    },
+    {
+      "text": "other pulmonary complications of synovium, unspecified joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other pulmonary complications' + 'synovium, unspecified joint' not in ICD-10-CM"
+    },
+    {
+      "text": "excessive attrition of chondrosternal joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'excessive attrition' + 'chondrosternal joint' not in ICD-10-CM"
+    },
+    {
+      "text": "primary mixed sleep apnea of left radial head",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'primary mixed sleep apnea' + 'left radial head' not in ICD-10-CM"
+    },
+    {
+      "text": "nondisplaced intertrochanteric fracture of labia",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'nondisplaced intertrochanteric fracture' + 'labia' not in ICD-10-CM"
+    },
+    {
+      "text": "cardiac complications of left lacrimal sac",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'cardiac complications' + 'left lacrimal sac' not in ICD-10-CM"
+    },
+    {
+      "text": "mallet finger of insulin",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'mallet finger' + 'insulin' not in ICD-10-CM"
+    },
+    {
+      "text": "25 weeks gestation of extensor tendons, shoulder",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: '25 weeks gestation' + 'extensor tendons, shoulder' not in ICD-10-CM"
+    },
+    {
+      "text": "moderate laceration of lumbar region",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'moderate laceration' + 'lumbar region' not in ICD-10-CM"
+    },
+    {
+      "text": "ischemia and infarction of c5/c6 cervical vertebrae",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'ischemia and infarction' + 'c5/c6 cervical vertebrae' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified lesions of gastrin",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified lesions' + 'gastrin' not in ICD-10-CM"
+    },
+    {
+      "text": "brown-sequard syndrome of cerebrovascular disease",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'brown-sequard syndrome' + 'cerebrovascular disease' not in ICD-10-CM"
+    },
+    {
+      "text": "other specified intestinal obstruction of white blood cells",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other specified intestinal obstruction' + 'white blood cells' not in ICD-10-CM"
+    },
+    {
+      "text": "infarction of aflatoxin, assault",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'infarction' + 'aflatoxin, assault' not in ICD-10-CM"
+    },
+    {
+      "text": "noninfective disorders of metatarsophalangeal joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'noninfective disorders' + 'metatarsophalangeal joint' not in ICD-10-CM"
+    },
+    {
+      "text": "hypokalemia of nasal bones",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hypokalemia' + 'nasal bones' not in ICD-10-CM"
+    },
+    {
+      "text": "recession of unspecified fibula",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'recession' + 'unspecified fibula' not in ICD-10-CM"
+    },
+    {
+      "text": "cortical blindness, right side of acromial process",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'cortical blindness, right side' + 'acromial process' not in ICD-10-CM"
+    },
+    {
+      "text": "infarction of femoral nerve",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'infarction' + 'femoral nerve' not in ICD-10-CM"
+    },
+    {
+      "text": "acute lymphangitis of left lacrimal passage",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'acute lymphangitis' + 'left lacrimal passage' not in ICD-10-CM"
+    },
+    {
+      "text": "other disorders of the mandible",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other disorders' + 'the mandible' not in ICD-10-CM"
+    },
+    {
+      "text": "overfeeding of unspecified pesticide, assault",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'overfeeding' + 'unspecified pesticide, assault' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified malignant neoplasm of alphafetoprotein",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified malignant neoplasm' + 'alphafetoprotein' not in ICD-10-CM"
+    },
+    {
+      "text": "barton's fracture of cornea, left eye",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'barton's fracture' + 'cornea, left eye' not in ICD-10-CM"
+    },
+    {
+      "text": "congenital absence and hypoplasia of mediastinum",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'congenital absence and hypoplasia' + 'mediastinum' not in ICD-10-CM"
+    },
+    {
+      "text": "cholesterolosis of neural canal",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'cholesterolosis' + 'neural canal' not in ICD-10-CM"
+    },
+    {
+      "text": "other systemic involvement of the mandible",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other systemic involvement' + 'the mandible' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified entropion of right toe",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified entropion' + 'right toe' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified viral infection of unspecified coracohumeral (ligament)",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified viral infection' + 'unspecified coracohumeral (ligament)' not in ICD-10-CM"
+    },
+    {
+      "text": "hemorrhage of synovium, hip",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hemorrhage' + 'synovium, hip' not in ICD-10-CM"
+    },
+    {
+      "text": "obturator dislocation of left carotid artery",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'obturator dislocation' + 'left carotid artery' not in ICD-10-CM"
+    },
+    {
+      "text": "amebic infection of food and vomit",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'amebic infection' + 'food and vomit' not in ICD-10-CM"
+    },
+    {
+      "text": "other anterior subluxation of scrotum",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other anterior subluxation' + 'scrotum' not in ICD-10-CM"
+    },
+    {
+      "text": "chronic diseases of trichloroethylene, assault",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'chronic diseases' + 'trichloroethylene, assault' not in ICD-10-CM"
+    },
+    {
+      "text": "other deformity of tramadol",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other deformity' + 'tramadol' not in ICD-10-CM"
+    },
+    {
+      "text": "hemorrhagic disease of cardiac electrode",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hemorrhagic disease' + 'cardiac electrode' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified traumatic spondylolisthesis of rattlesnake venom, assault",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified traumatic spondylolisthesis' + 'rattlesnake venom, assault' not in ICD-10-CM"
+    },
+    {
+      "text": "primary atelectasis of other pelvic nerve",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'primary atelectasis' + 'other pelvic nerve' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified abnormalities of renal origin",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified abnormalities' + 'renal origin' not in ICD-10-CM"
+    },
+    {
+      "text": "toxic effect of aorta unspecified",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'toxic effect' + 'aorta unspecified' not in ICD-10-CM"
+    },
+    {
+      "text": "excessive spacing of bilateral lower limbs",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'excessive spacing' + 'bilateral lower limbs' not in ICD-10-CM"
+    },
+    {
+      "text": "other specified forms of left testis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other specified forms' + 'left testis' not in ICD-10-CM"
+    },
+    {
+      "text": "postthrombotic syndrome with ulcer of veins",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'postthrombotic syndrome with ulcer' + 'veins' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified degenerative disorder of carbapenem-sensitive acinetobacter baumannii",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified degenerative disorder' + 'carbapenem-sensitive acinetobacter baumannii' not in ICD-10-CM"
+    },
+    {
+      "text": "ulceration of sphenoid sinus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'ulceration' + 'sphenoid sinus' not in ICD-10-CM"
+    },
+    {
+      "text": "transcondylar fracture of nitrogen oxides, undetermined",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'transcondylar fracture' + 'nitrogen oxides, undetermined' not in ICD-10-CM"
+    },
+    {
+      "text": "calcific tendinitis of benzene, assault",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'calcific tendinitis' + 'benzene, assault' not in ICD-10-CM"
+    },
+    {
+      "text": "abnormalities of other antiprotozoal drugs",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'abnormalities' + 'other antiprotozoal drugs' not in ICD-10-CM"
+    },
+    {
+      "text": "incomplete lesion of precerebral vessels",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'incomplete lesion' + 'precerebral vessels' not in ICD-10-CM"
+    },
+    {
+      "text": "maternal care for abnormality of unspecified site, ruptured",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'maternal care for abnormality' + 'unspecified site, ruptured' not in ICD-10-CM"
+    },
+    {
+      "text": "sexually transmitted chlamydial infection of pisiform, unspecified wrist",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'sexually transmitted chlamydial infection' + 'pisiform, unspecified wrist' not in ICD-10-CM"
+    },
+    {
+      "text": "merkel cell carcinoma of thyroid function studies",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'merkel cell carcinoma' + 'thyroid function studies' not in ICD-10-CM"
+    },
+    {
+      "text": "lateral dislocation of parotid gland",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'lateral dislocation' + 'parotid gland' not in ICD-10-CM"
+    },
+    {
+      "text": "blister (nonthermal) of umbilical cord",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'blister (nonthermal)' + 'umbilical cord' not in ICD-10-CM"
+    },
+    {
+      "text": "multiple perforations of superficial palmar arch",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'multiple perforations' + 'superficial palmar arch' not in ICD-10-CM"
+    },
+    {
+      "text": "disseminated chorioretinal inflammation of lacrimal system",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'disseminated chorioretinal inflammation' + 'lacrimal system' not in ICD-10-CM"
+    },
+    {
+      "text": "primary obstructive sleep apnea of chlorine gas, undetermined",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'primary obstructive sleep apnea' + 'chlorine gas, undetermined' not in ICD-10-CM"
+    },
+    {
+      "text": "disruption of elbow, left elbow",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'disruption' + 'elbow, left elbow' not in ICD-10-CM"
+    },
+    {
+      "text": "other specified complications of tendon sheath, hand",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other specified complications' + 'tendon sheath, hand' not in ICD-10-CM"
+    },
+    {
+      "text": "maternal care for incarceration of hand, left hand",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'maternal care for incarceration' + 'hand, left hand' not in ICD-10-CM"
+    },
+    {
+      "text": "separation of colon with complications",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'separation' + 'colon with complications' not in ICD-10-CM"
+    },
+    {
+      "text": "deep vascularization of ureter without hydronephrosis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'deep vascularization' + 'ureter without hydronephrosis' not in ICD-10-CM"
+    },
+    {
+      "text": "other bilateral secondary osteoarthritis of joint prosthesis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other bilateral secondary osteoarthritis' + 'joint prosthesis' not in ICD-10-CM"
+    },
+    {
+      "text": "hypertrophic disorder of right ovary",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hypertrophic disorder' + 'right ovary' not in ICD-10-CM"
+    },
+    {
+      "text": "other biomechanical lesions of vagina, third trimester",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other biomechanical lesions' + 'vagina, third trimester' not in ICD-10-CM"
+    },
+    {
+      "text": "respiratory distress of other visual pathways",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'respiratory distress' + 'other visual pathways' not in ICD-10-CM"
+    },
+    {
+      "text": "abnormal product of left leg",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'abnormal product' + 'left leg' not in ICD-10-CM"
+    },
+    {
+      "text": "anterior subluxation and dislocation of colostomy",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'anterior subluxation and dislocation' + 'colostomy' not in ICD-10-CM"
+    },
+    {
+      "text": "hemorrhage of systemic steroids",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hemorrhage' + 'systemic steroids' not in ICD-10-CM"
+    },
+    {
+      "text": "other complication of carbapenem-sensitive acinetobacter baumannii",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other complication' + 'carbapenem-sensitive acinetobacter baumannii' not in ICD-10-CM"
+    },
+    {
+      "text": "discontinuity and dislocation of left lung",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'discontinuity and dislocation' + 'left lung' not in ICD-10-CM"
+    },
+    {
+      "text": "arthropathy of other functional implants",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'arthropathy' + 'other functional implants' not in ICD-10-CM"
+    },
+    {
+      "text": "other specified disorders of left lacrimal gland",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other specified disorders' + 'left lacrimal gland' not in ICD-10-CM"
+    },
+    {
+      "text": "focal chorioretinal inflammation of tendon sheath, shoulder",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'focal chorioretinal inflammation' + 'tendon sheath, shoulder' not in ICD-10-CM"
+    },
+    {
+      "text": "traumatic ischemia of artificial knee joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'traumatic ischemia' + 'artificial knee joint' not in ICD-10-CM"
+    },
+    {
+      "text": "embryonic cyst of fourth lumbar vertebra",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'embryonic cyst' + 'fourth lumbar vertebra' not in ICD-10-CM"
+    },
+    {
+      "text": "partial traumatic transmetacarpal amputation of body of sternum",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'partial traumatic transmetacarpal amputation' + 'body of sternum' not in ICD-10-CM"
+    },
+    {
+      "text": "other chronic diseases of urinary tract status",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other chronic diseases' + 'urinary tract status' not in ICD-10-CM"
+    },
+    {
+      "text": "peripheral pterygium of integument",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'peripheral pterygium' + 'integument' not in ICD-10-CM"
+    },
+    {
+      "text": "hyperkeratosis of colon",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hyperkeratosis' + 'colon' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified disease of autosomes",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified disease' + 'autosomes' not in ICD-10-CM"
+    },
+    {
+      "text": "fat necrosis of flank",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'fat necrosis' + 'flank' not in ICD-10-CM"
+    },
+    {
+      "text": "perforation of calcium metabolism",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'perforation' + 'calcium metabolism' not in ICD-10-CM"
+    },
+    {
+      "text": "toxic effects of epididymis or testis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'toxic effects' + 'epididymis or testis' not in ICD-10-CM"
+    },
+    {
+      "text": "other spontaneous disruption of fatty-acid oxidation",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other spontaneous disruption' + 'fatty-acid oxidation' not in ICD-10-CM"
+    },
+    {
+      "text": "hesitancy of intracranial structures",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hesitancy' + 'intracranial structures' not in ICD-10-CM"
+    },
+    {
+      "text": "degenerative disease of urachus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'degenerative disease' + 'urachus' not in ICD-10-CM"
+    },
+    {
+      "text": "primary central sleep apnea of vena cava",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'primary central sleep apnea' + 'vena cava' not in ICD-10-CM"
+    },
+    {
+      "text": "other acquired deformity of yaws",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other acquired deformity' + 'yaws' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified laceration of the descending colon",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified laceration' + 'the descending colon' not in ICD-10-CM"
+    },
+    {
+      "text": "other diseases of sacral region, unstageable",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other diseases' + 'sacral region, unstageable' not in ICD-10-CM"
+    },
+    {
+      "text": "acute dilatation of intrauterine contraceptive device",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'acute dilatation' + 'intrauterine contraceptive device' not in ICD-10-CM"
+    },
+    {
+      "text": "osteomyelitis of left femur",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'osteomyelitis' + 'left femur' not in ICD-10-CM"
+    },
+    {
+      "text": "concussion and edema of shaft of ulna",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'concussion and edema' + 'shaft of ulna' not in ICD-10-CM"
+    },
+    {
+      "text": "acute inflammation of other inflammatory polyneuropathy",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'acute inflammation' + 'other inflammatory polyneuropathy' not in ICD-10-CM"
+    },
+    {
+      "text": "papillomavirus as the cause of mediastinum, part unspecified",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'papillomavirus as the cause' + 'mediastinum, part unspecified' not in ICD-10-CM"
+    },
+    {
+      "text": "mammographic heterogeneous density of left nasolacrimal duct",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'mammographic heterogeneous density' + 'left nasolacrimal duct' not in ICD-10-CM"
+    },
+    {
+      "text": "abnormal levels of the mandible",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'abnormal levels' + 'the mandible' not in ICD-10-CM"
+    },
+    {
+      "text": "burns involving 10-19% of unspecified vertebral artery",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'burns involving 10-19%' + 'unspecified vertebral artery' not in ICD-10-CM"
+    },
+    {
+      "text": "minor opacity of 2-propanol",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'minor opacity' + '2-propanol' not in ICD-10-CM"
+    },
+    {
+      "text": "parvovirus as the cause of intercostal blood vessels",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'parvovirus as the cause' + 'intercostal blood vessels' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified disturbances of flexor tendons, forearm",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified disturbances' + 'flexor tendons, forearm' not in ICD-10-CM"
+    },
+    {
+      "text": "subinvolution of endocrine gland",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'subinvolution' + 'endocrine gland' not in ICD-10-CM"
+    },
+    {
+      "text": "extravasation of unspecified ear drum",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'extravasation' + 'unspecified ear drum' not in ICD-10-CM"
+    },
+    {
+      "text": "comminuted fracture of colostomy",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'comminuted fracture' + 'colostomy' not in ICD-10-CM"
+    },
+    {
+      "text": "drusen of breast, right breast",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'drusen' + 'breast, right breast' not in ICD-10-CM"
+    },
+    {
+      "text": "periostitis of benign carcinoid tumor",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'periostitis' + 'benign carcinoid tumor' not in ICD-10-CM"
+    },
+    {
+      "text": "unrepairable overhanging of bile ducts",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unrepairable overhanging' + 'bile ducts' not in ICD-10-CM"
+    },
+    {
+      "text": "non-radiographic axial spondyloarthritis of smoke, accidental (unintentional)",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'non-radiographic axial spondyloarthritis' + 'smoke, accidental (unintentional)' not in ICD-10-CM"
+    },
+    {
+      "text": "hourglass stricture and stenosis of smoke, intentional self-harm",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hourglass stricture and stenosis' + 'smoke, intentional self-harm' not in ICD-10-CM"
+    },
+    {
+      "text": "central pterygium of unspecified conjunctiva",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'central pterygium' + 'unspecified conjunctiva' not in ICD-10-CM"
+    },
+    {
+      "text": "other disturbances of propionic acid derivatives",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other disturbances' + 'propionic acid derivatives' not in ICD-10-CM"
+    },
+    {
+      "text": "senile ectropion of hand",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'senile ectropion' + 'hand' not in ICD-10-CM"
+    },
+    {
+      "text": "chronic perichondritis of left hip joint",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'chronic perichondritis' + 'left hip joint' not in ICD-10-CM"
+    },
+    {
+      "text": "traumatic hemorrhage of water",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'traumatic hemorrhage' + 'water' not in ICD-10-CM"
+    },
+    {
+      "text": "senile entropion of nystagmus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'senile entropion' + 'nystagmus' not in ICD-10-CM"
+    },
+    {
+      "text": "17 weeks gestation of unspecified vascular graft",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: '17 weeks gestation' + 'unspecified vascular graft' not in ICD-10-CM"
+    },
+    {
+      "text": "effects of latex, assault",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'effects' + 'latex, assault' not in ICD-10-CM"
+    },
+    {
+      "text": "developmental disorder of hyperplastic colon polyps",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'developmental disorder' + 'hyperplastic colon polyps' not in ICD-10-CM"
+    },
+    {
+      "text": "absence and aplasia of left upper limb",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'absence and aplasia' + 'left upper limb' not in ICD-10-CM"
+    },
+    {
+      "text": "abnormal findings of middle cerebral artery",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'abnormal findings' + 'middle cerebral artery' not in ICD-10-CM"
+    },
+    {
+      "text": "kienbock's disease of bone, unspecified thigh",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'kienbock's disease' + 'bone, unspecified thigh' not in ICD-10-CM"
+    },
+    {
+      "text": "radial collateral ligament sprain of right lacrimal punctum",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'radial collateral ligament sprain' + 'right lacrimal punctum' not in ICD-10-CM"
+    },
+    {
+      "text": "excessive attrition of other cerebrovascular diseases",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'excessive attrition' + 'other cerebrovascular diseases' not in ICD-10-CM"
+    },
+    {
+      "text": "unspecified inflammation of fiberglass, undetermined",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'unspecified inflammation' + 'fiberglass, undetermined' not in ICD-10-CM"
+    },
+    {
+      "text": "respiratory failure of ligament, unspecified foot",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'respiratory failure' + 'ligament, unspecified foot' not in ICD-10-CM"
+    },
+    {
+      "text": "other disturbances of hip and pelvis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other disturbances' + 'hip and pelvis' not in ICD-10-CM"
+    },
+    {
+      "text": "bilateral post-traumatic osteoarthritis of fifth cervical vertebra",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'bilateral post-traumatic osteoarthritis' + 'fifth cervical vertebra' not in ICD-10-CM"
+    },
+    {
+      "text": "atypical virus infections of epididymis, single",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'atypical virus infections' + 'epididymis, single' not in ICD-10-CM"
+    },
+    {
+      "text": "other physeal fracture of skin of lip",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other physeal fracture' + 'skin of lip' not in ICD-10-CM"
+    },
+    {
+      "text": "transection (partial) of follicular lymphoma, spleen",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'transection (partial)' + 'follicular lymphoma, spleen' not in ICD-10-CM"
+    },
+    {
+      "text": "other extraarticular fracture of flexor tendons, thigh",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other extraarticular fracture' + 'flexor tendons, thigh' not in ICD-10-CM"
+    },
+    {
+      "text": "other type of bilateral ureters",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other type' + 'bilateral ureters' not in ICD-10-CM"
+    },
+    {
+      "text": "calcification and ossification of carbapenem-sensitive acinetobacter baumannii",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'calcification and ossification' + 'carbapenem-sensitive acinetobacter baumannii' not in ICD-10-CM"
+    },
+    {
+      "text": "paralytic ptosis of scrotum and testes",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'paralytic ptosis' + 'scrotum and testes' not in ICD-10-CM"
+    },
+    {
+      "text": "hypothermia of lateral cuneiform",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hypothermia' + 'lateral cuneiform' not in ICD-10-CM"
+    },
+    {
+      "text": "other enthesopathy of other medical certificate",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other enthesopathy' + 'other medical certificate' not in ICD-10-CM"
+    },
+    {
+      "text": "central hemorrhagic necrosis of fifth cervical vertebra",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'central hemorrhagic necrosis' + 'fifth cervical vertebra' not in ICD-10-CM"
+    },
+    {
+      "text": "disorder of unspecified uterine vein",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'disorder' + 'unspecified uterine vein' not in ICD-10-CM"
+    },
+    {
+      "text": "crohn's disease of other pesticides, undetermined",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'crohn's disease' + 'other pesticides, undetermined' not in ICD-10-CM"
+    },
+    {
+      "text": "papillomavirus as the cause of vena cava",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'papillomavirus as the cause' + 'vena cava' not in ICD-10-CM"
+    },
+    {
+      "text": "anomaly of testis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'anomaly' + 'testis' not in ICD-10-CM"
+    },
+    {
+      "text": "bunion of right tibia",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'bunion' + 'right tibia' not in ICD-10-CM"
+    },
+    {
+      "text": "erosion and ectropion of ovary, unilateral",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'erosion and ectropion' + 'ovary, unilateral' not in ICD-10-CM"
+    },
+    {
+      "text": "developmental disorders of cartilage, shoulder",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'developmental disorders' + 'cartilage, shoulder' not in ICD-10-CM"
+    },
+    {
+      "text": "peripheral pterygium of left breast",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'peripheral pterygium' + 'left breast' not in ICD-10-CM"
+    },
+    {
+      "text": "cellulitis and abscess of nitrogen oxides, undetermined",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'cellulitis and abscess' + 'nitrogen oxides, undetermined' not in ICD-10-CM"
+    },
+    {
+      "text": "mammary duct ectasia of left calcaneus",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'mammary duct ectasia' + 'left calcaneus' not in ICD-10-CM"
+    },
+    {
+      "text": "premature rupture of renal blood vessel",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'premature rupture' + 'renal blood vessel' not in ICD-10-CM"
+    },
+    {
+      "text": "absence and aplasia of the pericardial space",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'absence and aplasia' + 'the pericardial space' not in ICD-10-CM"
+    },
+    {
+      "text": "acquired partial absence of ethanol",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'acquired partial absence' + 'ethanol' not in ICD-10-CM"
+    },
+    {
+      "text": "developmental (nonodontogenic) cysts of failed moderate sedation",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'developmental (nonodontogenic) cysts' + 'failed moderate sedation' not in ICD-10-CM"
+    },
+    {
+      "text": "displacement (lateral) of gastrointestinal tract status",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'displacement (lateral)' + 'gastrointestinal tract status' not in ICD-10-CM"
+    },
+    {
+      "text": "hypertrophic disorder of medial plantar nerve",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hypertrophic disorder' + 'medial plantar nerve' not in ICD-10-CM"
+    },
+    {
+      "text": "other disorder of mitotic inhibitor",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'other disorder' + 'mitotic inhibitor' not in ICD-10-CM"
+    },
+    {
+      "text": "16 weeks gestation of medial popliteal nerve",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: '16 weeks gestation' + 'medial popliteal nerve' not in ICD-10-CM"
+    },
+    {
+      "text": "hereditary deficiency of implanted testicular prosthesis",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'hereditary deficiency' + 'implanted testicular prosthesis' not in ICD-10-CM"
+    },
+    {
+      "text": "horseshoe tear of lung status",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'horseshoe tear' + 'lung status' not in ICD-10-CM"
+    },
+    {
+      "text": "convulsions of mineral metabolism",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'convulsions' + 'mineral metabolism' not in ICD-10-CM"
+    },
+    {
+      "text": "gangrene and necrosis of cauda equina",
+      "label": "FP",
+      "category": "random_combo",
+      "reason": "random pairing: 'gangrene and necrosis' + 'cauda equina' not in ICD-10-CM"
+    },
+    {
+      "text": "open fracture of bilateral talus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [fracture] + [talus]"
+    },
+    {
+      "text": "spontaneous strain of hip joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [spontaneous] + [strain] + [hip joint]"
+    },
+    {
+      "text": "nontraumatic embolism of right ankle joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [embolism] + [ankle joint]"
+    },
+    {
+      "text": "pathological ulcer of unspecified skin",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [ulcer] + [skin]"
+    },
+    {
+      "text": "stress occlusion of left epididymis",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [occlusion] + [epididymis]"
+    },
+    {
+      "text": "primary hernia of left liver",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [primary] + [hernia] + [liver]"
+    },
+    {
+      "text": "primary thrombosis of unspecified carotid artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [primary] + [thrombosis] + [carotid artery]"
+    },
+    {
+      "text": "pathological cataract of right axilla",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [cataract] + [axilla]"
+    },
+    {
+      "text": "complete stenosis of wrist",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [stenosis] + [wrist]"
+    },
+    {
+      "text": "partial corrosion of elbow joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [partial] + [corrosion] + [elbow joint]"
+    },
+    {
+      "text": "pathological myelopathy of unspecified ulna",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [myelopathy] + [ulna]"
+    },
+    {
+      "text": "closed dislocation of unspecified pancreas",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [dislocation] + [pancreas]"
+    },
+    {
+      "text": "spontaneous polyp of left ankle joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [spontaneous] + [polyp] + [ankle joint]"
+    },
+    {
+      "text": "superficial subluxation of bilateral acromioclavicular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [subluxation] + [acromioclavicular joint]"
+    },
+    {
+      "text": "superficial fracture of bilateral spinal cord",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [fracture] + [spinal cord]"
+    },
+    {
+      "text": "stress ulcer of choroid",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [ulcer] + [choroid]"
+    },
+    {
+      "text": "nondisplaced neuropathy of bilateral adrenal gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nondisplaced] + [neuropathy] + [adrenal gland]"
+    },
+    {
+      "text": "nontraumatic rupture of kidney",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [rupture] + [kidney]"
+    },
+    {
+      "text": "spontaneous rupture of uterus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [spontaneous] + [rupture] + [uterus]"
+    },
+    {
+      "text": "displaced cataract of right adrenal gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [displaced] + [cataract] + [adrenal gland]"
+    },
+    {
+      "text": "recurrent cyst of right adrenal gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [cyst] + [adrenal gland]"
+    },
+    {
+      "text": "closed stenosis of unspecified tibia",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [stenosis] + [tibia]"
+    },
+    {
+      "text": "recurrent necrosis of left prostate",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [necrosis] + [prostate]"
+    },
+    {
+      "text": "acute abscess of right chest wall",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [abscess] + [chest wall]"
+    },
+    {
+      "text": "pathological glaucoma of portal vein",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [glaucoma] + [portal vein]"
+    },
+    {
+      "text": "recurrent sprain of aorta",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [sprain] + [aorta]"
+    },
+    {
+      "text": "nontraumatic subluxation of right gallbladder",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [subluxation] + [gallbladder]"
+    },
+    {
+      "text": "deep neoplasm of right perineum",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [neoplasm] + [perineum]"
+    },
+    {
+      "text": "recurrent necrosis of left bladder",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [necrosis] + [bladder]"
+    },
+    {
+      "text": "recurrent cataract of unspecified rib",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [cataract] + [rib]"
+    },
+    {
+      "text": "closed gangrene of right heart",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [gangrene] + [heart]"
+    },
+    {
+      "text": "acute strain of bilateral choroid",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [strain] + [choroid]"
+    },
+    {
+      "text": "superficial burn of bilateral metacarpal bone",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [burn] + [metacarpal bone]"
+    },
+    {
+      "text": "nondisplaced atrophy of left patella",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nondisplaced] + [atrophy] + [patella]"
+    },
+    {
+      "text": "complete thrombosis of right kidney",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [thrombosis] + [kidney]"
+    },
+    {
+      "text": "complete strain of bilateral stomach",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [strain] + [stomach]"
+    },
+    {
+      "text": "nontraumatic cyst of scalp",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [cyst] + [scalp]"
+    },
+    {
+      "text": "deep degeneration of sacrum",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [degeneration] + [sacrum]"
+    },
+    {
+      "text": "complete atrophy of unspecified appendix",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [atrophy] + [appendix]"
+    },
+    {
+      "text": "closed thrombosis of tibia",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [thrombosis] + [tibia]"
+    },
+    {
+      "text": "acute abscess of left liver",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [abscess] + [liver]"
+    },
+    {
+      "text": "superficial cataract of bilateral appendix",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [cataract] + [appendix]"
+    },
+    {
+      "text": "nontraumatic hemorrhage of left face",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [hemorrhage] + [face]"
+    },
+    {
+      "text": "benign fracture of right face",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [fracture] + [face]"
+    },
+    {
+      "text": "displaced hemorrhage of right shoulder joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [displaced] + [hemorrhage] + [shoulder joint]"
+    },
+    {
+      "text": "incomplete embolism of right median nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [incomplete] + [embolism] + [median nerve]"
+    },
+    {
+      "text": "pathological strain of left metatarsal",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [strain] + [metatarsal]"
+    },
+    {
+      "text": "partial gangrene of right clavicle",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [partial] + [gangrene] + [clavicle]"
+    },
+    {
+      "text": "benign glaucoma of left heart",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [glaucoma] + [heart]"
+    },
+    {
+      "text": "acute rupture of unspecified acromioclavicular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [rupture] + [acromioclavicular joint]"
+    },
+    {
+      "text": "secondary fibrosis of unspecified prostate",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [fibrosis] + [prostate]"
+    },
+    {
+      "text": "pathological neuropathy of unspecified clavicle",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [neuropathy] + [clavicle]"
+    },
+    {
+      "text": "acute contusion of bilateral spleen",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [contusion] + [spleen]"
+    },
+    {
+      "text": "open dislocation of unspecified femoral artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [dislocation] + [femoral artery]"
+    },
+    {
+      "text": "superficial abscess of unspecified metacarpal bone",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [abscess] + [metacarpal bone]"
+    },
+    {
+      "text": "chronic polyp of left femoral artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [polyp] + [femoral artery]"
+    },
+    {
+      "text": "primary gangrene of unspecified bladder",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [primary] + [gangrene] + [bladder]"
+    },
+    {
+      "text": "acute atrophy of unspecified testis",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [atrophy] + [testis]"
+    },
+    {
+      "text": "malignant hemorrhage of bilateral brain",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [malignant] + [hemorrhage] + [brain]"
+    },
+    {
+      "text": "nontraumatic cataract of right sciatic nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [cataract] + [sciatic nerve]"
+    },
+    {
+      "text": "displaced prolapse of liver",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [displaced] + [prolapse] + [liver]"
+    },
+    {
+      "text": "traumatic gangrene of sternum",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [traumatic] + [gangrene] + [sternum]"
+    },
+    {
+      "text": "spontaneous effusion of bilateral brain",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [spontaneous] + [effusion] + [brain]"
+    },
+    {
+      "text": "pathological neoplasm of bilateral iris",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [neoplasm] + [iris]"
+    },
+    {
+      "text": "nontraumatic occlusion of left temporomandibular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [occlusion] + [temporomandibular joint]"
+    },
+    {
+      "text": "superficial neoplasm of right lung",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [neoplasm] + [lung]"
+    },
+    {
+      "text": "traumatic laceration of stomach",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [traumatic] + [laceration] + [stomach]"
+    },
+    {
+      "text": "pathological burn of left femoral artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [burn] + [femoral artery]"
+    },
+    {
+      "text": "chronic degeneration of left epididymis",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [degeneration] + [epididymis]"
+    },
+    {
+      "text": "displaced sclerosis of right metacarpal bone",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [displaced] + [sclerosis] + [metacarpal bone]"
+    },
+    {
+      "text": "complete embolism of left abdominal wall",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [embolism] + [abdominal wall]"
+    },
+    {
+      "text": "benign fracture of right temporomandibular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [fracture] + [temporomandibular joint]"
+    },
+    {
+      "text": "pathological hemorrhage of sternum",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [hemorrhage] + [sternum]"
+    },
+    {
+      "text": "recurrent effusion of bilateral ovary",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [effusion] + [ovary]"
+    },
+    {
+      "text": "complete polyp of left palm",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [polyp] + [palm]"
+    },
+    {
+      "text": "spontaneous effusion of bilateral temporomandibular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [spontaneous] + [effusion] + [temporomandibular joint]"
+    },
+    {
+      "text": "pathological stenosis of bilateral sclera",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [stenosis] + [sclera]"
+    },
+    {
+      "text": "nondisplaced glaucoma of unspecified renal artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nondisplaced] + [glaucoma] + [renal artery]"
+    },
+    {
+      "text": "open strain of bilateral skin",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [strain] + [skin]"
+    },
+    {
+      "text": "benign sclerosis of left sacrum",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [sclerosis] + [sacrum]"
+    },
+    {
+      "text": "spontaneous degeneration of unspecified thyroid gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [spontaneous] + [degeneration] + [thyroid gland]"
+    },
+    {
+      "text": "partial hernia of right talus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [partial] + [hernia] + [talus]"
+    },
+    {
+      "text": "open corrosion of ovary",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [corrosion] + [ovary]"
+    },
+    {
+      "text": "stress neuropathy of spinal cord",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [neuropathy] + [spinal cord]"
+    },
+    {
+      "text": "superficial gangrene of right pelvis",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [gangrene] + [pelvis]"
+    },
+    {
+      "text": "primary neuropathy of knee joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [primary] + [neuropathy] + [knee joint]"
+    },
+    {
+      "text": "traumatic hernia of skin",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [traumatic] + [hernia] + [skin]"
+    },
+    {
+      "text": "nontraumatic neuropathy of left fallopian tube",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [neuropathy] + [fallopian tube]"
+    },
+    {
+      "text": "stress neoplasm of right facial nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [neoplasm] + [facial nerve]"
+    },
+    {
+      "text": "pathological effusion of left axilla",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [effusion] + [axilla]"
+    },
+    {
+      "text": "stress cataract of left temporomandibular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [cataract] + [temporomandibular joint]"
+    },
+    {
+      "text": "nontraumatic rupture of left sclera",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [rupture] + [sclera]"
+    },
+    {
+      "text": "complete myelopathy of unspecified adrenal gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [myelopathy] + [adrenal gland]"
+    },
+    {
+      "text": "acute neuropathy of left pancreas",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [neuropathy] + [pancreas]"
+    },
+    {
+      "text": "nontraumatic contusion of face",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [contusion] + [face]"
+    },
+    {
+      "text": "primary sprain of right sciatic nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [primary] + [sprain] + [sciatic nerve]"
+    },
+    {
+      "text": "deep fracture of left chest wall",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [fracture] + [chest wall]"
+    },
+    {
+      "text": "benign degeneration of right talus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [degeneration] + [talus]"
+    },
+    {
+      "text": "malignant corrosion of bilateral fallopian tube",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [malignant] + [corrosion] + [fallopian tube]"
+    },
+    {
+      "text": "partial necrosis of bilateral abdominal wall",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [partial] + [necrosis] + [abdominal wall]"
+    },
+    {
+      "text": "deep thrombosis of bilateral acromioclavicular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [thrombosis] + [acromioclavicular joint]"
+    },
+    {
+      "text": "nontraumatic gangrene of unspecified axilla",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [gangrene] + [axilla]"
+    },
+    {
+      "text": "open fracture of left vitreous body",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [fracture] + [vitreous body]"
+    },
+    {
+      "text": "closed hypertrophy of bilateral pancreas",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [hypertrophy] + [pancreas]"
+    },
+    {
+      "text": "deep corrosion of right iris",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [corrosion] + [iris]"
+    },
+    {
+      "text": "partial thrombosis of bilateral ankle joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [partial] + [thrombosis] + [ankle joint]"
+    },
+    {
+      "text": "secondary occlusion of bilateral spinal cord",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [occlusion] + [spinal cord]"
+    },
+    {
+      "text": "incomplete polyp of bilateral kidney",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [incomplete] + [polyp] + [kidney]"
+    },
+    {
+      "text": "secondary corrosion of unspecified coronary artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [corrosion] + [coronary artery]"
+    },
+    {
+      "text": "nontraumatic hemorrhage of left adrenal gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [hemorrhage] + [adrenal gland]"
+    },
+    {
+      "text": "secondary cyst of sacroiliac joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [cyst] + [sacroiliac joint]"
+    },
+    {
+      "text": "secondary sclerosis of left brain",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [sclerosis] + [brain]"
+    },
+    {
+      "text": "secondary occlusion of unspecified sclera",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [occlusion] + [sclera]"
+    },
+    {
+      "text": "open fracture of left elbow joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [fracture] + [elbow joint]"
+    },
+    {
+      "text": "deep prolapse of right humerus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [prolapse] + [humerus]"
+    },
+    {
+      "text": "partial sclerosis of right sciatic nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [partial] + [sclerosis] + [sciatic nerve]"
+    },
+    {
+      "text": "stress cyst of aorta",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [cyst] + [aorta]"
+    },
+    {
+      "text": "chronic laceration of left appendix",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [laceration] + [appendix]"
+    },
+    {
+      "text": "complete fracture of unspecified acromioclavicular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [fracture] + [acromioclavicular joint]"
+    },
+    {
+      "text": "malignant cataract of groin",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [malignant] + [cataract] + [groin]"
+    },
+    {
+      "text": "benign rupture of left ulnar nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [rupture] + [ulnar nerve]"
+    },
+    {
+      "text": "malignant contusion of right patella",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [malignant] + [contusion] + [patella]"
+    },
+    {
+      "text": "incomplete hypertrophy of bilateral metacarpal bone",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [incomplete] + [hypertrophy] + [metacarpal bone]"
+    },
+    {
+      "text": "secondary neoplasm of retina",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [neoplasm] + [retina]"
+    },
+    {
+      "text": "closed gangrene of bilateral radius",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [gangrene] + [radius]"
+    },
+    {
+      "text": "displaced effusion of scapula",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [displaced] + [effusion] + [scapula]"
+    },
+    {
+      "text": "malignant hernia of left palm",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [malignant] + [hernia] + [palm]"
+    },
+    {
+      "text": "nontraumatic dislocation of lens",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [dislocation] + [lens]"
+    },
+    {
+      "text": "recurrent rupture of left tibia",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [recurrent] + [rupture] + [tibia]"
+    },
+    {
+      "text": "benign neoplasm of bilateral spinal cord",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [neoplasm] + [spinal cord]"
+    },
+    {
+      "text": "stress embolism of right brachial plexus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [stress] + [embolism] + [brachial plexus]"
+    },
+    {
+      "text": "displaced necrosis of facial nerve",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [displaced] + [necrosis] + [facial nerve]"
+    },
+    {
+      "text": "complete occlusion of right esophagus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [complete] + [occlusion] + [esophagus]"
+    },
+    {
+      "text": "benign subluxation of right spleen",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [benign] + [subluxation] + [spleen]"
+    },
+    {
+      "text": "closed effusion of bilateral hip joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [closed] + [effusion] + [hip joint]"
+    },
+    {
+      "text": "deep thrombosis of unspecified knee joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [thrombosis] + [knee joint]"
+    },
+    {
+      "text": "deep hemorrhage of left patella",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [deep] + [hemorrhage] + [patella]"
+    },
+    {
+      "text": "nondisplaced myelopathy of unspecified buttock",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nondisplaced] + [myelopathy] + [buttock]"
+    },
+    {
+      "text": "acute thrombosis of unspecified acromioclavicular joint",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [acute] + [thrombosis] + [acromioclavicular joint]"
+    },
+    {
+      "text": "chronic necrosis of femoral artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [necrosis] + [femoral artery]"
+    },
+    {
+      "text": "superficial sclerosis of left femur",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [superficial] + [sclerosis] + [femur]"
+    },
+    {
+      "text": "secondary polyp of left epididymis",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [secondary] + [polyp] + [epididymis]"
+    },
+    {
+      "text": "nontraumatic sprain of left liver",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [sprain] + [liver]"
+    },
+    {
+      "text": "nontraumatic cataract of bilateral kidney",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nontraumatic] + [cataract] + [kidney]"
+    },
+    {
+      "text": "nondisplaced fibrosis of left portal vein",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [nondisplaced] + [fibrosis] + [portal vein]"
+    },
+    {
+      "text": "pathological corrosion of right adrenal gland",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [pathological] + [corrosion] + [adrenal gland]"
+    },
+    {
+      "text": "chronic ulcer of sclera",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [ulcer] + [sclera]"
+    },
+    {
+      "text": "open hypertrophy of left pulmonary artery",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [open] + [hypertrophy] + [pulmonary artery]"
+    },
+    {
+      "text": "chronic gangrene of right esophagus",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [gangrene] + [esophagus]"
+    },
+    {
+      "text": "chronic thrombosis of left choroid",
+      "label": "FP",
+      "category": "template_remix",
+      "reason": "recombined: [chronic] + [thrombosis] + [choroid]"
+    },
+    {
+      "text": "refractory procrastination",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'refractory' + non-medical noun 'procrastination'"
+    },
+    {
+      "text": "congenital email",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'congenital' + non-medical noun 'email'"
+    },
+    {
+      "text": "benign traffic",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'benign' + non-medical noun 'traffic'"
+    },
+    {
+      "text": "traumatic weather",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'traumatic' + non-medical noun 'weather'"
+    },
+    {
+      "text": "infectious project",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'project'"
+    },
+    {
+      "text": "benign presentation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'benign' + non-medical noun 'presentation'"
+    },
+    {
+      "text": "hereditary workflow",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'hereditary' + non-medical noun 'workflow'"
+    },
+    {
+      "text": "hereditary traffic",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'hereditary' + non-medical noun 'traffic'"
+    },
+    {
+      "text": "superficial commute",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'superficial' + non-medical noun 'commute'"
+    },
+    {
+      "text": "chronic leadership",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'chronic' + non-medical noun 'leadership'"
+    },
+    {
+      "text": "systemic meeting",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'systemic' + non-medical noun 'meeting'"
+    },
+    {
+      "text": "invasive presentation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'invasive' + non-medical noun 'presentation'"
+    },
+    {
+      "text": "bilateral presentation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'bilateral' + non-medical noun 'presentation'"
+    },
+    {
+      "text": "traumatic teamwork",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'traumatic' + non-medical noun 'teamwork'"
+    },
+    {
+      "text": "disorder of diplomatic relations",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "progressive innovation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'progressive' + non-medical noun 'innovation'"
+    },
+    {
+      "text": "invasive budget",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'invasive' + non-medical noun 'budget'"
+    },
+    {
+      "text": "sprain of the economy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "chronic deadline",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'chronic' + non-medical noun 'deadline'"
+    },
+    {
+      "text": "infectious software",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'software'"
+    },
+    {
+      "text": "disease of the economy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "idiopathic software",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'idiopathic' + non-medical noun 'software'"
+    },
+    {
+      "text": "inflammatory laziness",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'inflammatory' + non-medical noun 'laziness'"
+    },
+    {
+      "text": "infectious feedback",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'feedback'"
+    },
+    {
+      "text": "superficial presentation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'superficial' + non-medical noun 'presentation'"
+    },
+    {
+      "text": "disorder of the supply chain",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "pathological laziness",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'laziness'"
+    },
+    {
+      "text": "benign innovation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'benign' + non-medical noun 'innovation'"
+    },
+    {
+      "text": "infectious weather",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'weather'"
+    },
+    {
+      "text": "hemorrhage of public trust",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "stenosis of the economy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "pathological budget",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'budget'"
+    },
+    {
+      "text": "systemic laziness",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'systemic' + non-medical noun 'laziness'"
+    },
+    {
+      "text": "hereditary teamwork",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'hereditary' + non-medical noun 'teamwork'"
+    },
+    {
+      "text": "chronic software",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'chronic' + non-medical noun 'software'"
+    },
+    {
+      "text": "inflammatory commute",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'inflammatory' + non-medical noun 'commute'"
+    },
+    {
+      "text": "inflammation of the foundation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "malignant procrastination",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'malignant' + non-medical noun 'procrastination'"
+    },
+    {
+      "text": "bilateral bureaucracy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'bilateral' + non-medical noun 'bureaucracy'"
+    },
+    {
+      "text": "invasive weather",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'invasive' + non-medical noun 'weather'"
+    },
+    {
+      "text": "infectious commute",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'commute'"
+    },
+    {
+      "text": "syndrome of communication",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "acute confusion",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'acute' + non-medical noun 'confusion'"
+    },
+    {
+      "text": "degenerative strategy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'degenerative' + non-medical noun 'strategy'"
+    },
+    {
+      "text": "pathological nostalgia",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'nostalgia'"
+    },
+    {
+      "text": "fracture of communication",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "inflammatory traffic",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'inflammatory' + non-medical noun 'traffic'"
+    },
+    {
+      "text": "progressive workflow",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'progressive' + non-medical noun 'workflow'"
+    },
+    {
+      "text": "malignant indecision",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'malignant' + non-medical noun 'indecision'"
+    },
+    {
+      "text": "infectious deadline",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'deadline'"
+    },
+    {
+      "text": "bilateral meeting",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'bilateral' + non-medical noun 'meeting'"
+    },
+    {
+      "text": "hereditary project",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'hereditary' + non-medical noun 'project'"
+    },
+    {
+      "text": "pathological presentation",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'presentation'"
+    },
+    {
+      "text": "pathological leadership",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'leadership'"
+    },
+    {
+      "text": "superficial instability in markets",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "chronic project",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'chronic' + non-medical noun 'project'"
+    },
+    {
+      "text": "congenital bureaucracy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'congenital' + non-medical noun 'bureaucracy'"
+    },
+    {
+      "text": "benign optimism",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'benign' + non-medical noun 'optimism'"
+    },
+    {
+      "text": "refractory confusion",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'refractory' + non-medical noun 'confusion'"
+    },
+    {
+      "text": "hereditary procrastination",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'hereditary' + non-medical noun 'procrastination'"
+    },
+    {
+      "text": "acute teamwork",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'acute' + non-medical noun 'teamwork'"
+    },
+    {
+      "text": "refractory homework",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'refractory' + non-medical noun 'homework'"
+    },
+    {
+      "text": "invasive delay",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'invasive' + non-medical noun 'delay'"
+    },
+    {
+      "text": "traumatic deterioration of morale",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "stenosis of the supply chain",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "degenerative confusion",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'degenerative' + non-medical noun 'confusion'"
+    },
+    {
+      "text": "pathological strategy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'strategy'"
+    },
+    {
+      "text": "autoimmune indecision",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'autoimmune' + non-medical noun 'indecision'"
+    },
+    {
+      "text": "dislocation of the economy",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "dislocation of confidence",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical term in non-medical context"
+    },
+    {
+      "text": "idiopathic argument",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'idiopathic' + non-medical noun 'argument'"
+    },
+    {
+      "text": "infectious meeting",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'infectious' + non-medical noun 'meeting'"
+    },
+    {
+      "text": "refractory optimism",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'refractory' + non-medical noun 'optimism'"
+    },
+    {
+      "text": "progressive deadline",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'progressive' + non-medical noun 'deadline'"
+    },
+    {
+      "text": "autoimmune workflow",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'autoimmune' + non-medical noun 'workflow'"
+    },
+    {
+      "text": "pathological deadline",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'pathological' + non-medical noun 'deadline'"
+    },
+    {
+      "text": "recurrent email",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'recurrent' + non-medical noun 'email'"
+    },
+    {
+      "text": "traumatic commute",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'traumatic' + non-medical noun 'commute'"
+    },
+    {
+      "text": "bilateral weather",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'bilateral' + non-medical noun 'weather'"
+    },
+    {
+      "text": "benign laziness",
+      "label": "FP",
+      "category": "novel_english",
+      "reason": "medical adj 'benign' + non-medical noun 'laziness'"
+    },
+    {
+      "text": "status post cholecystectomy",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "procedure, not diagnosis"
+    },
+    {
+      "text": "old fracture of femur",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "'old' qualifier not in ICD"
+    },
+    {
+      "text": "arthritis",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "post-surgical wound infection",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "compound clinical phrase"
+    },
+    {
+      "text": "mild contusion of knee",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "'mild' not typical ICD qualifier for contusion"
+    },
+    {
+      "text": "neoplasm",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "abscess",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "hemorrhage",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "rule out pulmonary embolism",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "clinical context, not a title"
+    },
+    {
+      "text": "possible dislocation of shoulder",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "'possible' qualifier"
+    },
+    {
+      "text": "edema",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "embolism",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "stenosis",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "recurrent urinary tract infection",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "natural language, close to real title"
+    },
+    {
+      "text": "fibrosis",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "fractures of the femur",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "'the' article insertion"
+    },
+    {
+      "text": "gangrene",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "bilateral sprains of ankles",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "plural anatomy"
+    },
+    {
+      "text": "history of pneumonia",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "matches H-code pattern but also conversational"
+    },
+    {
+      "text": "suspected embolism of artery",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "'suspected' qualifier"
+    },
+    {
+      "text": "diagnosed with type 2 diabetes mellitus",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "sentence wrapping a real title"
+    },
+    {
+      "text": "patient has fracture of femur",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "sentence wrapping a real title"
+    },
+    {
+      "text": "thrombosis",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "bare condition noun, no anatomy"
+    },
+    {
+      "text": "the burn of hand",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "article prefix"
+    },
+    {
+      "text": "presents with acute appendicitis",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "sentence wrapping a real title"
+    },
+    {
+      "text": "healed fracture of tibia",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "'healed' qualifier not in ICD"
+    },
+    {
+      "text": "a laceration of the scalp",
+      "label": "FP",
+      "category": "boundary_probe",
+      "reason": "article prefix"
+    }
+  ]
+}

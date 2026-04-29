@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+# Generated entity XML files (rebuild with: python3 build_entity.py)
+strategy1_domain_split/entity.xml
+strategy3_flat_entries/entity.xml
+strategy4_core_terms/entity.xml
+original/entity.xml
+
+# Generated evaluation reports (rebuild with: python3 ../shared/report.py entity.xml)
+*/report.json
+*/results.json
+
+# Legacy root-level generated files
+icd10cm_diagnostic_classifications.xml
+uncovered_titles.txt

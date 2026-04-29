@@ -1,0 +1,4134 @@
+{
+  "metadata": {
+    "description": "ICD-10-CM entity evaluation dataset for false positive testing",
+    "version": "1.0",
+    "categories": {
+      "impossible_combo": "Valid condition + valid anatomy but medically impossible",
+      "domain_mismatch": "Condition applied to wrong anatomical system",
+      "common_english": "Everyday phrases containing medical-sounding words",
+      "partial_medical": "Medical term used in non-diagnostic context",
+      "ambiguous_short": "Too short/vague to be meaningful matches",
+      "near_miss": "Almost-medical phrases that aren't real ICD terms",
+      "official_title": "Real ICD-10-CM official titles (true positives)",
+      "natural_variant": "Natural language variants of ICD titles (true positives)"
+    },
+    "counts": {
+      "by_label": {
+        "TP": 600,
+        "FP": 171,
+        "EDGE": 12
+      },
+      "by_category": {
+        "official_title": 500,
+        "natural_variant": 100,
+        "impossible_combo": 52,
+        "domain_mismatch": 17,
+        "common_english": 69,
+        "partial_medical": 12,
+        "ambiguous_short": 16,
+        "near_miss": 17
+      },
+      "total": 783
+    }
+  },
+  "entries": [
+    {
+      "text": "poisoning by unspecified hormones and synthetic substitutes, intentional self-harm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified cardiac arrhythmias",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for other rhesus isoimmunization, third trimester, fetus 2",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cerebral infarction due to embolism of unspecified cerebellar artery",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced spiral fracture of shaft of right fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "osteopathy after poliomyelitis, left thigh",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "subluxation of distal interphalangeal joint of left middle finger",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced transverse fracture of unspecified patella, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other infections with a predominantly sexual mode of transmission complicating pregnancy, first trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other physeal fracture of unspecified calcaneus, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "epidural hemorrhage with loss of consciousness greater than 24 hours without return to pre-existing conscious level with patient surviving",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pneumococcal arthritis and polyarthritis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "non-pressure chronic ulcer of left heel and midfoot with other specified severity",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified dislocation of right middle finger, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "epidural hemorrhage with loss of consciousness of any duration with death due to brain injury prior to regaining consciousness",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of posterior process of left talus, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of left front wall of thorax, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "partial traumatic amputation of left foot at ankle level, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lead-induced chronic gout, unspecified elbow, with tophus (tophi)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other injury of unspecified muscles, fascia and tendons at forearm level, left arm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of left lower leg, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "preterm newborn, gestational age 35 completed weeks",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of right back wall of thorax without penetration into thoracic cavity, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other adverse food reaction due to milk and dairy products with baked milk tolerance/reactivity, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of third degree of unspecified axilla, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of unspecified tarsal bone(s) of left foot, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acute pulmonary manifestations due to radiation",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of anterior cruciate ligament of right knee, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of antimycobacterial drugs, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced comminuted fracture of right patella, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of left femur, subsequent encounter for open fracture type i or ii with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acute hematogenous osteomyelitis, unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complication of immune effector cellular therapy, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of venom of ants, undetermined, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced avulsion fracture of left ischium, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced oblique fracture of shaft of right radius, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "atherosclerosis of native arteries of left leg with ulceration of heel and midfoot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of extensor muscle, fascia and tendon of right thumb at wrist and hand level",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified disorders of amniotic fluid and membranes, third trimester, fetus 4",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of anterior wall of nasopharynx",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for other isoimmunization, third trimester, other fetus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting right dominant side",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crushing injury of unspecified hip with thigh, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acute posterior multifocal placoid pigment epitheliopathy",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of flexor muscle, fascia and tendon of left index finger at wrist and hand level, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "traumatic rupture of other ligament of right index finger at metacarpophalangeal and interphalangeal joint",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of multiple right fingers (nail), not including thumb, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of nerve root of sacral spine",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abscess of external ear, unspecified ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by other estrogens and progestogens, undetermined, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced intertrochanteric fracture of right femur, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "opioid abuse with withdrawal",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "adverse effect of unspecified drugs primarily affecting the autonomic nervous system",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of distal pole of navicular [scaphoid] bone of left wrist, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified synovitis and tenosynovitis, unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "premature rupture of membranes, unspecified as to length of time between rupture and onset of labor",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of unspecified upper arm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other disorders of continuity of bone, unspecified hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fetal anemia and thrombocytopenia, unspecified trimester, fetus 1",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of radiocarpal joint of unspecified wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other superficial bite of breast, right breast, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced other fracture of tuberosity of left calcaneus, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "type 1 diabetes mellitus with ophthalmic complications",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cardiovascular syphilis, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced transverse fracture of shaft of right fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic epidermal necrolysis [lyell]",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "partial traumatic metacarpophalangeal amputation of right thumb, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "disease of tongue, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by monoamine-oxidase-inhibitor antidepressants, undetermined, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of pharynx and cervical esophagus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fissure and fistula of anal and rectal regions",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial foreign body, right knee, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of proximal phalanx of left index finger, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of lower end of left tibia, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "asphyxiation due to smothering in furniture, assault, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "plasmodium malariae malaria without complication",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "attic perforation of tympanic membrane, right ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of right wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of shaft of second metacarpal bone, right hand, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cardiac complications of anesthesia during pregnancy",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "edema of eyelid",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "major laceration of femoral artery, left leg, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of left axilla, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "loose body in unspecified finger joint(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified injury of innominate or subclavian artery",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of 2-propanol",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exposure of implanted vaginal mesh into vagina",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "aseptic meningitis in leptospirosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other physeal fracture of phalanx of left toe, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound of abdominal wall with foreign body, left lower quadrant without penetration into peritoneal cavity, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diabetes mellitus due to underlying condition with other diabetic kidney complication",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "resistance to antiparasitic drug(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "irritant contact dermatitis due friction or contact with other specified body fluids",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of intrinsic muscle, fascia and tendon of right thumb at wrist and hand level, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "adverse effect of other antidysrhythmic drugs",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other manic episodes",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of chest wall, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crushing injury of left middle finger",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "twin pregnancy, unspecified number of placenta and unspecified number of amniotic sacs",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "rheumatoid polyneuropathy with rheumatoid arthritis of left knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other psychoactive substance use, unspecified with other psychoactive substance-induced disorders",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of cutaneous sensory nerve at ankle and foot level, left leg, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous) of scalp",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced transcondylar fracture of right humerus, initial encounter for open fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced maisonneuve's fracture of left leg, subsequent encounter for closed fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "frostbite with tissue necrosis of right hand, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abscess of bursa, ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of middle phalanx of right little finger, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "familial chondrocalcinosis, unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "moderate laceration of right kidney, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "folate deficiency anemia",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "loiasis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound without foreign body of nose, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of medial collateral ligament of unspecified knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified atherosclerosis of other type of bypass graft(s) of the extremities, bilateral legs",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "impacted cerumen, right ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "solar retinopathy, bilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nephrotic syndrome with focal and segmental glomerular lesions",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blister (nonthermal), left lower leg, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial injury of ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of right femur, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crushing injury of right index finger, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal hypotension syndrome",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "stress fracture, left fibula, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of right internal carotid artery, intracranial portion, not elsewhere classified with loss of consciousness of 31 minutes to 59 minutes, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "drug-induced gout, unspecified hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "breakdown (mechanical) of other gastrointestinal prosthetic devices, implants and grafts, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "scarring of conjunctiva, left eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "myositis ossificans progressiva, right lower leg",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "polyp of vocal cord and larynx",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "neuroma of amputation stump",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "stress fracture, right hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fluency disorder following unspecified cerebrovascular disease",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of left great toe without damage to nail, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "adverse effect of other antipsychotics and neuroleptics, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of vein at forearm level, unspecified arm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "non-pressure chronic ulcer of right heel and midfoot with other specified severity",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced comminuted fracture of shaft of radius, left arm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of other part of scapula, right shoulder, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture (avulsion) of medial epicondyle of unspecified humerus, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of lateral condyle of right femur, subsequent encounter for open fracture type iiia, iiib, or iiic with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "food in larynx causing asphyxiation, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced associated transverse-posterior fracture of unspecified acetabulum, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of third degree of unspecified hand, unspecified site, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "umbilical polyp of newborn",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified entropion of left upper eyelid",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of pertussis vaccine, including combinations with a pertussis component",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "external constriction of vagina and vulva",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "carcinoma in situ of left bronchus and lung",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by thrombolytic drug, intentional self-harm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of other halogen derivatives of aromatic hydrocarbons, accidental (unintentional), subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by other general anesthetics, undetermined, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of distal phalanx of unspecified finger, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "juvenile osteochondrosis of spine, cervical region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "charcot's joint, left hip",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of unspecified part of scapula, right shoulder, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contact with and (suspected) exposure to uranium",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blister (nonthermal) of right eyelid and periocular area, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of abdominal wall, right lower quadrant with penetration into peritoneal cavity, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified disorders of synovium and tendon, elbow",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "disorder of teeth and supporting structures, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified nephritic syndrome with diffuse membranous glomerulonephritis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous) of throat",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified injury of femoral vein at hip and thigh level, left leg, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "major laceration of unspecified vertebral artery",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pathological fracture in neoplastic disease, left radius, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other respiratory distress of newborn",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified disorder of synovium and tendon, right hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "breakdown (mechanical) of other prosthetic devices, implants and grafts of genital tract",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "secondary syphilitic hepatitis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "leukoderma, not elsewhere classified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of anterior cruciate ligament of right knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "furuncle of groin",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crushing injury of other parts of head, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "monteggia's fracture of left ulna",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of head, face, and neck",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other reactive arthropathies, unspecified knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "salter-harris type i physeal fracture of left metatarsal, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "salter-harris type iii physeal fracture of left calcaneus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of unspecified site of lower limb, except ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of shaft of other metacarpal bone, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of unspecified phalanx of left index finger, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cervical disc disorder with radiculopathy, unspecified cervical region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of medial condyle of left femur, subsequent encounter for closed fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "presence of artificial wrist joint",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of extensor muscle, fascia and tendon of left ring finger at forearm level, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "enteropathic arthropathies, unspecified shoulder",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified malignant neoplasm of skin of unspecified parts of face",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of proximal third of navicular [scaphoid] bone of right wrist, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of greater trochanter of right femur, subsequent encounter for closed fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nodular sclerosis hodgkin lymphoma, intrapelvic lymph nodes",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced comminuted fracture of shaft of humerus, left arm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "adverse effect of other psychodysleptics [hallucinogens], sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "subluxation of right acromioclavicular joint",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of right back wall of thorax with penetration into thoracic cavity, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of phosphorus and its compounds, intentional self-harm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dicroceliasis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "onchocerciasis with endophthalmitis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body, right knee, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of unspecified site of right eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other chronic nonsuppurative otitis media, right ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of other muscles, fascia and tendons at shoulder and upper arm level, unspecified arm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of paints and dyes, not elsewhere classified, accidental (unintentional), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "ototoxic hearing loss, unspecified ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "kidney transplant rejection",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fistula, other specified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sudden visual loss, bilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial foreign body, right lesser toe(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "charcot's joint, multiple sites",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "kuru",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of trapezoid [smaller multangular], right wrist, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration with foreign body of left middle finger with damage to nail, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of coronoid process of unspecified ulna, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "endothelial corneal dystrophy, left eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of cutaneous sensory nerve at ankle and foot level, right leg, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "chondromalacia, left shoulder",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "longitudinal reduction defect of left fibula",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of bone and articular cartilage, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "salter-harris type i physeal fracture of unspecified metatarsal, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contracture of muscle, ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of second degree of multiple sites of unspecified wrist and hand, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "left tubal pregnancy without intrauterine pregnancy",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "supervision of pregnancy with history of infertility, third trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other physeal fracture of lower end of right fibula, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "merkel cell carcinoma of unspecified upper limb, including shoulder",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of lower end of right femur, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of unspecified degree of left upper arm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "age-related osteoporosis with current pathological fracture, unspecified humerus, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of venom of other snake, accidental (unintentional)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "kwashiorkor",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified subluxation of unspecified ulnohumeral joint, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other fracture of left ilium, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cysticercosis, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced transverse fracture of shaft of unspecified tibia, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body, unspecified thigh, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sublingual varices",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "crohn's disease of small intestine with other complication",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for other isoimmunization, unspecified trimester, fetus 5",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of base of second metacarpal bone, right hand, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of left back wall of thorax",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lichen striatus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "injury of peroneal nerve at lower leg level, unspecified leg, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of shaft of first metacarpal bone, unspecified hand, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "postprocedural hemorrhage of a circulatory system organ or structure following a cardiac catheterization",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial foreign body, right ankle, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "non-pressure chronic ulcer of left hand with other specified severity",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for transverse and oblique lie, fetus 1",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of manganese and its compounds, accidental (unintentional), sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by fluoroquinolone antibiotics, accidental (unintentional), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant carcinoid tumor of the small intestine, unspecified portion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of thigh",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "subluxation of proximal interphalangeal joint of left middle finger, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pupillary abnormalities",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of second degree of single left finger (nail) except thumb",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body of unspecified part of head, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other fish poisoning, undetermined, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lateral dislocation of proximal end of tibia, right knee, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "flail joint, unspecified knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "major laceration of spleen",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete traumatic transphalangeal amputation of left little finger, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "moderate laceration of tail of pancreas",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "direct infection of right elbow in infectious and parasitic diseases classified elsewhere",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound without foreign body of abdominal wall, unspecified quadrant with penetration into peritoneal cavity, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other spondylosis with myelopathy, lumbar region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "irritant contact dermatitis related to digestive stoma or fistula",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of other ligament of right ankle, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "barrett's esophagus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of unspecified part of neck of unspecified femur, subsequent encounter for open fracture type iiia, iiib, or iiic with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified slipped upper femoral epiphysis (nontraumatic), right hip",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cellulitis of left axilla",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "strain of intrinsic muscle, fascia and tendon of unspecified thumb at wrist and hand level, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body of penis, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lead-induced chronic gout, unspecified ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "salter-harris type i physeal fracture of lower end of left femur, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified subluxation of left index finger",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abscess of tendon sheath, forearm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cutaneous abscess, furuncle and carbuncle of hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diabetes mellitus due to underlying condition with diabetic peripheral angiopathy without gangrene",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dissociative and conversion disorder, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "chorioretinal scars after surgery for detachment, left eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "newborn affected by multiple pregnancy",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "lead-induced gout, left hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "chondromalacia, right ankle and joints of right foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of right middle finger without damage to nail, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abnormal results of other function studies of ear and other special senses",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "blister (nonthermal), unspecified lower leg, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of venom of other australian snake, accidental (unintentional)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "phlebitis and thrombophlebitis of femoral vein, bilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "primary osteoarthritis, right ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "strain of unspecified muscles, fascia and tendons at thigh level, left thigh, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of fourth thoracic vertebra, initial encounter for open fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn with resulting rupture and destruction of right eyeball",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of breast, right breast, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "aspiration pneumonitis due to anesthesia during labor and delivery",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sequelae of unspecified cerebrovascular diseases",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other and unspecified soft tissue disorders, not elsewhere classified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified sprain of unspecified wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial endometriosis of the right pelvic brim",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laparoscopic surgical procedure converted to open procedure",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other injury of extensor muscle, fascia and tendon of left middle finger at forearm level",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced comminuted fracture of shaft of left tibia, initial encounter for open fracture type i or ii",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "sprain of interphalangeal joint of other finger, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other displaced fracture of upper end of unspecified humerus, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "encounter for health counseling related to travel",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "primary open-angle glaucoma, left eye, moderate stage",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "non-pressure chronic ulcer of left upper arm with bone involvement without evidence of necrosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "encounter for antenatal screening for isoimmunization",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exposure of other implanted mesh into organ or tissue, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other deformities of toe(s) (acquired), right foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "multiple gestation",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "aftercare following explantation of joint prosthesis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "chronic angle-closure glaucoma, right eye, mild stage",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of unspecified tibial spine, initial encounter for open fracture type iiia, iiib, or iiic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of first metatarsal bone, left foot, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete lesion at c6 level of cervical spinal cord, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diabetes mellitus due to underlying condition with proliferative diabetic retinopathy with macular edema, bilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of navicular [scaphoid] of right foot, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "high grade squamous intraepithelial lesion on cytologic smear of vagina (hgsil)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "chronic venous hypertension (idiopathic) without complications of left lower extremity",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified physeal fracture of lower end of right femur, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exposure of other prosthetic materials into organ or tissue",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "generalized edema",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of second degree of right shoulder, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other disorders of glucose transport",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of left radial styloid process, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other and unspecified disorders of eustachian tube",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified physeal fracture of lower end of ulna, unspecified arm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of unspecified degree of left upper arm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "atherosclerosis of autologous vein bypass graft(s) of the left leg with ulceration of unspecified site",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete traumatic amputation of right hand at wrist level, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of second degree of upper arm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced maisonneuve's fracture of left leg, initial encounter for open fracture type iiia, iiib, or iiic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "meibomian gland dysfunction right eye, upper and lower eyelids",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "glaucoma secondary to other eye disorders, unspecified eye, mild stage",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pathological fracture, right tibia, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "basal cell carcinoma of skin of unspecified upper limb, including shoulder",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of unspecified degree of multiple right fingers (nail), including thumb, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acquired absence of other genital organ(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other extraarticular fracture of lower end of unspecified radius",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "irradiation cystitis with hematuria",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete traumatic transphalangeal amputation of unspecified finger, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of overlapping sites of lip, oral cavity and pharynx",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diplacusis, unspecified ear",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "primary blast injury of lung, unilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of third degree of single right finger (nail) except thumb, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of unspecified drugs acting on muscles, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "continuing pregnancy after elective fetal reduction of one fetus or more, first trimester, fetus 5",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of trachea",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of venom of hornets, assault, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other injury of bladder, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "hypertrophy of bone, left radius",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "complete traumatic amputation at knee level, right lower leg, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other paralytic syndrome following nontraumatic subarachnoid hemorrhage affecting right non-dominant side",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "oblique fracture of shaft of humerus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified injury of prostate, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "strain of other muscles, fascia and tendons at forearm level, left arm, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "pain due to internal orthopedic prosthetic devices, implants and grafts, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "arnold-chiari syndrome",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "traumatic subdural hemorrhage with loss of consciousness of 1 hour to 5 hours 59 minutes",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "twin pregnancy, unspecified number of placenta and unspecified number of amniotic sacs, second trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of left wrist, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "staphylococcal arthritis, left hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "wedge compression fracture of second lumbar vertebra, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other dystrophies primarily involving the sensory retina",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "non-pressure chronic ulcer of left ankle with necrosis of muscle",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "tuberculosis complicating childbirth",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of abdominal wall, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "torus fracture of lower end of humerus",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other disorders of continuity of bone, ulna and radius",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified physeal fracture of upper end of radius, unspecified arm, subsequent encounter for fracture with malunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of third degree of unspecified scapular region, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for fetal problem, unspecified, third trimester, not applicable or unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "syphilis complicating pregnancy, third trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "personal history of (corrected) congenital malformations of integument, limbs and musculoskeletal system",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified nephritic syndrome with diffuse crescentic glomerulonephritis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by, adverse effect of and underdosing of unspecified systemic antibiotic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "maternal care for abnormalities of the fetal heart rate or rhythm, third trimester, fetus 2",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abnormal radiological finding on antenatal screening of mother",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other streptococcal arthritis, unspecified joint",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "stress fracture, right finger(s), subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "social phobias",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "primary optic atrophy, unspecified eye",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "kaschin-beck disease, unspecified elbow",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exfoliation due to erythematous condition involving less than 10 percent of body surface",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other shellfish poisoning, undetermined, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced transcondylar fracture of right humerus, initial encounter for open fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by iron and its compounds, undetermined, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open bite of abdominal wall, periumbilic region with penetration into peritoneal cavity, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of lateral condyle of unspecified tibia",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "intervertebral disc stenosis of neural canal of lumbar region",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other nerve root and plexus disorders",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by other antacids and anti-gastric-secretion drugs, accidental (unintentional), sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "breakdown (mechanical) of electronic bone stimulator, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other bursitis, not elsewhere classified, left hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by penicillins, assault",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "torus fracture of lower end of left radius, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "muscular disorders of urethra",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "meningitis in other infectious and parasitic diseases classified elsewhere",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fistula, unspecified knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration without foreign body, left ankle, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of opium, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cerebral infarction due to cerebral venous thrombosis, nonpyogenic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "traumatic anuria",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other fracture of occiput, unspecified side, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosions of other specified parts of unspecified eye and adnexa",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced osteochondral fracture of right patella, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of second degree of upper back, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other and unspecified cord compression",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of second degree of multiple sites of lower limb, except ankle and foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of corrosive alkalis and alkali-like substances, accidental (unintentional), sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of peripheral nerves of abdomen",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "peptic ulcer, site unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other and unspecified injuries of thoracic spinal cord",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified open wound of larynx",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified synovitis and tenosynovitis, left forearm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of other nonopioid analgesics and antipyretics, not elsewhere classified, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified displaced fracture of second cervical vertebra",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by chloramphenicol group, assault, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "acquired clubfoot, unspecified foot",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of neck of second metacarpal bone, left hand, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "presence of artificial skin",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of contact with venomous toad, intentional self-harm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified subluxation of left sternoclavicular joint, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of chewing tobacco",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of formaldehyde, intentional self-harm, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by antithrombotic drugs, intentional self-harm, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of fifth metatarsal bone, left foot, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "strain of adductor muscle, fascia and tendon of thigh",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified physeal fracture of lower end of unspecified femur, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced spiral fracture of shaft of unspecified fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced comminuted fracture of shaft of ulna, right arm, subsequent encounter for open fracture type i or ii with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced fracture of lateral malleolus of unspecified fibula, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of flank (latus) region, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fatigue fracture of vertebra, sacral and sacrococcygeal region, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "derangement of unspecified lateral meniscus due to old tear or injury, left knee",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of unspecified quadriceps muscle, fascia and tendon, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "open angle with borderline findings, low risk",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "underdosing of other psychodysleptics [hallucinogens]",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "toxic effect of contact with other jellyfish, intentional self-harm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "subluxation of radiocarpal joint of unspecified wrist, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial foreign body of back wall of thorax",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "cyanosis",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "thoracoabdominal aortic aneurysm, ruptured, unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "superficial foreign body of breast, left breast, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "traumatic rupture of collateral ligament of left index finger at metacarpophalangeal and interphalangeal joint, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "gestational edema, complicating the puerperium",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of extensor muscle, fascia and tendon of right ring finger at wrist and hand level, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "exhaustion due to exposure",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous) of unspecified eyelid and periocular area",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by sulfonamides, undetermined, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of sigmoid colon, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "osteopathy in diseases classified elsewhere, thigh",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of lower end of right tibia, subsequent encounter for open fracture type iiia, iiib, or iiic with delayed healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other mechanical complication of graft of urinary organ",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced oblique fracture of shaft of humerus, left arm, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced bicondylar fracture of left tibia, subsequent encounter for open fracture type i or ii with routine healing",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "heat exhaustion, anhydrotic",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "laceration of muscle, fascia and tendon of left hip, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "breakdown (mechanical) of implanted electronic neurostimulator of spinal cord electrode (lead), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "displaced fracture of posterior column [ilioischial] of unspecified acetabulum, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other fracture of lower end of unspecified tibia, initial encounter for open fracture type i or ii",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "malignant neoplasm of tonsil",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "dislocation of interphalangeal joint of right lesser toe(s)",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "furuncle of left axilla",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of cornea and conjunctival sac, left eye, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of unspecified ear, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified joint disorders, elbow",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous), right lesser toe(s), initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by methamphetamines, undetermined",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified superficial injury of right thumb",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "insect bite (nonvenomous) of nose, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by anticholinesterase agents, accidental (unintentional), sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "coma scale, best motor response, localizes pain, unspecified time",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abscess of left lower eyelid",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "papyraceous fetus, unspecified trimester",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "diffuse traumatic brain injury with loss of consciousness status unknown, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "embolism due to cardiac prosthetic devices, implants and grafts",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of first degree of unspecified single finger (nail) except thumb, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "soemmering's ring, bilateral",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "corrosion of second degree of right shoulder, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "nondisplaced subtrochanteric fracture of right femur, initial encounter for open fracture type i or ii",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of first thoracic vertebra, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other fracture of lower end of left tibia, initial encounter for open fracture type i or ii",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound of abdominal wall with foreign body, periumbilic region without penetration into peritoneal cavity, sequela",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "fracture of coronoid process of mandible, unspecified side",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified fracture of right ilium, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "arthritis due to other bacteria, vertebrae",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "respiratory conditions due to smoke inhalation",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "mixed conductive and sensorineural hearing loss, unilateral with restricted hearing on the contralateral side",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "liver transplant rejection",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "traumatic arthropathy, wrist",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "puncture wound with foreign body of right shoulder, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "other specified fracture of unspecified ischium, initial encounter for open fracture",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "gonococcal infection of lower genitourinary tract with periurethral and accessory gland abscess",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abscess of bursa, unspecified hand",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "poisoning by digestants, accidental (unintentional), subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "juvenile idiopathic scoliosis, site unspecified",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "abrasion of abdominal wall, subsequent encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "contusion of left upper arm",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "burn of unspecified degree of unspecified multiple fingers (nail), including thumb, initial encounter",
+      "label": "TP",
+      "category": "official_title"
+    },
+    {
+      "text": "unspecified cerebellar artery, cerebral infarction due to embolism",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "shaft of right fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion, displaced spiral fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced spiral fracture of shaft of rt fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with malunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "osteopathy after poliomyelitis, lt thigh",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "distal interphalangeal joint of left middle finger, subluxation",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "subluxation of distal interphalangeal joint of lt middle finger",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified patella, subsequent encounter for open fracture type i or ii with nonunion, displaced transverse fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "transmission complicating pregnancy, first trimester, other infections with a predominantly sexual mode",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified calcaneus, subsequent encounter for fracture with malunion, other physeal fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "consciousness greater than 24 hours without return to pre-existing conscious level with patient surviving, epidural hemorrhage with loss",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "left heel and midfoot with other specified severity, non-pressure chronic ulcer",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "non-pressure chronic ulcer of lt heel and midfoot with other specified severity",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "right middle finger, subsequent encounter, unspecified dislocation",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified dislocation of rt middle finger, subsequent encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "consciousness of any duration with death due to brain injury prior to regaining consciousness, epidural hemorrhage with loss",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "posterior process of left talus, subsequent encounter for fracture with nonunion, displaced fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced fracture of posterior process of lt talus, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "left front wall of thorax, initial encounter, abrasion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "abrasion of lt front wall of thorax, initial encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "left foot at ankle level, subsequent encounter, partial traumatic amputation",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "partial traumatic amputation of lt foot at ankle level, subsequent encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified muscles, fascia and tendons at forearm level, left arm, initial encounter, other injury",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "other injury of unspecified muscles, fascia and tendons at forearm level, lt arm, initial encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "left lower leg, initial encounter for closed fracture, unspecified fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified fracture of lt lower leg, initial encounter for closed fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "right back wall of thorax without penetration into thoracic cavity, initial encounter, laceration with foreign body",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "laceration with foreign body of rt back wall of thorax without penetration into thoracic cavity, initial encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "third degree of unspecified axilla, subsequent encounter, burn",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified tarsal bone(s) of left foot, subsequent encounter for fracture with routine healing, fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "fracture of unspecified tarsal bone(s) of lt foot, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "anterior cruciate ligament of right knee, sequela, sprain",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "sprain of anterior cruciate ligament of rt knee, sequela",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "antimycobacterial drugs, initial encounter, underdosing",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "right patella, subsequent encounter for open fracture type i or ii with nonunion, displaced comminuted fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced comminuted fracture of rt patella, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "left femur, subsequent encounter for open fracture type i or ii with routine healing, unspecified fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified fracture of lt femur, subsequent encounter for open fracture type i or ii with routine healing",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "immune effector cellular therapy, initial encounter, complication",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "venom of ants, undetermined, sequela, toxic effect",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "left ischium, sequela, displaced avulsion fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced avulsion fracture of lt ischium, sequela",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "shaft of right radius, subsequent encounter for open fracture type i or ii with nonunion, displaced oblique fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced oblique fracture of shaft of rt radius, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "native arteries of left leg with ulceration of heel and midfoot, atherosclerosis",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "atherosclerosis of native arteries of lt leg with ulceration of heel and midfoot",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "extensor muscle, fascia and tendon of right thumb at wrist and hand level, laceration",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "laceration of extensor muscle, fascia and tendon of rt thumb at wrist and hand level",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "amniotic fluid and membranes, third trimester, fetus 4, other specified disorders",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "anterior wall of nasopharynx, malignant neoplasm",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "hemiplegia and hemiparesis following nontraumatic intracerebral hemorrhage affecting rt dominant side",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified hip with thigh, subsequent encounter, crushing injury",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "flexor muscle, fascia and tendon of left index finger at wrist and hand level, sequela, unspecified injury",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified injury of flexor muscle, fascia and tendon of lt index finger at wrist and hand level, sequela",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "other ligament of right index finger at metacarpophalangeal and interphalangeal joint, traumatic rupture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "traumatic rupture of other ligament of rt index finger at metacarpophalangeal and interphalangeal joint",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "first degree of multiple right fingers (nail), not including thumb, sequela, corrosion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "corrosion of first degree of multiple rt fingers (nail), not including thumb, sequela",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "nerve root of sacral spine, injury",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "external ear, unspecified ear, abscess",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "right femur, subsequent encounter for closed fracture with routine healing, displaced intertrochanteric fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced intertrochanteric fracture of rt femur, subsequent encounter for closed fracture with routine healing",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified drugs primarily affecting the autonomic nervous system, adverse effect",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "distal pole of navicular [scaphoid] bone of left wrist, sequela, displaced fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced fracture of distal pole of navicular [scaphoid] bone of lt wrist, sequela",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "membranes, unspecified as to length of time between rupture and onset of labor, premature rupture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "first degree of unspecified upper arm, sequela, corrosion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "continuity of bone, unspecified hand, other disorders",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "radiocarpal joint of unspecified wrist, sprain",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "breast, right breast, initial encounter, other superficial bite",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "other superficial bite of breast, rt breast, initial encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "tuberosity of left calcaneus, subsequent encounter for fracture with routine healing, displaced other fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "displaced other fracture of tuberosity of lt calcaneus, subsequent encounter for fracture with routine healing",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "shaft of right fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with nonunion, nondisplaced transverse fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "nondisplaced transverse fracture of shaft of rt fibula, subsequent encounter for open fracture type iiia, iiib, or iiic with nonunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "right thumb, subsequent encounter, partial traumatic metacarpophalangeal amputation",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "partial traumatic metacarpophalangeal amputation of rt thumb, subsequent encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "tongue, unspecified, disease",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "pharynx and cervical esophagus, laceration with foreign body",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "anal and rectal regions, fissure and fistula",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "superficial foreign body, rt knee, initial encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "proximal phalanx of left index finger, subsequent encounter for fracture with nonunion, nondisplaced fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "nondisplaced fracture of proximal phalanx of lt index finger, subsequent encounter for fracture with nonunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "lower end of left tibia, subsequent encounter for open fracture type i or ii with nonunion, unspecified fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "unspecified fracture of lower end of lt tibia, subsequent encounter for open fracture type i or ii with nonunion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "tympanic membrane, right ear, attic perforation",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "attic perforation of tympanic membrane, rt ear",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "right wrist, open bite",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "open bite of rt wrist",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "shaft of second metacarpal bone, right hand, subsequent encounter for fracture with delayed healing, nondisplaced fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "nondisplaced fracture of shaft of second metacarpal bone, rt hand, subsequent encounter for fracture with delayed healing",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "anesthesia during pregnancy, cardiac complications",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "eyelid, edema",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "femoral artery, left leg, subsequent encounter, major laceration",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "major laceration of femoral artery, lt leg, subsequent encounter",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "first degree of left axilla, sequela, corrosion",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "corrosion of first degree of lt axilla, sequela",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "innominate or subclavian artery, other specified injury",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "2-propanol, toxic effect",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "implanted vaginal mesh into vagina, exposure",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "phalanx of left toe, subsequent encounter for fracture with routine healing, other physeal fracture",
+      "label": "TP",
+      "category": "natural_variant"
+    },
+    {
+      "text": "fracture of liver",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; liver is a solid organ"
+    },
+    {
+      "text": "fracture of lung",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; lung is a parenchymal organ"
+    },
+    {
+      "text": "fracture of brain",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; brain is neural tissue"
+    },
+    {
+      "text": "fracture of kidney",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; kidney is a solid organ"
+    },
+    {
+      "text": "fracture of spleen",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; spleen is a solid organ"
+    },
+    {
+      "text": "fracture of bladder",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; bladder is a hollow organ"
+    },
+    {
+      "text": "fracture of esophagus",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; esophagus is soft tissue"
+    },
+    {
+      "text": "fracture of iris",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "fracture is skeletal; iris is ocular tissue"
+    },
+    {
+      "text": "displaced fracture of liver",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "qualified fracture still impossible for organs"
+    },
+    {
+      "text": "nondisplaced fracture of stomach",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "qualified fracture still impossible for organs"
+    },
+    {
+      "text": "stress fracture of heart",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "stress fracture is skeletal only"
+    },
+    {
+      "text": "dislocation of liver",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "dislocation is joints; liver is an organ"
+    },
+    {
+      "text": "dislocation of kidney",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "dislocation is joints; kidney is an organ"
+    },
+    {
+      "text": "dislocation of brain",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "dislocation is joints; brain is neural"
+    },
+    {
+      "text": "dislocation of lung",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "dislocation is joints; lung is parenchymal"
+    },
+    {
+      "text": "dislocation of skin",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "dislocation is joints; skin is integumentary"
+    },
+    {
+      "text": "subluxation of liver",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "subluxation is joints only"
+    },
+    {
+      "text": "subluxation of retina",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "subluxation applies to joints not ocular tissue"
+    },
+    {
+      "text": "sprain of brain",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "sprain is ligamentous; brain has no ligaments"
+    },
+    {
+      "text": "sprain of liver",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "sprain is ligamentous; liver has no ligaments"
+    },
+    {
+      "text": "sprain of kidney",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "sprain is ligamentous; kidney has no ligaments"
+    },
+    {
+      "text": "sprain of cornea",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "sprain is ligamentous; cornea is ocular"
+    },
+    {
+      "text": "strain of patella",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "strain is muscular; patella is bone"
+    },
+    {
+      "text": "strain of femur",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "strain is muscular; femur is bone"
+    },
+    {
+      "text": "burn of femur",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "burn is surface; femur is internal bone"
+    },
+    {
+      "text": "burn of liver",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "burn is surface; liver is internal organ"
+    },
+    {
+      "text": "burn of brain",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "burn is surface; brain is internal"
+    },
+    {
+      "text": "burn of spinal cord",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "burn is surface; spinal cord is internal"
+    },
+    {
+      "text": "burn of patella",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "burn is surface; patella is deep bone"
+    },
+    {
+      "text": "burn of tibia",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "burn is surface; tibia is bone"
+    },
+    {
+      "text": "corrosion of humerus",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "corrosion is surface; humerus is bone"
+    },
+    {
+      "text": "corrosion of kidney",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "corrosion is surface; kidney is internal"
+    },
+    {
+      "text": "hernia of cornea",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "hernia is cavity/opening; cornea is ocular surface"
+    },
+    {
+      "text": "hernia of skull",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "hernia is cavity/opening; skull is flat bone"
+    },
+    {
+      "text": "hernia of patella",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "hernia is cavity/opening; patella is bone"
+    },
+    {
+      "text": "hernia of finger",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "hernia is cavity/opening; finger is extremity"
+    },
+    {
+      "text": "prolapse of skull",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "prolapse is organ descent; skull is bone"
+    },
+    {
+      "text": "prolapse of femur",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "prolapse is organ descent; femur is bone"
+    },
+    {
+      "text": "prolapse of patella",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "prolapse is organ descent; patella is bone"
+    },
+    {
+      "text": "embolism of nail",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "embolism is vascular; nail is integumentary"
+    },
+    {
+      "text": "thrombosis of diaphragm",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "thrombosis is vascular; diaphragm is muscle"
+    },
+    {
+      "text": "thrombosis of skin",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "thrombosis is vascular; skin is integumentary"
+    },
+    {
+      "text": "cataract of knee",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "cataract is ocular only"
+    },
+    {
+      "text": "glaucoma of elbow",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "glaucoma is ocular only"
+    },
+    {
+      "text": "retinopathy of femur",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "retinopathy is ocular only"
+    },
+    {
+      "text": "ectopic pregnancy of knee",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "pregnancy is reproductive system only"
+    },
+    {
+      "text": "abortion of knee",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "abortion is reproductive only"
+    },
+    {
+      "text": "placental disorder of femur",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "placental is reproductive only"
+    },
+    {
+      "text": "dental caries of femur",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "dental applies to teeth only"
+    },
+    {
+      "text": "periodontal disease of knee",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "periodontal applies to teeth only"
+    },
+    {
+      "text": "gangrene of lens",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "lens doesn't undergo gangrene"
+    },
+    {
+      "text": "gangrene of cornea",
+      "label": "FP",
+      "category": "impossible_combo",
+      "reason": "cornea doesn't undergo gangrene"
+    },
+    {
+      "text": "osteoporosis of muscle",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "osteoporosis is bone disease"
+    },
+    {
+      "text": "osteoporosis of skin",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "osteoporosis is bone disease"
+    },
+    {
+      "text": "scoliosis of kidney",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "scoliosis is spinal deformity"
+    },
+    {
+      "text": "kyphosis of liver",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "kyphosis is spinal deformity"
+    },
+    {
+      "text": "neuropathy of femur",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "neuropathy is neural condition"
+    },
+    {
+      "text": "encephalopathy of knee",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "encephalopathy is brain condition"
+    },
+    {
+      "text": "myelopathy of skin",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "myelopathy is spinal cord condition"
+    },
+    {
+      "text": "cirrhosis of knee",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "cirrhosis is liver condition"
+    },
+    {
+      "text": "hepatitis of femur",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "hepatitis is liver condition"
+    },
+    {
+      "text": "nephritis of shoulder",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "nephritis is kidney condition"
+    },
+    {
+      "text": "nephrotic syndrome of elbow",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "nephrotic is kidney condition"
+    },
+    {
+      "text": "arrhythmia of femur",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "arrhythmia is cardiac"
+    },
+    {
+      "text": "myocardial infarction of knee",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "MI is cardiac"
+    },
+    {
+      "text": "pneumonia of knee",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "pneumonia is pulmonary"
+    },
+    {
+      "text": "emphysema of shoulder",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "emphysema is pulmonary"
+    },
+    {
+      "text": "dermatitis of femur",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "dermatitis is skin condition"
+    },
+    {
+      "text": "psoriasis of tibia",
+      "label": "FP",
+      "category": "domain_mismatch",
+      "reason": "psoriasis is skin condition"
+    },
+    {
+      "text": "broken promise",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "broken is condition_adjective; promise is not anatomy"
+    },
+    {
+      "text": "broken record",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "everyday expression"
+    },
+    {
+      "text": "broken heart",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "metaphorical, not medical"
+    },
+    {
+      "text": "open door",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "open is qualifier; door is not anatomy"
+    },
+    {
+      "text": "open mind",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "metaphorical"
+    },
+    {
+      "text": "open question",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "everyday expression"
+    },
+    {
+      "text": "open source",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "technology term"
+    },
+    {
+      "text": "acute angle",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "geometry term"
+    },
+    {
+      "text": "acute accent",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "linguistics term"
+    },
+    {
+      "text": "acute observation",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "everyday expression"
+    },
+    {
+      "text": "chronic complainer",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "everyday expression"
+    },
+    {
+      "text": "chronic issue",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "non-medical use of chronic"
+    },
+    {
+      "text": "chronic underperformance",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "non-medical use"
+    },
+    {
+      "text": "malignant influence",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "metaphorical use"
+    },
+    {
+      "text": "benign neglect",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "political term"
+    },
+    {
+      "text": "primary school",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "education"
+    },
+    {
+      "text": "primary color",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "art/science"
+    },
+    {
+      "text": "primary key",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "database term"
+    },
+    {
+      "text": "secondary school",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "education"
+    },
+    {
+      "text": "major league",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "sports"
+    },
+    {
+      "text": "major label",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "music industry"
+    },
+    {
+      "text": "minor key",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "music term"
+    },
+    {
+      "text": "minor league",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "sports"
+    },
+    {
+      "text": "displaced person",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "refugee term"
+    },
+    {
+      "text": "displaced worker",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "employment term"
+    },
+    {
+      "text": "partial view",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "perspective term"
+    },
+    {
+      "text": "partial credit",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "education term"
+    },
+    {
+      "text": "complete guide",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "book/manual"
+    },
+    {
+      "text": "complete set",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "collection term"
+    },
+    {
+      "text": "deep state",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "political term"
+    },
+    {
+      "text": "deep learning",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "AI/ML term"
+    },
+    {
+      "text": "deep dive",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative expression"
+    },
+    {
+      "text": "superficial analysis",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "non-medical use"
+    },
+    {
+      "text": "lateral thinking",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "non-medical use"
+    },
+    {
+      "text": "anterior motive",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "not a thing but could pattern-match"
+    },
+    {
+      "text": "bilateral agreement",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "diplomatic term"
+    },
+    {
+      "text": "compression socks",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "product, not condition"
+    },
+    {
+      "text": "burn rate",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "finance term"
+    },
+    {
+      "text": "burn notice",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "TV show / intelligence term"
+    },
+    {
+      "text": "total failure",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "general expression"
+    },
+    {
+      "text": "system failure",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "technology term"
+    },
+    {
+      "text": "engine failure",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "mechanical term"
+    },
+    {
+      "text": "mission failure",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "general expression"
+    },
+    {
+      "text": "market breakdown",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "finance term"
+    },
+    {
+      "text": "communication breakdown",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "general expression"
+    },
+    {
+      "text": "mental breakdown",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "colloquial, not ICD term"
+    },
+    {
+      "text": "viral video",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "internet culture"
+    },
+    {
+      "text": "viral marketing",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "business term"
+    },
+    {
+      "text": "infectious enthusiasm",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "infectious laughter",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "contagious enthusiasm",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "toxic relationship",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "colloquial psychology"
+    },
+    {
+      "text": "toxic masculinity",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "social term"
+    },
+    {
+      "text": "toxic workplace",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "colloquial"
+    },
+    {
+      "text": "inflammatory rhetoric",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "inflammatory article",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "terminal velocity",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "physics term"
+    },
+    {
+      "text": "terminal illness",
+      "label": "EDGE",
+      "category": "common_english",
+      "reason": "EDGE - this IS medical"
+    },
+    {
+      "text": "progressive tax",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "finance term"
+    },
+    {
+      "text": "progressive rock",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "music genre"
+    },
+    {
+      "text": "recurrent theme",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "literary term"
+    },
+    {
+      "text": "degenerative art",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "art criticism"
+    },
+    {
+      "text": "congenital liar",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative expression"
+    },
+    {
+      "text": "hereditary title",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "nobility/politics"
+    },
+    {
+      "text": "genetic algorithm",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "computer science"
+    },
+    {
+      "text": "immune to criticism",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "resistant to change",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "figurative"
+    },
+    {
+      "text": "acute shortage",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "economic term"
+    },
+    {
+      "text": "chronic shortage",
+      "label": "FP",
+      "category": "common_english",
+      "reason": "economic term"
+    },
+    {
+      "text": "the fracture was severe",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "fracture in sentence context, not ICD title"
+    },
+    {
+      "text": "she has a condition",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "condition alone is meaningless"
+    },
+    {
+      "text": "treatment for the disease",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "disease alone is too vague"
+    },
+    {
+      "text": "pain in his shoulder",
+      "label": "EDGE",
+      "category": "partial_medical",
+      "reason": "EDGE - could be ICD R-code match"
+    },
+    {
+      "text": "numbness and weakness",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "symptoms without anatomy context"
+    },
+    {
+      "text": "infection control",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "process term, not condition"
+    },
+    {
+      "text": "injury prevention",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "process term"
+    },
+    {
+      "text": "disease management",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "process term"
+    },
+    {
+      "text": "cancer screening",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "process term"
+    },
+    {
+      "text": "fracture clinic",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "facility, not condition"
+    },
+    {
+      "text": "trauma center",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "facility, not condition"
+    },
+    {
+      "text": "burn unit",
+      "label": "FP",
+      "category": "partial_medical",
+      "reason": "facility, not condition"
+    },
+    {
+      "text": "left side",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "laterality alone, no medical content"
+    },
+    {
+      "text": "right arm",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "anatomy alone, no condition"
+    },
+    {
+      "text": "the knee",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "anatomy alone"
+    },
+    {
+      "text": "chronic",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "adjective alone"
+    },
+    {
+      "text": "acute",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "adjective alone"
+    },
+    {
+      "text": "unspecified",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "qualifier alone"
+    },
+    {
+      "text": "bilateral",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "laterality alone"
+    },
+    {
+      "text": "fracture",
+      "label": "EDGE",
+      "category": "ambiguous_short",
+      "reason": "condition alone - EDGE, could be valid"
+    },
+    {
+      "text": "infection",
+      "label": "EDGE",
+      "category": "ambiguous_short",
+      "reason": "condition alone - EDGE, could be valid"
+    },
+    {
+      "text": "other",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "qualifier alone"
+    },
+    {
+      "text": "type 1",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "classifier alone"
+    },
+    {
+      "text": "type 2",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "classifier alone"
+    },
+    {
+      "text": "with complications",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "modifier alone"
+    },
+    {
+      "text": "not elsewhere classified",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "classifier alone"
+    },
+    {
+      "text": "initial encounter",
+      "label": "FP",
+      "category": "ambiguous_short",
+      "reason": "encounter suffix alone"
+    },
+    {
+      "text": "sequela",
+      "label": "EDGE",
+      "category": "ambiguous_short",
+      "reason": "encounter suffix alone - EDGE, could be valid"
+    },
+    {
+      "text": "bilateral happiness",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "medical pattern + non-medical noun"
+    },
+    {
+      "text": "chronic tiredness",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "medical adj + non-ICD term"
+    },
+    {
+      "text": "acute boredom",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "medical adj + non-ICD term"
+    },
+    {
+      "text": "idiopathic sadness",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "medical adj + non-ICD term"
+    },
+    {
+      "text": "congenital optimism",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "medical adj + non-ICD term"
+    },
+    {
+      "text": "recurrent disappointment",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "medical adj + non-ICD term"
+    },
+    {
+      "text": "familial dysfunction",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - could be medical or colloquial"
+    },
+    {
+      "text": "acquired taste",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "non-medical use of acquired"
+    },
+    {
+      "text": "acquired immunity",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - IS medical concept"
+    },
+    {
+      "text": "progressive overload",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "exercise/fitness term"
+    },
+    {
+      "text": "inflammatory response",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - IS medical concept"
+    },
+    {
+      "text": "degenerative changes",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - IS medical, vague"
+    },
+    {
+      "text": "autoimmune response",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - IS medical concept"
+    },
+    {
+      "text": "pathological liar",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "colloquial use"
+    },
+    {
+      "text": "pathological gambling",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - IS ICD F63"
+    },
+    {
+      "text": "functional programming",
+      "label": "FP",
+      "category": "near_miss",
+      "reason": "computer science"
+    },
+    {
+      "text": "functional impairment",
+      "label": "EDGE",
+      "category": "near_miss",
+      "reason": "EDGE - IS medical concept"
+    }
+  ]
+}
