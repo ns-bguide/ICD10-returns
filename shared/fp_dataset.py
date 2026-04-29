@@ -1,27 +1,44 @@
 """Generate the false positive evaluation dataset.
 
-Produces fp_dataset.json with three categories:
-  - true_positives: Real ICD-10-CM titles and natural variants that SHOULD match
-  - false_positives: Phrases that should NOT match (nonsensical medical combos,
-    common English, ambiguous terms in non-medical context)
-  - edge_cases: Phrases where matching is debatable (labeled with reasoning)
+Produces fp_dataset.json with three label types:
+  - TP (true positives): Real ICD-10-CM titles and natural variants that SHOULD match
+  - FP (false positives): Phrases that should NOT match
+  - EDGE: Phrases where matching is debatable (labeled with reasoning)
 
 The dataset is designed to stress-test entity precision, not just coverage.
 Coverage is measured separately against the full ICD-10-CM CSV.
 
 Categories of false positives tested:
+
   1. IMPOSSIBLE_COMBO: Valid condition + valid anatomy but medically impossible
      ("fracture of liver", "burn of femur", "hernia of cornea")
+
   2. DOMAIN_MISMATCH: Condition applied to wrong anatomical system
-     ("dislocation of kidney", "sprain of brain", "cataract of knee")
+     ("cirrhosis of knee", "pneumonia of knee", "cataract of knee")
+
   3. COMMON_ENGLISH: Everyday phrases that contain medical-sounding words
      ("broken promise", "acute angle", "chronic complainer")
+
   4. PARTIAL_MEDICAL: Phrases with one medical term in non-medical context
-     ("viral video", "infectious laughter", "benign neglect")
+     ("viral video", "infectious laughter", "fracture clinic")
+
   5. AMBIGUOUS_SHORT: Short phrases too vague without context
      ("the condition", "severe case", "left side")
+
   6. NEAR_MISS: Almost-medical phrases that look real but aren't ICD terms
      ("bilateral happiness", "chronic tiredness", "acute boredom")
+
+  7. NONMEDICAL_TEXT: Completely unrelated text from non-medical domains.
+     No medical words at all — tests whether the entity stays silent on
+     ordinary language. Covers: news, legal, finance, technology, sports,
+     cooking, education, weather, real estate, literature, and more.
+     ("the court dismissed the appeal", "bitcoin rose 12 percent")
+
+Categories 1-6 probe the boundary between medical and non-medical language.
+Category 7 probes the other end: text that has nothing to do with medicine.
+A well-built entity should match zero entries from category 7. If it does
+match any, it means the entity contains overly generic terms that fire on
+ordinary text.
 """
 
 import json
@@ -284,6 +301,102 @@ NEAR_MISS = [
     ("functional impairment", "EDGE - IS medical concept"),
 ]
 
+# ── NONMEDICAL TEXT ───────────────────────────────────────────────
+# Completely unrelated text with zero medical vocabulary.
+# These probe whether the entity fires on ordinary language.
+# Organized by domain for clarity and maintainability.
+
+NONMEDICAL_TEXT = [
+    # ── News / current affairs ──
+    ("the prime minister announced new trade agreements with neighboring countries", "news headline"),
+    ("voters head to the polls amid record turnout expectations", "political news"),
+    ("the committee approved the infrastructure spending bill", "legislative news"),
+    ("protests erupted across the capital following the court ruling", "news report"),
+    ("the ambassador was recalled after diplomatic tensions escalated", "international news"),
+
+    # ── Legal / judicial ──
+    ("the court dismissed the appeal on procedural grounds", "legal ruling"),
+    ("the defendant pleaded not guilty to all charges", "court proceedings"),
+    ("the jury returned a unanimous verdict after three days of deliberation", "trial outcome"),
+    ("counsel for the plaintiff filed a motion to compel discovery", "legal filing"),
+    ("the statute of limitations had expired before the claim was brought", "legal doctrine"),
+    ("the arbitration clause in the contract was deemed enforceable", "contract law"),
+
+    # ── Finance / economics ──
+    ("bitcoin rose twelve percent in overnight trading", "cryptocurrency"),
+    ("the federal reserve held interest rates steady at the quarterly meeting", "monetary policy"),
+    ("quarterly earnings exceeded analyst expectations by a wide margin", "corporate finance"),
+    ("the company announced a two for one stock split effective next month", "equity markets"),
+    ("inflation adjusted wages have remained flat for the past decade", "economics"),
+    ("the bond yield curve inverted for the third consecutive session", "fixed income"),
+
+    # ── Technology / software ──
+    ("the database migration completed without downtime", "software engineering"),
+    ("the pull request was merged after passing all integration tests", "version control"),
+    ("latency spikes correlated with increased cache eviction rates", "system performance"),
+    ("the team adopted a microservices architecture for the new platform", "software architecture"),
+    ("the API rate limit was increased from one hundred to five hundred requests per minute", "API design"),
+    ("the firmware update bricked several thousand devices before it was rolled back", "hardware/software"),
+
+    # ── Sports ──
+    ("the goalkeeper saved three penalties in the shootout to win the cup", "football/soccer"),
+    ("she completed the marathon in two hours and forty one minutes", "athletics"),
+    ("the umpire called a controversial strike three to end the inning", "baseball"),
+    ("the team clinched a playoff berth with two games remaining in the season", "general sports"),
+    ("the referee awarded a free kick just outside the penalty area", "football/soccer"),
+
+    # ── Cooking / food ──
+    ("preheat the oven to three hundred seventy five degrees and line a baking sheet", "recipe instruction"),
+    ("fold the egg whites gently into the batter to keep it light and airy", "baking technique"),
+    ("the restaurant earned its second michelin star after a decade of consistent quality", "food review"),
+    ("season the cast iron skillet and let it smoke before adding the steak", "cooking technique"),
+    ("the sourdough starter needs to be fed twice daily at room temperature", "bread baking"),
+
+    # ── Education / academia ──
+    ("the curriculum was revised to include more project based learning", "education policy"),
+    ("the dissertation committee requested major revisions before final approval", "academic process"),
+    ("enrollment in computer science programs has doubled over the past five years", "education trends"),
+    ("the professor assigned three chapters of reading for the midterm exam", "classroom instruction"),
+    ("the scholarship covers tuition and housing for up to four academic years", "financial aid"),
+
+    # ── Weather / environment ──
+    ("a cold front is expected to bring heavy snowfall to the northeast by friday", "weather forecast"),
+    ("temperatures will reach the upper nineties with high humidity through the weekend", "weather forecast"),
+    ("the wildfire has burned over fifty thousand acres since it started last tuesday", "environmental news"),
+    ("the river crested at fourteen feet above flood stage overnight", "flood reporting"),
+
+    # ── Real estate / housing ──
+    ("the three bedroom colonial on elm street sold for well above the asking price", "real estate"),
+    ("mortgage rates climbed to their highest level in over two decades", "housing market"),
+    ("the zoning board approved a variance for the mixed use development downtown", "urban planning"),
+    ("the building inspection revealed no structural issues with the foundation", "property inspection"),
+
+    # ── Literature / arts / culture ──
+    ("the novel won the national book award for fiction in its debut year", "literary award"),
+    ("the exhibition features watercolors from the artist early period in provence", "art exhibition"),
+    ("the orchestra performed beethoven ninth symphony to a sold out audience", "classical music"),
+    ("the documentary premiered at the sundance film festival to critical acclaim", "film"),
+
+    # ── Transportation / logistics ──
+    ("the freight train derailed near the junction but no cargo was lost", "rail transport"),
+    ("flight delays cascaded across the eastern seaboard due to thunderstorms", "aviation"),
+    ("the shipping container was held at customs for additional inspection", "logistics"),
+    ("the city council voted to extend the subway line by three new stations", "urban transit"),
+
+    # ── Agriculture / farming ──
+    ("the wheat harvest was twenty percent below projections due to the early frost", "agriculture"),
+    ("the dairy cooperative negotiated better prices for organic milk this quarter", "farming economics"),
+    ("the vineyard produced its first commercial vintage after seven years of planting", "viticulture"),
+
+    # ── Mixed everyday ──
+    ("the dog chased a squirrel across the backyard and knocked over the garden chairs", "everyday life"),
+    ("she finished the crossword puzzle on the train before reaching her stop", "everyday life"),
+    ("the plumber replaced the corroded pipe under the kitchen sink", "home repair"),
+    ("they booked a cabin in the mountains for the long weekend", "travel planning"),
+    ("the library book was three weeks overdue and the fine was two dollars", "everyday life"),
+    ("the landlord agreed to repaint the apartment before the new tenants moved in", "rental housing"),
+]
+
 
 def build_dataset():
     print("Loading true positives from ICD-10-CM titles...")
@@ -315,6 +428,8 @@ def build_dataset():
             fp_entries.append({"text": text, "label": "EDGE", "category": "near_miss", "reason": reason})
         else:
             fp_entries.append({"text": text, "label": "FP", "category": "near_miss", "reason": reason})
+    for text, reason in NONMEDICAL_TEXT:
+        fp_entries.append({"text": text, "label": "FP", "category": "nonmedical_text", "reason": reason})
 
     print(f"  {sum(1 for e in fp_entries if e['label'] == 'FP')} false positive entries")
     print(f"  {sum(1 for e in fp_entries if e['label'] == 'EDGE')} edge case entries")
@@ -330,6 +445,7 @@ def build_dataset():
                 "partial_medical": "Medical term used in non-diagnostic context",
                 "ambiguous_short": "Too short/vague to be meaningful matches",
                 "near_miss": "Almost-medical phrases that aren't real ICD terms",
+                "nonmedical_text": "Completely unrelated non-medical text from diverse domains",
                 "official_title": "Real ICD-10-CM official titles (true positives)",
                 "natural_variant": "Natural language variants of ICD titles (true positives)",
             },

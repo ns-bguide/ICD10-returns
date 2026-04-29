@@ -22,7 +22,7 @@ ICD10-returns/
 │   ├── adversarial_validation.py   #   Dynamic adversarial FP generation
 │   ├── report.py                   #   Standardized report (runs all layers)
 │   ├── compare.py                  #   Side-by-side comparison
-│   ├── fp_dataset.json             #   Layer 1: 783 hand-crafted test entries
+│   ├── fp_dataset.json             #   Layer 1: 846 hand-crafted test entries
 │   ├── fp_dataset.py               #   Generator for fp_dataset.json
 │   ├── fp_validation.json          #   Layer 2: 957 generated test entries
 │   ├── fp_validation.py            #   Generator for fp_validation.json
@@ -127,7 +127,7 @@ Three independent validation layers, each harder to game than the last:
 
 | Layer | File | FP tests | Can be memorized? |
 |-------|------|----------|-------------------|
-| 1. Dev FP | `shared/fp_dataset.json` | 171 | Yes (visible) |
+| 1. Dev FP | `shared/fp_dataset.json` | 234 | Yes (visible) |
 | 2. Static Validation | `shared/fp_validation.json` | 657 | Technically yes |
 | 3. Adversarial | Generated at eval time | 460 | **No** (dynamic) |
 

@@ -25,9 +25,9 @@ We evaluate entities through three independent layers, ordered by increasing res
 
 ### Layer 1: Development FP Dataset (static, hand-crafted)
 
-**File:** `shared/fp_dataset.json` — 783 entries (600 TP, 171 FP, 12 edge cases)
+**File:** `shared/fp_dataset.json` — 846 entries (600 TP, 234 FP, 12 edge cases)
 
-Hand-crafted entries across six false positive categories:
+Hand-crafted entries across seven false positive categories:
 
 | Category | Count | Description |
 |----------|------:|-------------|
@@ -37,10 +37,13 @@ Hand-crafted entries across six false positive categories:
 | `partial_medical` | 12 | Medical terms in non-diagnostic context (fracture clinic, infection control) |
 | `ambiguous_short` | 16 | Too vague to be meaningful (chronic, left side, type 1) |
 | `near_miss` | 17 | Almost-medical phrases that aren't ICD terms (bilateral happiness, chronic tiredness) |
+| `nonmedical_text` | 63 | Completely unrelated non-medical text from 13 domains (news, legal, finance, tech, sports, cooking, education, weather, real estate, literature, transport, agriculture, everyday life) |
+
+Categories 1–6 probe the boundary between medical and non-medical language — every entry contains at least one medical-adjacent word. Category 7 (`nonmedical_text`) probes the other end: full sentences with zero medical vocabulary. A well-built entity should match none of them. If it does, the entity contains overly generic terms (short prefixes, common roots) that fire on ordinary text. For example, the original entity matches "the orchestra performed beethoven ninth symphony" because "chest" (anatomy) appears as a substring inside "orchestra".
 
 The 600 true positives are randomly sampled official ICD-10-CM titles plus 100 natural language variants (abbreviations, word reorderings).
 
-**Purpose:** Sanity check. Validates that obvious false positives are rejected and real titles are matched. This dataset is visible to builders during development.
+**Purpose:** Sanity check. Validates that obvious false positives are rejected and real titles are matched. The `nonmedical_text` category additionally tests whether the entity stays silent on ordinary text with no medical content. This dataset is visible to builders during development.
 
 **Limitation:** Static and small enough to memorize. A builder can read this file and add targeted `score="0"` patterns for each entry without solving the underlying structural problem.
 
@@ -196,6 +199,7 @@ Flat entries also fully solve both the structural combination and word_soup prob
 | Impossible anatomy combos (fracture of liver) | Yes | Yes | Yes |
 | Domain-mismatch combos (cataract of knee) | Yes | Yes | Yes |
 | Common English phrases (viral video) | Yes | Yes | No (not tested) |
+| Non-medical text with no medical words | **Yes** | No | No |
 | Random condition × anatomy from ICD vocab | No | Yes | Yes |
 | Recombined qualifier + condition + anatomy | No | Yes | No (tested differently) |
 | Vocabulary extracted from the entity itself | No | No | **Yes** |
@@ -203,6 +207,8 @@ Flat entries also fully solve both the structural combination and word_soup prob
 | Synthetic medical-sounding nonwords | No | No | **Yes** |
 
 The critical diagonal: Layer 3 is the only layer that tests whether the entity's own vocabulary creates false positives. Layers 1 and 2 test against a fixed universe of phrases. Layer 3 adapts to whatever vocabulary the entity contains.
+
+The `nonmedical_text` category in Layer 1 fills a distinct gap: it tests whether the entity fires on ordinary text that has no medical content at all. Categories 1–6 contain at least one medical-adjacent word; category 7 contains none. This catches overly generic entries (short prefixes, anatomical roots) that substring-match into unrelated words.
 
 ## 8. Known Limitations
 

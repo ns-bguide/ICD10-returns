@@ -9,13 +9,14 @@
       "partial_medical": "Medical term used in non-diagnostic context",
       "ambiguous_short": "Too short/vague to be meaningful matches",
       "near_miss": "Almost-medical phrases that aren't real ICD terms",
+      "nonmedical_text": "Completely unrelated non-medical text from diverse domains",
       "official_title": "Real ICD-10-CM official titles (true positives)",
       "natural_variant": "Natural language variants of ICD titles (true positives)"
     },
     "counts": {
       "by_label": {
         "TP": 600,
-        "FP": 171,
+        "FP": 234,
         "EDGE": 12
       },
       "by_category": {
@@ -26,9 +27,10 @@
         "common_english": 69,
         "partial_medical": 12,
         "ambiguous_short": 16,
-        "near_miss": 17
+        "near_miss": 17,
+        "nonmedical_text": 63
       },
-      "total": 783
+      "total": 846
     }
   },
   "entries": [
@@ -4129,6 +4131,384 @@
       "label": "EDGE",
       "category": "near_miss",
       "reason": "EDGE - IS medical concept"
+    },
+    {
+      "text": "the prime minister announced new trade agreements with neighboring countries",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "news headline"
+    },
+    {
+      "text": "voters head to the polls amid record turnout expectations",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "political news"
+    },
+    {
+      "text": "the committee approved the infrastructure spending bill",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "legislative news"
+    },
+    {
+      "text": "protests erupted across the capital following the court ruling",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "news report"
+    },
+    {
+      "text": "the ambassador was recalled after diplomatic tensions escalated",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "international news"
+    },
+    {
+      "text": "the court dismissed the appeal on procedural grounds",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "legal ruling"
+    },
+    {
+      "text": "the defendant pleaded not guilty to all charges",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "court proceedings"
+    },
+    {
+      "text": "the jury returned a unanimous verdict after three days of deliberation",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "trial outcome"
+    },
+    {
+      "text": "counsel for the plaintiff filed a motion to compel discovery",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "legal filing"
+    },
+    {
+      "text": "the statute of limitations had expired before the claim was brought",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "legal doctrine"
+    },
+    {
+      "text": "the arbitration clause in the contract was deemed enforceable",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "contract law"
+    },
+    {
+      "text": "bitcoin rose twelve percent in overnight trading",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "cryptocurrency"
+    },
+    {
+      "text": "the federal reserve held interest rates steady at the quarterly meeting",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "monetary policy"
+    },
+    {
+      "text": "quarterly earnings exceeded analyst expectations by a wide margin",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "corporate finance"
+    },
+    {
+      "text": "the company announced a two for one stock split effective next month",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "equity markets"
+    },
+    {
+      "text": "inflation adjusted wages have remained flat for the past decade",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "economics"
+    },
+    {
+      "text": "the bond yield curve inverted for the third consecutive session",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "fixed income"
+    },
+    {
+      "text": "the database migration completed without downtime",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "software engineering"
+    },
+    {
+      "text": "the pull request was merged after passing all integration tests",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "version control"
+    },
+    {
+      "text": "latency spikes correlated with increased cache eviction rates",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "system performance"
+    },
+    {
+      "text": "the team adopted a microservices architecture for the new platform",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "software architecture"
+    },
+    {
+      "text": "the API rate limit was increased from one hundred to five hundred requests per minute",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "API design"
+    },
+    {
+      "text": "the firmware update bricked several thousand devices before it was rolled back",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "hardware/software"
+    },
+    {
+      "text": "the goalkeeper saved three penalties in the shootout to win the cup",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "football/soccer"
+    },
+    {
+      "text": "she completed the marathon in two hours and forty one minutes",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "athletics"
+    },
+    {
+      "text": "the umpire called a controversial strike three to end the inning",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "baseball"
+    },
+    {
+      "text": "the team clinched a playoff berth with two games remaining in the season",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "general sports"
+    },
+    {
+      "text": "the referee awarded a free kick just outside the penalty area",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "football/soccer"
+    },
+    {
+      "text": "preheat the oven to three hundred seventy five degrees and line a baking sheet",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "recipe instruction"
+    },
+    {
+      "text": "fold the egg whites gently into the batter to keep it light and airy",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "baking technique"
+    },
+    {
+      "text": "the restaurant earned its second michelin star after a decade of consistent quality",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "food review"
+    },
+    {
+      "text": "season the cast iron skillet and let it smoke before adding the steak",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "cooking technique"
+    },
+    {
+      "text": "the sourdough starter needs to be fed twice daily at room temperature",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "bread baking"
+    },
+    {
+      "text": "the curriculum was revised to include more project based learning",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "education policy"
+    },
+    {
+      "text": "the dissertation committee requested major revisions before final approval",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "academic process"
+    },
+    {
+      "text": "enrollment in computer science programs has doubled over the past five years",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "education trends"
+    },
+    {
+      "text": "the professor assigned three chapters of reading for the midterm exam",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "classroom instruction"
+    },
+    {
+      "text": "the scholarship covers tuition and housing for up to four academic years",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "financial aid"
+    },
+    {
+      "text": "a cold front is expected to bring heavy snowfall to the northeast by friday",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "weather forecast"
+    },
+    {
+      "text": "temperatures will reach the upper nineties with high humidity through the weekend",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "weather forecast"
+    },
+    {
+      "text": "the wildfire has burned over fifty thousand acres since it started last tuesday",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "environmental news"
+    },
+    {
+      "text": "the river crested at fourteen feet above flood stage overnight",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "flood reporting"
+    },
+    {
+      "text": "the three bedroom colonial on elm street sold for well above the asking price",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "real estate"
+    },
+    {
+      "text": "mortgage rates climbed to their highest level in over two decades",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "housing market"
+    },
+    {
+      "text": "the zoning board approved a variance for the mixed use development downtown",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "urban planning"
+    },
+    {
+      "text": "the building inspection revealed no structural issues with the foundation",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "property inspection"
+    },
+    {
+      "text": "the novel won the national book award for fiction in its debut year",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "literary award"
+    },
+    {
+      "text": "the exhibition features watercolors from the artist early period in provence",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "art exhibition"
+    },
+    {
+      "text": "the orchestra performed beethoven ninth symphony to a sold out audience",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "classical music"
+    },
+    {
+      "text": "the documentary premiered at the sundance film festival to critical acclaim",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "film"
+    },
+    {
+      "text": "the freight train derailed near the junction but no cargo was lost",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "rail transport"
+    },
+    {
+      "text": "flight delays cascaded across the eastern seaboard due to thunderstorms",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "aviation"
+    },
+    {
+      "text": "the shipping container was held at customs for additional inspection",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "logistics"
+    },
+    {
+      "text": "the city council voted to extend the subway line by three new stations",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "urban transit"
+    },
+    {
+      "text": "the wheat harvest was twenty percent below projections due to the early frost",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "agriculture"
+    },
+    {
+      "text": "the dairy cooperative negotiated better prices for organic milk this quarter",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "farming economics"
+    },
+    {
+      "text": "the vineyard produced its first commercial vintage after seven years of planting",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "viticulture"
+    },
+    {
+      "text": "the dog chased a squirrel across the backyard and knocked over the garden chairs",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "everyday life"
+    },
+    {
+      "text": "she finished the crossword puzzle on the train before reaching her stop",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "everyday life"
+    },
+    {
+      "text": "the plumber replaced the corroded pipe under the kitchen sink",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "home repair"
+    },
+    {
+      "text": "they booked a cabin in the mountains for the long weekend",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "travel planning"
+    },
+    {
+      "text": "the library book was three weeks overdue and the fine was two dollars",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "everyday life"
+    },
+    {
+      "text": "the landlord agreed to repaint the apartment before the new tenants moved in",
+      "label": "FP",
+      "category": "nonmedical_text",
+      "reason": "rental housing"
     }
   ]
 }
